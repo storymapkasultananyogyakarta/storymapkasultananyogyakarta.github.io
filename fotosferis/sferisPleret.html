@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "plered1",
+        "author": "Ignatius Ivan Rizky Marcelino",
+        "sceneFadeDuration": 1000,
+        "autoLoad": true,
+        "compass": false
+    },
+
+    "scenes": {
+        "plered1": {
+            "title": "Situs Masjid Kauman Pleret",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 320,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620460203/Situs%20Masjid%20Kauman%20Pleret/R0011677_kk7msd.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -2,
+                    "yaw": 270,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered2",
+                    "targetYaw": 320
+                },
+                {
+                    "pitch": -3,
+                    "yaw": 330,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered8",
+                }
+            ]
+        },
+
+        "plered2": {
+            "title": "Situs Masjid Kauman Pleret",
+            "hfov": 120,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620460203/Situs%20Masjid%20Kauman%20Pleret/R0011678_qwwhjt.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -3,
+                    "yaw": 80,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered1",
+                },
+                {
+                    "pitch": -3,
+                    "yaw": 320,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered3",
+                }
+            ]
+        },
+
+        "plered3": {
+            "title": "Situs Masjid Kauman Pleret",
+            "hfov": 120,
+            "yaw": 306,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620460209/Situs%20Masjid%20Kauman%20Pleret/R0011676_aro4ew.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 80,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered2",
+                    "targetYaw": 80
+                },
+                {
+                    "pitch": -7,
+                    "yaw": 306,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered6",
+                }
+            ]
+        },
+
+        "plered4": {
+            "title": "Situs Masjid Kauman Pleret",
+            "hfov": 120,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620460202/Situs%20Masjid%20Kauman%20Pleret/R0011671_undwsv.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -8,
+                    "yaw": 213,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered6",
+                    "targetYaw": 315
+                },
+                {
+                    "pitch": -8,
+                    "yaw": 35,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered5",
+                    "targetYaw": 280
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 318,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered7",
+                    "targetYaw": 30
+                },
+                {
+                    "pitch": -6,
+                    "yaw": 136,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered8",
+                    "targetYaw": 70
+                }
+            ]
+        },
+
+        "plered5": {
+            "title": "Situs Masjid Kauman Pleret",
+            "hfov": 120,
+            "yaw": 140,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620460209/Situs%20Masjid%20Kauman%20Pleret/R0011673_f6fwdi.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -7,
+                    "yaw": 135,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered4",
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 180,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered7",
+                    "targetYaw": 30
+                },
+            ]
+        },
+
+        "plered6": {
+            "title": "Situs Masjid Kauman Pleret",
+            "hfov": 120,
+            "yaw": 140,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620460203/Situs%20Masjid%20Kauman%20Pleret/R0011675_crklvr.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -8,
+                    "yaw": 315,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered3"  
+                },
+                {
+                    "pitch": -7,
+                    "yaw": 128,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered4"
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 184,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered8",
+                }
+            ]
+        },
+
+        "plered7": {
+            "title": "Situs Masjid Kauman Pleret",
+            "hfov": 120,
+            "yaw": 200,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620460203/Situs%20Masjid%20Kauman%20Pleret/R0011672_wgyphm.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -4,
+                    "yaw": 183,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered5",
+                    "targetYaw": 280 
+                },
+                {
+                    "pitch": -4,
+                    "yaw": 218,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered4",
+                    "targetYaw": 180
+                }
+            ]
+        },
+
+        "plered8": {
+            "title": "Situs Masjid Kauman Pleret",
+            "hfov": 120,
+            "yaw": 200,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620460204/Situs%20Masjid%20Kauman%20Pleret/R0011674_j8qh1b.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -6,
+                    "yaw": 175,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered6"  
+                },
+                {
+                    "pitch": -7,
+                    "yaw": 227,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered4"
+                },
+                {
+                    "pitch": -8,
+                    "yaw": 70,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi",
+                    "sceneId": "plered1",
+                }
+            ]
+        }
+    }
+});
+</script>
+
+</body>
+</html>

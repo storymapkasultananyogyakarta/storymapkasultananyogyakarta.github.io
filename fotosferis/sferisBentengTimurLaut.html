@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "joktengTL1",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "compass": false
+            },
+
+            "scenes": {
+                "joktengTL1": {
+                    "title": "Pojok Benteng Timur Laut",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256726/Benteng%20Keraton%20Jogja/R0011753_k3juq1.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 88,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Pojok Benteng Wetan",
+                            "sceneId": "joktengTL2"
+                        }
+                    ]
+                },
+
+                "joktengTL2": {
+                    "title": "Pojok Benteng Timur Laut",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256711/Benteng%20Keraton%20Jogja/R0011752_mrcf6i.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 290,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Pojok Benteng Wetan",
+                            "sceneId": "joktengTL1"
+                        },
+                        {
+                            "pitch": -6,
+                            "yaw": 60,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Pojok Benteng Wetan",
+                            "sceneId": "joktengTL3"
+                        }
+                    ]
+                },
+
+                "joktengTL3": {
+                    "title": "Pojok Benteng Timur Laut",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256737/Benteng%20Keraton%20Jogja/R0011751_eb6dpt.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 270,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Pojok Benteng Wetan",
+                            "sceneId": "joktengTL2"
+                        }
+                    ]
+                }
+            }
+
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "pintuMasuk",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "compass": false
+            },
+
+            "scenes": {
+                "pintuMasuk": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622601968/Tamansari/R0011846_ibs0yj.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -4,
+                            "yaw": 357,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari1",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 94,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Temanten berfungsi sebagai tempat Abdi Dalem bertugas menjaga Tamansari."
+                        },
+                        {
+                            "pitch": -6,
+                            "yaw": 264,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Temanten berfungsi sebagai tempat Abdi Dalem bertugas menjaga Tamansari."
+                        },
+                        {
+                            "pitch": -6,
+                            "yaw": 295,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Pangunjukan/Gedhong Patehan berfungsi sebagai tempat Abdi Dalem menyiapkan minuman untuk Sultan dan keluarganya."
+                        },
+                        {
+                            "pitch": -6,
+                            "yaw": 60,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Pangunjukan/Gedhong Patehan berfungsi sebagai tempat Abdi Dalem menyiapkan minuman untuk Sultan dan keluarganya."
+                        },
+                        {
+                            "pitch": 15,
+                            "yaw": 357,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Gapura Panggung merupakan sebuah bangunan yang juga berfungsi sebagai sebuah gerbang penghubung."
+                        }
+                    ]
+                },
+
+                "tamansari1": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622601976/Tamansari/R0011847_uprqhb.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -15,
+                            "yaw": 178,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "pintuMasuk",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -15,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari2",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "tamansari2": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622601982/Tamansari/R0011849_rt8mhk.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari1",
+                            "targetYaw": 178
+                        },
+                        {
+                            "pitch": -15,
+                            "yaw": 93,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari3",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": 13,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Bagian Panggung",
+                            "sceneId": "tamansari4",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Pasiraman Umbul Binangun",
+                            "sceneId": "tamansari5",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 238,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Sekawan/Gedhong Sedah Mirah merupakan tempat istirahat Sultan dan keluarganya. Bangunan ini juga digunakan sebagai tempat untuk memainkan alat musik."
+                        },
+                        {
+                            "pitch": -30,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Pelataran ini biasa digunakan sebagai tempat pertunjukan tarian atau musik gamelan."
+                        }
+                    ]
+                },
+
+                "tamansari3": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622601993/Tamansari/R0011848_ivlatu.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -15,
+                            "yaw": 178,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari2",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "tamansari4": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622601982/Tamansari/R0011850_sdbz9a.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -25,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari2",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -40,
+                            "yaw": 357,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bagian atas Gapura Panggung biasa digunakan Sultan untuk duduk mendengarkan bunyi gamelan atau menyaksikan pertunjukan di pelataran belakang gapura."
+                        }
+                    ]
+                },
+
+                "tamansari5": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616768/Tamansari/R0011772_ks6gzt.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 10,
+                            "yaw": 192,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari2",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -13,
+                            "yaw": 60,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari6",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 298,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari7",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": 20,
+                            "yaw": 298,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Menara yang hanya boleh dinaiki oleh Sultan untuk melihat kompleks pemandian. Pada bangunan menara ini juga terdapat ruangan untuk raja dan istri serta selir raja berganti pakaian."
+                        }
+                    ]
+                },
+
+                "tamansari6": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616769/Tamansari/R0011771_dfeiyr.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -7,
+                            "yaw": 303,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari5",
+                            "targetYaw": 190
+                        },
+                        {
+                            "pitch": -4,
+                            "yaw": 184,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari9",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -4,
+                            "yaw": 36,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari10",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 185,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Umbul Kawitan merupakan kolam yang digunakan sebagai tempat pemandian para putri raja."
+                        },
+                        {
+                            "pitch": -30,
+                            "yaw": 345,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Umbul Pamuncar merupakan kolam yang digunakan sebagai tempat pemandian istri dan para selir raja."
+                        }
+                    ]
+                },
+
+                "tamansari7": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616767/Tamansari/R0011775_eh1vyz.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -7,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari5",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 174,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari8",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -30,
+                            "yaw": 174,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Umbul Panguras merupakan kolam khusus untuk mandi raja."
+                        }
+                    ]
+                },
+
+                "tamansari8": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616767/Tamansari/R0011774_japtdm.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari7",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "tamansari9": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622601996/Tamansari/R0011851_ntwjy1.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 358,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari6",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 180,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Tempat para putri raja berganti pakaian."
+                        }
+                    ]
+                },
+
+                "tamansari10": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616776/Tamansari/R0011776_rzvbvs.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 178,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari6",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -4,
+                            "yaw": 271,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari11",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 40,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari16",
+                            "targetYaw": 330
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Dahulu berdiri di tempat ini Gedhong Lopak-lopak yang merupakan pelataran berbentuk segi delapan. Bangunan tersebut digunakan sebagai menara pengawas berlantai dua."
+                        },
+                        {
+                            "pitch": 20,
+                            "yaw": 359,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Gapura Hageng atau Gapura Agung merupakan pintu gerbang utama Tamansari."
+                        }
+                    ]
+                },
+
+                "tamansari11": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622601988/Tamansari/R0011856_a7s3tw.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 5,
+                            "yaw": 2,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari10",
+                            "targetYaw": 30
+                        },
+                        {
+                            "pitch": -30,
+                            "yaw": 120,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari12",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": 40,
+                            "yaw": 2,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Carik berfungsi sebagai jalan masuk ke Pasarean Ledhok Sari. Bangunan ini adalah tempat para carik (juru tulis) bertugas."
+                        }
+                    ]
+                },
+
+                "tamansari12": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622601992/Tamansari/R0011857_ju8zvj.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -25,
+                            "yaw": 330,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari11",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -25,
+                            "yaw": 205,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari13",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 5,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Madaran merupakan tempat memasak santapan untuk Sultan dan keluarganya."
+                        }
+                    ]
+                },
+
+                "tamansari13": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622602004/Tamansari/R0011858_ne2f4c.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -18,
+                            "yaw": 213,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari12",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -25,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari14",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "tamansari14": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622601998/Tamansari/R0011859_shpeq8.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -18,
+                            "yaw": 130,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari13",
+                            "targetYaw": 210
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 43,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari15",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 220,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Pasareyan Ledhoksari adalah tempat Sultan untuk beristirahat."
+                        }
+                    ]
+                },
+
+                "tamansari15": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622602003/Tamansari/R0011860_ojat9t.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -15,
+                            "yaw": 315,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari14",
+                            "targetYaw": 130
+                        },
+                        {
+                            "pitch": -23,
+                            "yaw": 10,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Dahulu tempat ini adalah Gedhong Blawong yang memiliki fungsi sebagai tempat menyiapkan makanan yang akan disajikan untuk Sultan dan keluarganya selama mereka beristirahat di Pasarean Ledhoksari."
+                        },
+                        {
+                            "pitch": 15,
+                            "yaw": 48,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gapura Umbulsari merupakan pintu penghubung antara Pasarean Ledhoksari dengan Pasiraman Umbulsari."
+                        }
+                    ]
+                },
+
+                "tamansari16": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616776/Tamansari/R0011777_zjzyrp.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 75,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari10",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 290,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari17",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 320,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Sumur Gumuling adalah bangunan yang berfungsi sebagai masjid dan hanya bisa dicapai melalui terowongan bawah air atau urung-urung. Dari luar, bangunan ini tampak seperti menara bulat di tengah air."
+                        }
+                    ]
+                },
+
+                "tamansari17": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616776/Tamansari/R0011778_bfqn8q.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -20,
+                            "yaw": 173,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari16",
+                            "targetYaw": 75
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 348,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Pulo Kenanga",
+                            "sceneId": "tamansari18",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "tamansari18": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616779/Tamansari/R0011780_umafik.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -20,
+                            "yaw": 178,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari17",
+                            "targetYaw": 173
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Memasuki Gedhong Kenanga",
+                            "sceneId": "tamansari19",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": 40,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Kenanga merupakan bangunan tertinggi dibanding bangunan sekitarnya yang digunakan untuk dapat mengamati kawasan Keraton Yogyakarta dari atas. Gedhong ini terletak di tengah Pulo Kenanga atau Pulo Cemeti."
+                        }
+                    ]
+                },
+
+                "tamansari19": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616778/Tamansari/R0011781_ognks0.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -20,
+                            "yaw": 177,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari18",
+                            "targetYaw": 178
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 270,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari20",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari21",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Meninggalkan Gedhong Kenanga",
+                            "sceneId": "tamansari22",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": 15,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Kenanga memiliki beberapa ruangan yang dapat dijelajahi."
+                        }
+                    ]
+                },
+
+                "tamansari20": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616786/Tamansari/R0011782_iwh9rk.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari19",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 358,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari23",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "tamansari21": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616786/Tamansari/R0011784_j96ua1.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 174,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari19",
+                            "targetYaw": 270
+                        }
+                    ]
+                },
+
+                "tamansari22": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616787/Tamansari/R0011783_gfhoj3.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -18,
+                            "yaw": 172,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari19",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 353,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari24",
+                            "targetYaw": 290
+                        }
+                    ]
+                },
+
+                "tamansari23": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622602022/Tamansari/R0011861_k04qoo.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -18,
+                            "yaw": 205,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari20",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "tamansari24": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616787/Tamansari/R0011786_a72dox.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 7,
+                            "yaw": 15,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari22",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 290,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Urung-urung",
+                            "sceneId": "tamansari25",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": 10,
+                            "yaw": 277,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Urung-urung atau Terowongan Bawah Air yang digunakan raja dan keluarga untuk menuju Pulo Kenanga."
+                        }
+                    ]
+                },
+
+                "tamansari25": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616790/Tamansari/R0011787_p7hq57.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 315,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari24",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -18,
+                            "yaw": 2,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Memasuki Urung-urung",
+                            "sceneId": "tamansari26",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "tamansari26": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616794/Tamansari/R0011788_nasx9p.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari25",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari27",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "tamansari27": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616793/Tamansari/R0011789_lyxewl.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -25,
+                            "yaw": 265,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari26",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": 6,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Meninggalkan Urung-urung",
+                            "sceneId": "tamansari28",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "tamansari28": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616794/Tamansari/R0011790_dfabpq.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -20,
+                            "yaw": 176,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari27",
+                            "targetYaw": 265
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 3,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari29",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "tamansari29": {
+                    "title": "Wisata Tamansari",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622616767/Tamansari/R0011791_emsxsa.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 263,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Wisata Tamansari",
+                            "sceneId": "tamansari28",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -30,
+                            "yaw": 340,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Pongangan Timur merupakan dermaga yang digunakan khusus untuk Abdi Dalem yang bertugas di Tamansari."
+                        }
+                    ]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

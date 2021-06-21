@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .censor-hotspot {
+        height: 100px;
+        width: 200px;
+        background-position: center;
+        background-size: cover;
+        background-color: blanchedalmond;
+    }
+    </style>
+</head>
+<body>
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "surakarta1",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "compass": false
+            },
+            "scenes": {
+                "surakarta1": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721077/Keraton%20Surakarta/R0012022_c1gafx.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 285,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta2",
+                            "targetYaw": 260
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 80,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta3",
+                            "targetYaw": 80
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta4",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 170,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Area Pagelaran Keraton Surakarta",
+                            "sceneId": "surakarta26",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "surakarta2": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721086/Keraton%20Surakarta/R0012023_icj92p.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 100,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta1",
+                            "targetYaw": 80
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 260,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta5",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "surakarta3": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721096/Keraton%20Surakarta/R0012026_hrqfcx.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 250,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta1",
+                            "targetYaw": 285
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 80,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta6",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "surakarta4": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721085/Keraton%20Surakarta/R0012025_h1xqp1.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 178,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta1",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "surakarta5": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721087/Keraton%20Surakarta/R0012024_qgklhc.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 210,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta2",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -15,
+                            "yaw": 5,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta7",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "surakarta6": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721097/Keraton%20Surakarta/R0012027_ldabwb.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 150,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta3",
+                            "targetYaw": 250
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta25",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "surakarta7": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721102/Keraton%20Surakarta/R0012028_pftxkb.jpg",
+                    "hotSpots":[
+                        {
+                            "pitch": -1,
+                            "yaw": 43.5,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta5",
+                            "targetYaw": 210
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 318,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta8",
+                            "targetYaw": 270
+                        }
+                    ]
+                },
+
+                "surakarta8": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721102/Keraton%20Surakarta/R0012029_dchbtz.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta7",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 248,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta9",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "surakarta9": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721097/Keraton%20Surakarta/R0012030_at8sir.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 170,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta8",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 353,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta10",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -57,
+                            "yaw": 350,
+                            "cssClass": "censor-hotspot"
+                        }
+                    ]
+                },
+
+                "surakarta10": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721096/Keraton%20Surakarta/R0012031_mnrxgo.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -54,
+                            "yaw": 2,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 184,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta9",
+                            "targetYaw": 170
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 3,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta11",
+                            "targetYaw": 20
+                        }
+                    ]
+                },
+
+                "surakarta11": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 10,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721111/Keraton%20Surakarta/R0012032_yx7rv5.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 65,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta10",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 325,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta12",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -60,
+                            "yaw": 270,
+                            "cssClass": "censor-hotspot"
+                        }
+                    ]
+                },
+
+                "surakarta12": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721104/Keraton%20Surakarta/R0012034_ufekoh.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 170,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta11",
+                            "targetYaw": 20
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 350,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta13",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -57,
+                            "yaw": 348,
+                            "cssClass": "censor-hotspot"
+                        }
+                    ]
+                },
+
+                "surakarta13": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721109/Keraton%20Surakarta/R0012035_lxji1m.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -57,
+                            "yaw": 12,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -4,
+                            "yaw": 200,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta12",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 340,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta14",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 275,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta34",
+                            "targetYaw": 140
+                        }
+                    ]
+                },
+
+                "surakarta14": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721109/Keraton%20Surakarta/R0012036_fb7ft0.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 175,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta13",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta15",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -57,
+                            "yaw": 355,
+                            "cssClass": "censor-hotspot"
+                        }
+                    ]
+                },
+
+                "surakarta15": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721111/Keraton%20Surakarta/R0012037_xv45wi.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -57,
+                            "yaw": 350,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 170,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta14",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 350,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta16",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+                
+                "surakarta16": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721117/Keraton%20Surakarta/R0012038_qweomw.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -4,
+                            "yaw": 165,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta15",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 345,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta17",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -57,
+                            "yaw": 345,
+                            "cssClass": "censor-hotspot"
+                        }
+                    ]
+                },
+
+                "surakarta17": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721112/Keraton%20Surakarta/R0012039_lseq4a.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -4,
+                            "yaw": 125,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta16",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 20,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta18",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -55,
+                            "yaw": 355,
+                            "cssClass": "censor-hotspot"
+                        }
+                    ]
+                },
+
+                "surakarta18": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721120/Keraton%20Surakarta/R0012043_qzlfdv.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 175,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta17",
+                            "targetYaw": 70
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta19",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -62,
+                            "yaw": 358,
+                            "cssClass": "censor-hotspot"
+                        }
+                    ]
+                },
+
+                "surakarta19": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721118/Keraton%20Surakarta/R0012044_dgsemu.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 175,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta18",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -58,
+                            "yaw": 355,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta20",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "surakarta20": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721123/Keraton%20Surakarta/R0012045_r7joct.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 170,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta19",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -58,
+                            "yaw": 355,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -1,
+                            "yaw": 353,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta21",
+                            "targetYaw": 30
+                        }
+                    ]
+                },
+
+                "surakarta21": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721123/Keraton%20Surakarta/R0012046_r5ppiz.jpg",
+                    "hotSpots": [
+                    {
+                            "pitch": -3,
+                            "yaw": 85,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta20",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -63,
+                            "yaw": 310,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 340,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta22",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "surakarta22": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721124/Keraton%20Surakarta/R0012047_eewwvj.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 164,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta21",
+                            "targetYaw": 30
+                        },
+                        {
+                            "pitch": -63,
+                            "yaw": 340,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -1,
+                            "yaw": 350,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta23",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "surakarta23": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721134/Keraton%20Surakarta/R0012048_wo2shq.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 164,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta22",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -63,
+                            "yaw": 350,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -1,
+                            "yaw": 350,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta24",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "surakarta24": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721129/Keraton%20Surakarta/R0012051_k441qo.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 155,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta23",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -60,
+                            "yaw": 335,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -1,
+                            "yaw": 340,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta25",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "surakarta25": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721131/Keraton%20Surakarta/R0012052_aiasg7.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta24",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -63,
+                            "yaw": 351,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 350,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta6",
+                            "targetYaw": 150
+                        }
+                    ]
+                },
+
+                "surakarta26": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721080/Keraton%20Surakarta/R0012060_hqayw2.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 360,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Area Keraton Surakarta",
+                            "sceneId": "surakarta1",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton Surakarta",
+                            "sceneId": "surakarta27",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "surakarta27": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721082/Keraton%20Surakarta/R0012058_wfur9q.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton Surakarta",
+                            "sceneId": "surakarta26",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Alun-alun Utara Kasunanan Surakarta",
+                            "sceneId": "surakarta28",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "surakarta28": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721070/Keraton%20Surakarta/R0012056_d26mgn.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Area Keraton Surakarta",
+                            "sceneId": "surakarta27",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Alun-alun Utara Kasunanan Surakarta",
+                            "sceneId": "surakarta29",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "surakarta29": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721133/Keraton%20Surakarta/R0012054_ru6h10.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Alun-alun Utara Kasunanan Surakarta",
+                            "sceneId": "surakarta28",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 130,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Masjid Agung Keraton Surakarta",
+                            "sceneId": "surakarta30",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "surakarta30": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721068/Keraton%20Surakarta/R0012064_jogmnx.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 3,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Memasuki Halaman Masjid Agung Keraton Surakarta",
+                            "sceneId": "surakarta31",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Area Alun-alun Utara Kasunanan Surakarta",
+                            "sceneId": "surakarta29",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "surakarta31": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721075/Keraton%20Surakarta/R0012065_v4kotl.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -4,
+                            "yaw": 100,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Agung Keraton Surakarta",
+                            "sceneId": "surakarta32",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 260,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Agung Keraton Surakarta",
+                            "sceneId": "surakarta33",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 182,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Meninggalkan Halaman Masjid Agung Keraton Surakarta",
+                            "sceneId": "surakarta30",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "surakarta32": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721077/Keraton%20Surakarta/R0012066_wcdqri.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 320,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Agung Keraton Surakarta",
+                            "sceneId": "surakarta31",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "surakarta33": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721086/Keraton%20Surakarta/R0012067_xrhxwg.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Agung Keraton Surakarta",
+                            "sceneId": "surakarta31",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "surakarta34": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721068/Keraton%20Surakarta/R0012063_tvyb2v.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 342,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta13",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -7,
+                            "yaw": 160,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta35",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "surakarta35": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721059/Keraton%20Surakarta/R0012061_wljhu7.jpg",
+                    "hotSpots": [
+                    {
+                            "pitch": -3,
+                            "yaw": 310,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Keraton Surakarta",
+                            "sceneId": "surakarta34",
+                            "targetYaw": 340
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 176,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Alun-alun Selatan Kasunanan Surakarta",
+                            "sceneId": "surakarta36",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "surakarta36": {
+                    "title": "Area Keraton Surakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721064/Keraton%20Surakarta/R0012062_qd9ytz.jpg",
+                    "hotSpots":[
+                        {
+                            "pitch": -3,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Area Keraton Surakarta",
+                            "sceneId": "surakarta35",
+                            "targetYaw": 0
+                        }
+                    ]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

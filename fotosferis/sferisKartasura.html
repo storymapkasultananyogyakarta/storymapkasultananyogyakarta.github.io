@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .censor-hotspot {
+        height: 100px;
+        width: 200px;
+        background-position: center;
+        background-size: cover;
+        background-color: blanchedalmond;
+    }
+    </style>
+</head>
+<body>
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "kartasura1",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "compass": false
+            },
+
+            "scenes": {
+                "kartasura1": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 330,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622720992/Keraton%20Kartasura/R0012009_x6paxs.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -15,
+                            "yaw": 290,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura2",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 100,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura4",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "kartasura2": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622720987/Keraton%20Kartasura/R0012008_uxoxtb.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -15,
+                            "yaw": 100,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura1",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 358,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Masjid Hastana Karaton Kartasura",
+                            "sceneId": "kartasura3",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 270,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura7",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "kartasura3": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622720999/Keraton%20Kartasura/R0012007_grkmmt.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Bekas Benteng Kartasura",
+                            "sceneId": "kartasura2",
+                            "targetYaw": 270
+                        }
+                    ]
+                },
+
+                "kartasura4": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622720995/Keraton%20Kartasura/R0012010_d0ryax.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 282,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Bekas Benteng Kartasura",
+                            "sceneId": "kartasura1",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 30,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Bekas Benteng Kartasura",
+                            "sceneId": "kartasura5",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -60,
+                            "yaw": 68,
+                            "cssClass": "censor-hotspot",
+                        }
+                    ] 
+                },
+
+                "kartasura5": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622720993/Keraton%20Kartasura/R0012011_ovuktn.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 175,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Bekas Benteng Kartasura",
+                            "sceneId": "kartasura4",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -60,
+                            "yaw": 348,
+                            "cssClass": "censor-hotspot",
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Bekas Benteng Kartasura",
+                            "sceneId": "kartasura6",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "kartasura6": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721013/Keraton%20Kartasura/R0012012_woqwme.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 165,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Bekas Benteng Kartasura",
+                            "sceneId": "kartasura5",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -60,
+                            "yaw": 344,
+                            "cssClass": "censor-hotspot",
+                        }
+                    ]
+                },
+
+                "kartasura7": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622720986/Keraton%20Kartasura/R0012021_hhkhdk.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura2",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 182,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura8",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -58,
+                            "yaw": 0,
+                            "cssClass": "censor-hotspot",
+                        }
+                    ]
+                },
+
+                "kartasura8": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721008/Keraton%20Kartasura/R0012019_j7ssai.jpg",
+                    "hotSpots":[
+                        {
+                            "pitch": -5,
+                            "yaw": 358,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura7",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 178,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura9",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -58,
+                            "yaw": 356,
+                            "cssClass": "censor-hotspot",
+                        }
+                    ]
+                },
+
+                "kartasura9": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721005/Keraton%20Kartasura/R0012018_seueoj.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -58,
+                            "yaw": 356,
+                            "cssClass": "censor-hotspot",
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura8",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura10",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "kartasura10": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721014/Keraton%20Kartasura/R0012017_br9m0e.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 7,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura9",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -58,
+                            "yaw": 5,
+                            "cssClass": "censor-hotspot",
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 188,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura11",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "kartasura11": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721005/Keraton%20Kartasura/R0012016_ldqwpt.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -58,
+                            "yaw": 7,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -15,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura10",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 183,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura12",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "kartasura12": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622721015/Keraton%20Kartasura/R0012015_gnbf9c.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -60,
+                            "yaw": 355,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura11",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 175,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura13",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "kartasura13": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622720999/Keraton%20Kartasura/R0012014_syhjeo.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 359,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura12",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -60,
+                            "yaw": 0,
+                            "cssClass": "censor-hotspot"
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura14",
+                            "targetYaw": 330
+                        }
+                    ]
+                },
+
+                "kartasura14": {
+                    "title": "Bekas Benteng Keraton Kartasura",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622720993/Keraton%20Kartasura/R0012013_lbgf7v.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 358,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Kartasura",
+                            "sceneId": "kartasura13",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -60,
+                            "yaw": 0,
+                            "cssClass": "censor-hotspot"
+                        }
+                    ]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

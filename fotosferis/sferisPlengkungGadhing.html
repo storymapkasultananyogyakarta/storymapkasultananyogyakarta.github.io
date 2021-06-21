@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "gadhing1",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "compass": false
+            },
+            
+            "scenes": {
+                "gadhing1": {
+                    "title": "Plengkung Gadhing",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256664/Benteng%20Keraton%20Jogja/R0011739_pcejpv.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 15,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing2"
+                        }
+                    ]
+                },
+
+                "gadhing2": {
+                    "title": "Plengkung Gadhing",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256584/Benteng%20Keraton%20Jogja/R0011740_jqk1yh.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 205,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing1"
+                        },
+                        {
+                            "pitch": -6,
+                            "yaw": 60,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing3"
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 10,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Bagian Dalam Plengkung Gadhing",
+                            "sceneId": "gadhing5"
+                        }
+                    ]
+                },
+
+                "gadhing3": {
+                    "title": "Plengkung Gadhing",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256566/Benteng%20Keraton%20Jogja/R0011741_iayikw.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 358,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Bagian Dalam Plengkung Gadhing",
+                            "sceneId": "gadhing6"
+                        },
+                        {
+                            "pitch": -6,
+                            "yaw": 300,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing2"
+                        },
+                        {
+                            "pitch": -12,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing4"
+                        }
+                    ]
+                },
+
+                "gadhing4": {
+                    "title": "Plengkung Gadhing",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256756/Benteng%20Keraton%20Jogja/R0011742_m7fgcc.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -12,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing3"
+                        }
+                    ]
+                },
+
+                "gadhing5": {
+                    "title": "Plengkung Gadhing",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 10,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256682/Benteng%20Keraton%20Jogja/R0011747_yllcuw.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 57,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Bagian Luar Plengkung Gadhing",
+                            "sceneId": "gadhing2",
+                            "targetYaw": 205
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 120,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing6"
+                        },
+                        {
+                            "pitch": 9,
+                            "yaw": 352,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing7"
+                        }
+                    ]
+                },
+
+                "gadhing6": {
+                    "title": "Plengkung Gadhing",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 330,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256724/Benteng%20Keraton%20Jogja/R0011746_njifgt.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -7,
+                            "yaw": 230,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing5"
+                        },
+                        {
+                            "pitch": -6,
+                            "yaw": 290,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Bagian Luar Plengkung Gadhing",
+                            "sceneId": "gadhing3",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": 10,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing9"
+                        }
+                    ]
+                },
+
+                "gadhing7": {
+                    "title": "Plengkung Gadhing",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256626/Benteng%20Keraton%20Jogja/R0011744_lveopk.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -35,
+                            "yaw": 215,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing5"
+                        },
+                        {
+                            "pitch": -1,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing8"
+                        }
+                    ]
+                },
+
+                "gadhing8": {
+                    "title": "Plengkung Gadhing",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256656/Benteng%20Keraton%20Jogja/R0011743_gfccr8.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -14,
+                            "yaw": 260,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing7"
+                        },
+                        {
+                            "pitch": -15,
+                            "yaw": 105,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing9"
+                        }
+                    ]
+                },
+
+                "gadhing9": {
+                    "title": "Plengkung Gadhing",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256678/Benteng%20Keraton%20Jogja/R0011745_szubft.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 270,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing8"
+                        },
+                        {
+                            "pitch": -25,
+                            "yaw": 135,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Plengkung Gadhing",
+                            "sceneId": "gadhing6"
+                        }
+                    ]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

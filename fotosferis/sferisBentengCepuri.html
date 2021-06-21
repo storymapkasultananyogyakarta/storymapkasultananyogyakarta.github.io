@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+    </head>
+    <body>
+
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "cepuri1",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "compass": false,
+            },
+
+            "scenes": {
+                "cepuri1": {
+                    "title": "Situs Benteng Cepuri Utara",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620620553/Benteng%20Cepuri/R0011708_tczcng.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Utara",
+                            "sceneId": "cepuri2",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 288,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Situs Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri3",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "cepuri2": {
+                    "title": "Situs Benteng Cepuri Utara",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620620555/Benteng%20Cepuri/R0011709_egzfjm.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Jalan Masjid Besar",
+                            "sceneId": "cepuri1",
+                            "targetYaw": 288
+                        }
+                    ]
+                },
+
+                "cepuri3": {
+                    "title": "Situs Benteng Cepuri Selatan",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620620522/Benteng%20Cepuri/R0011702_gimlob.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -4,
+                            "yaw": 100,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Benteng Cepuri Bagian Utara",
+                            "sceneId": "cepuri1",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 10,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri4",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 190,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri9",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "cepuri4":{
+                    "title": "Situs Benteng Cepuri Selatan",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620620526/Benteng%20Cepuri/R0011701_kezhce.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -15,
+                            "yaw": 13,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri3",
+                            "targetYaw": 100
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 195,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri5",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "cepuri5": {
+                    "title": "Situs Benteng Cepuri Selatan",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620620529/Benteng%20Cepuri/R0011700_heo6ob.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 195,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri4",
+                            "targetYaw": 13
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri6",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "cepuri6": {
+                    "title": "Situs Benteng Cepuri Selatan",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620620544/Benteng%20Cepuri/R0011699_gdinjf.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 165,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri5",
+                            "targetYaw": 195
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 338,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri7",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "cepuri7": {
+                    "title": "Situs Benteng Cepuri Selatan",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620620537/Benteng%20Cepuri/R0011698_cadufr.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -1,
+                            "yaw": 70,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri6",
+                            "targetYaw": 165
+                        },
+                        {
+                            "pitch": 2,
+                            "yaw": 275,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri8",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "cepuri8": {
+                    "title": "Situs Benteng Cepuri Selatan",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620620545/Benteng%20Cepuri/R0011695_hmwlkx.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 175,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri7",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "cepuri9": {
+                    "title": "Situs Benteng Cepuri Selatan",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620620551/Benteng%20Cepuri/R0011704_srteus.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri3",
+                            "targetYaw": 100
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 178,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri10",
+                            "targetYaw": 50
+                        }
+                    ]
+                },
+
+                "cepuri10": {
+                    "title": "Situs Benteng Cepuri Selatan",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620620563/Benteng%20Cepuri/R0011703_qiwmde.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 303,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Benteng Cepuri Bagian Selatan",
+                            "sceneId": "cepuri9",
+                            "targetYaw": 0
+                        }
+                    ]
+                }
+            }
+        });
+    </script>
+    </body>
+    </html>

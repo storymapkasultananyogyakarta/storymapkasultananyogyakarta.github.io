@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .censor-hotspot {
+        height: 100px;
+        width: 200px;
+        background-position: center;
+        background-size: cover;
+        background-color: blanchedalmond;
+    }
+    </style>
+</head>
+<body>
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "tuguPalPutih1",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "compass": false
+            },
+
+            "scenes": {
+                "tuguPalPutih1": {
+                    "title": "Tugu Pal Putih",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623394246/Tugu%20Pal%20Putih%20dan%20Monumen%20Tugu%20Golong%20Gilig/R0011763_fwlkmu.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 320,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Tugu Pal Putih",
+                            "sceneId": "tuguPalPutih2",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 35,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Tugu Pal Putih",
+                            "sceneId": "tuguPalPutih4",
+                            "targetYaw": 350
+                        },
+                        {
+                            "pitch": -35,
+                            "yaw": 220,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Tugu Golong Gilig",
+                            "sceneId": "tuguGolongGilig1",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+                
+                "tuguPalPutih2": {
+                    "title": "Tugu Pal Putih",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623394515/Tugu%20Pal%20Putih%20dan%20Monumen%20Tugu%20Golong%20Gilig/R0011766_v7utc0.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 43,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Tugu Pal Putih",
+                            "sceneId": "tuguPalPutih1",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 325,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Tugu Pal Putih",
+                            "sceneId": "tuguPalPutih3",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "tuguPalPutih3": {
+                    "title": "Tugu Pal Putih",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623394265/Tugu%20Pal%20Putih%20dan%20Monumen%20Tugu%20Golong%20Gilig/R0011767_wfzynu.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 56,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Tugu Pal Putih",
+                            "sceneId": "tuguPalPutih2",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 325,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Tugu Pal Putih",
+                            "sceneId": "tuguPalPutih4",
+                            "targetYaw": 350
+                        }
+                    ]
+                },
+
+                "tuguPalPutih4": {
+                    "title": "Tugu Pal Putih",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623394277/Tugu%20Pal%20Putih%20dan%20Monumen%20Tugu%20Golong%20Gilig/R0011768_ph1qa9.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 45,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Tugu Pal Putih",
+                            "sceneId": "tuguPalPutih3",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 300,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Tugu Pal Putih",
+                            "sceneId": "tuguPalPutih1",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "tuguGolongGilig1": {
+                    "title": "Tugu Golong Gilig",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623394276/Tugu%20Pal%20Putih%20dan%20Monumen%20Tugu%20Golong%20Gilig/R0011765_cfursb.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -30,
+                            "yaw": 210,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Tugu Pal Putih",
+                            "sceneId": "tuguPalPutih1",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 2,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Tugu Golong Gilig",
+                            "sceneId": "tuguGolongGilig2",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "tuguGolongGilig2": {
+                    "title": "Tugu Golong Gilig",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623394282/Tugu%20Pal%20Putih%20dan%20Monumen%20Tugu%20Golong%20Gilig/R0011764_mrvjbc.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 215,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Tugu Golong Gilig",
+                            "sceneId": "tuguGolongGilig1",
+                            "targetYaw": 180
+                        }
+                    ]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

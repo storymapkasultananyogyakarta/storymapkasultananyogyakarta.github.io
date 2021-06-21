@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "gerbangAltar",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "compass": false
+            },
+
+            "scenes": {
+                "pintuAltar": {
+                    "title": "Area Alun-alun Utara",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621428855/Pagelaran%20Keraton/R0011755_vxwshd.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 2,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "gerbangAltar",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "gerbangAltar": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 180,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425096/Pagelaran%20Keraton/R0011844_jxo4ob.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "pintuAltar",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 182,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Bangsal Pagelaran Keraton",
+                            "sceneId": "pagelaran1",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+                
+                "pagelaran1": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425104/Pagelaran%20Keraton/R0011842_njb9ch.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 358,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Halaman Pagelaran Keraton",
+                            "sceneId": "gerbangAltar",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 80,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran2",
+                            "targetYaw": 40
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 220,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran16",
+                            "targetYaw": 280
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 178,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Pagelaran Keraton merupakan area paling depan yang digunakan sebagai tempat para Abdi Dalem menghadap Sultan ketika upacara-upacara kerajaan."
+                        }
+                    ]
+                },
+
+                "pagelaran2": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425092/Pagelaran%20Keraton/R0011841_bkt3s6.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -6,
+                            "yaw": 175,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran1",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 358,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Halaman Pagelaran Keraton",
+                            "sceneId": "halaman1",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -7,
+                            "yaw": 80,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran3",
+                            "targetYaw": 70
+                        }
+                    ]
+                },
+
+                "halaman1": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425078/Pagelaran%20Keraton/R0011843_yy5umv.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 170,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Area Pagelaran Keraton",
+                            "sceneId": "pagelaran2",
+                            "targetYaw": 175
+                        }
+                    ] 
+                },
+
+                "pagelaran3": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425234/Pagelaran%20Keraton/R0011840_sczqhj.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 260,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran2",
+                            "targetYaw": 175
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 95,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran4",
+                            "targetYaw": 50
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 5,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Pasewakan/Pengapit dahulu digunakan para panglima kerajaan untuk menerima perintah dari Sultan atau menunggu giliran melapor kepada Sultan. Bangsal ini juga digunakan sebagai tempat jaga Bupati Anom Jaba."
+                        }
+                    ]
+                },
+
+                "pagelaran4": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425224/Pagelaran%20Keraton/R0011839_aznmi9.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 215,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran3",
+                            "targetYaw": 260
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 85,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran5",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 150,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Pengrawit digunakan oleh Sultan untuk melantik Pepatih Dalem."
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Relief perjuangan Sultan HB I dan Sultan HB IX."
+                        }
+                    ]
+                },
+
+                "pagelaran5": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425163/Pagelaran%20Keraton/R0011821_dslezq.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -20,
+                            "yaw": 175,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran4",
+                            "targetYaw": 215
+                        },
+                        {
+                            "pitch": 3,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran6",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "pagelaran6": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425209/Pagelaran%20Keraton/R0011837_pa10g1.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -7,
+                            "yaw": 175,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran5",
+                            "targetYaw": 175
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 50,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran7",
+                            "targetYaw": 80
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 220,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran15",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -30,
+                            "yaw": 3,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Sitihinggil merupakan tanah yang ditinggikan karena memiliki fungsi filosofis penting sebagai tempat kedudukan Sultan saat memimpin upacara kerajaan."
+                        }
+                    ]
+                },
+
+                "pagelaran7": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425133/Pagelaran%20Keraton/R0011823_gkviqe.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -7,
+                            "yaw": 310,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran6",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran8",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Manguntur Tangkil adalah tempat Sultan duduk di atas singgasananya pada saat acara-acara resmi kerajaan."
+                        }
+                    ]
+                },
+
+                "pagelaran8": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425165/Pagelaran%20Keraton/R0011829_h0a6oy.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 135,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran7",
+                            "targetYaw": 310
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 70,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran9",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -12,
+                            "yaw": 270,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran10",
+                            "targetYaw": 358
+                        }
+                    ]
+                },
+
+                "pagelaran9": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425159/Pagelaran%20Keraton/R0011824_xiqvgx.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -20,
+                            "yaw": 135,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran8",
+                            "targetYaw": 280
+                        },
+                        {
+                            "pitch": 5,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bale Angun-angun merupakan tempat yang digunakan untuk menyimpan tombak."
+                        }
+                    ]
+                },
+
+                "pagelaran10": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425210/Pagelaran%20Keraton/R0011830_gng9e0.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran8",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": 2,
+                            "yaw": 260,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran12",
+                            "targetYaw": 260
+                        },
+                        {
+                            "pitch": -15,
+                            "yaw": 354,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran11",
+                            "targetYaw": 358
+                        }
+                    ]
+                },
+
+                "pagelaran11": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425184/Pagelaran%20Keraton/R0011831_m6wzny.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 178,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran10",
+                            "targetYaw": 260
+                        },
+                        {
+                            "pitch": 5,
+                            "yaw": 358,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Regol Brajanala adalah penghubung Plataran Sitihinggil Lor dengan Plataran Kamandungan Lor."
+                        }
+                    ]
+                },
+
+                "pagelaran12": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425184/Pagelaran%20Keraton/R0011832_vb0brw.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -15,
+                            "yaw": 80,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran10",
+                            "targetYaw": 80
+                        },
+                        {
+                            "pitch": -6,
+                            "yaw": 263,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran13",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -7,
+                            "yaw": 235,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran14",
+                            "targetYaw": 90
+                        }
+                    ]
+                },
+
+                "pagelaran13": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425208/Pagelaran%20Keraton/R0011835_hfgq1h.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -7,
+                            "yaw": 115,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran12",
+                            "targetYaw": 80
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 235,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran14",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 359,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bale Bang adalah tempat yang digunakan untuk menyimpan perangkat Gamelan Sekati."
+                        }
+                    ]
+                },
+
+                "pagelaran14": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425199/Pagelaran%20Keraton/R0011836_zkki7u.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 265,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran12",
+                            "targetYaw": 80
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 235,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran13",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 50,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran6",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 310,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Witana merupakan bangsal yang digunakan untuk meletakkan lambang-lambang kerajaan atau pusaka kerajaan pada saat acara resmi kerajaan."
+                        }
+                    ]
+                },
+
+                "pagelaran15": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425235/Pagelaran%20Keraton/R0011838_cgkes3.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 175,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran6",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": 5,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Kori pada zaman dahulu digunakan Abdi Dalem Kori dan Abdi Dalem Jaksa untuk menyampaikan permohonan maupun pengaduan rakyat kepada Sultan."
+                        }
+                    ]
+                },
+
+                "pagelaran16": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425139/Pagelaran%20Keraton/R0011819_qd3p2r.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 130,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran1",
+                            "targetYaw": 358
+                        },
+                        {
+                            "pitch": -4,
+                            "yaw": 270,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran17",
+                            "targetYaw": 300
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 345,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Pasewakan/Pengapit dahulu digunakan para panglima kerajaan untuk menerima perintah dari Sultan atau menunggu giliran melapor kepada Sultan. Bangsal ini juga digunakan sebagai tempat jaga Bupati Anom Jaba."
+                        }
+                    ]
+                },
+
+                "pagelaran17": {
+                    "title": "Pagelaran Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425122/Pagelaran%20Keraton/R0011820_orslvr.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 165,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran16",
+                            "targetYaw": 120
+                        },
+                        {
+                            "pitch": -4,
+                            "yaw": 275,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Pagelaran Keraton",
+                            "sceneId": "pagelaran5",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Relief perjuangan Sultan HB I dan Sultan HB IX."
+                        }
+                    ]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "pasar1",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "compass": false
+            },
+
+            "scenes": {
+                "pasar1": {
+                    "title": "Pasar Legi Kotagede",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622104654/Pasar%20Legi%20Kotagede/R0011693_qlkdsa.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 80,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "pasar2"
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 265,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "pasar3"
+                        }
+                    ]
+                },
+
+                "pasar2": {
+                    "title": "Pasar Legi Kotagede",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 260,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622104667/Pasar%20Legi%20Kotagede/R0011694_zde9gc.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 198,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "pasar1"
+                        }
+                    ]
+                },
+
+                "pasar3": {
+                    "title": "Pasar Legi Kotagede",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1622136629/Pasar%20Legi%20Kotagede/R0011692_broh1h.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 35,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "pasar1"
+                        }
+                    ]
+                }
+            }
+        })
+</script>
+</body>
+</html>

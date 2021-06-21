@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+    
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "kerta1",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "compass": false
+            },
+
+            "scenes": {
+                "kerta1": {
+                    "title": "Situs Kerta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621235081/Situs%20Kerta/R0011684_whs45m.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -6,
+                            "yaw": 360,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta2"
+                        }
+                    ]
+                },
+
+                "kerta2": {
+                    "title": "Situs Kerta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621235185/Situs%20Kerta/R0011685_r5idck.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -6,
+                            "yaw": 195,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta1",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -13,
+                            "yaw": 10,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta3"
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 294,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta7"
+                        }
+                    ]
+                },
+
+                "kerta3": {
+                    "title": "Situs Kerta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621235076/Situs%20Kerta/R0011686_juz6kg.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta2",
+                            "targetYaw": 195
+                        },
+                        {
+                            "pitch": -7,
+                            "yaw": 18,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta4"
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 95,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta8",
+                            "targetYaw": 80
+                        }
+                    ]
+                },
+
+                "kerta4": {
+                    "title": "Situs Kerta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621235073/Situs%20Kerta/R0011687_b1kxmg.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -13,
+                            "yaw": 198,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta3",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 345,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta5"
+                        }
+                    ]
+                },
+                
+                "kerta5": {
+                    "title": "Situs Kerta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621235074/Situs%20Kerta/R0011688_gmfhvd.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -7,
+                            "yaw": 145,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta4",
+                            "targetYaw": 198
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 35,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta6"
+                        }
+                    ]
+                },
+
+                "kerta6": {
+                    "title": "Situs Kerta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621235080/Situs%20Kerta/R0011689_w997ex.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 340,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta5",
+                            "targetYaw": 145
+                        }
+                    ]
+                },
+
+                "kerta7": {
+                    "title": "Situs Kerta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621235074/Situs%20Kerta/R0011690_unuri8.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 110,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta2",
+                            "targetYaw": 114
+                        }
+                    ]
+                },
+
+                "kerta8": {
+                    "title": "Situs Kerta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621235074/Situs%20Kerta/R0011691_u380j9.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 250,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Situs Kerta",
+                            "sceneId": "kerta3",
+                            "targetYaw": 275
+                        }
+                    ]
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

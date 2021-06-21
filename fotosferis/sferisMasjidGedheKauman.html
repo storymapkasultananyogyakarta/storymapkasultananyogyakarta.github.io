@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "masjid1",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "compass": false
+            },
+            
+            "scenes": {
+                "masjid1": {
+                    "title": "Masjid Gedhe Kauman",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623493566/Masjid%20Gedhe%20Kauman/R0011809_h8pkxk.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 359,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Memasuki Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid2",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "masjid2": {
+                    "title": "Masjid Gedhe Kauman",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623493589/Masjid%20Gedhe%20Kauman/R0011810_xbmgsv.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 181,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Meninggalkan Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid1",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 97,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid3",
+                            "targetYaw": 260
+                        },
+                        {
+                            "pitch": -4,
+                            "yaw": 260,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid4",
+                            "targetYaw": 90
+                        }
+                    ]
+                },
+
+                "masjid3": {
+                    "title": "Masjid Gedhe Kauman",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623493551/Masjid%20Gedhe%20Kauman/R0011811_dqqrkd.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid2",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 235,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid5",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "masjid4": {
+                    "title": "Masjid Gedhe Kauman",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623493522/Masjid%20Gedhe%20Kauman/R0011816_bjmwix.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 270,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid2",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 115,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid6",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "masjid5": {
+                    "title": "Masjid Gedhe Kauman",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623493542/Masjid%20Gedhe%20Kauman/R0011812_kofazw.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 70,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid3",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid7",
+                            "targetYaw": 270
+                        }
+                    ]
+                },
+
+                "masjid6": {
+                    "title": "Masjid Gedhe Kauman",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623493550/Masjid%20Gedhe%20Kauman/R0011817_ajo8ya.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -6,
+                            "yaw": 290,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid4",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -6,
+                            "yaw": 190,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid8",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "masjid7": {
+                    "title": "Masjid Gedhe Kauman",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623493519/Masjid%20Gedhe%20Kauman/R0011813_wrsgw8.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -6,
+                            "yaw": 80,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid5",
+                            "targetYaw": 80
+                        },
+                        {
+                            "pitch": -4,
+                            "yaw": 308,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid9",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "masjid8": {
+                    "title": "Masjid Gedhe Kauman",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623493530/Masjid%20Gedhe%20Kauman/R0011818_jtj8uq.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 286,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid6",
+                            "targetYaw": 270
+                        }
+                    ]
+                },
+
+                "masjid9": {
+                    "title": "Masjid Gedhe Kauman",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623493517/Masjid%20Gedhe%20Kauman/R0011814_f8adjg.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 115,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid7",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 13,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid10",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "masjid10": {
+                    "title": "Masjid Gedhe Kauman",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama":"https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1623493525/Masjid%20Gedhe%20Kauman/R0011815_oqqyeq.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 150,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Masjid Gedhe Kauman",
+                            "sceneId": "masjid9",
+                            "targetYaw": 90
+                        }
+                    ]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

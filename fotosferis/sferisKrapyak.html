@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "krapyak1",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 500,
+                "autoLoad": true,
+                "compass": false
+            },
+
+            "scenes": {
+                "krapyak1": {
+                    "title": "Panggung Krapyak",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620619676/Panggung%20Krapyak/R0011731_o7m3jg.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 315,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "krapyak2"
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 40,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "krapyak4"
+                        }
+                    ]
+                },
+
+                "krapyak2": {
+                    "title": "Panggung Krapyak",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620619674/Panggung%20Krapyak/R0011733_bdawov.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 50,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "krapyak1"
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 318,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "krapyak3"
+                        }
+                    ]
+                },
+
+                "krapyak3": {
+                    "title": "Panggung Krapyak",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620619672/Panggung%20Krapyak/R0011734_hvwagj.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 55,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "krapyak2"
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 315,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "krapyak4"
+                        }
+                    ]
+                },
+
+                "krapyak4": {
+                    "title": "Panggung Krapyak",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620619670/Panggung%20Krapyak/R0011735_a3mn5h.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -2,
+                            "yaw": 55,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "krapyak3"
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 320,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi",
+                            "sceneId": "krapyak1"
+                        }
+                    ]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

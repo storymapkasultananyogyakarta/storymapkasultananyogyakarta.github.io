@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    .sensor-hotspot {
+        height: 120px;
+        width: 120px;
+        background-color: antiquewhite;
+        position: fixed;
+    }
+    </style>
+</head>
+<body>
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "halamanKeraton1",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 1000,
+                "autoLoad": true,
+                "compass": false
+            },
+            
+            "scenes": {
+                "halamanKeraton1": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425153/Keraton%20Yogyakarta/R0011799_j5qyus.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 359,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Memasuki Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton2",
+                            "targetYaw": 180
+                        }
+                    ]
+                },
+
+                "halamanKeraton2": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425157/Keraton%20Yogyakarta/R0011798_oqs7a1.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Meninggalkan Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton1",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -6,
+                            "yaw": 220,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton3",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "halamanKeraton3": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425076/Keraton%20Yogyakarta/R0011796_nynaof.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -6,
+                            "yaw": 210,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Meninggalkan Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton2",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -4,
+                            "yaw": 32,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton4",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -4,
+                            "yaw": 320,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton5",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 350,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Pancaniti terletak di Plataran Kamandungan Lor atau Plataran Keben. Disebut Plataran Keben karena terdapat beberapa pohon besar bernama pohon keben."
+                        }
+                    ]
+                },
+
+                "halamanKeraton4": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425119/Keraton%20Yogyakarta/R0011795_aymbf5.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 113,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton3",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 247,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton6",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 3,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Memasuki Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton1",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": 15,
+                            "yaw": 3,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Regol Srimanganti merupakan penghubung antara Plataran Kamandungan Lor ke Plataran Srimanganti."
+                        }
+                    ]
+                },
+
+                "halamanKeraton5": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425058/Keraton%20Yogyakarta/R0011792_oxy1rx.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 250,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton3",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 125,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton6",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": 5,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Regol Brajanala adalah penghubung Plataran Sitihinggil Lor dengan Plataran Kamandungan Lor."
+                        }
+                    ]
+                },
+
+                "halamanKeraton6": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425103/Keraton%20Yogyakarta/R0011793_p2ikum.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 28,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton5",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 319,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton4",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 136,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton7",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "halamanKeraton7": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425096/Keraton%20Yogyakarta/R0011794_lxreyj.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 140,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton6",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "areaKeraton1": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425294/Keraton%20Yogyakarta/R0011864_wibiwb.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 165,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Menuju Halaman Wisata Keraton Yogyakarta",
+                            "sceneId": "halamanKeraton4",
+                            "targetYaw": 113
+                        },
+                        {
+                            "pitch": -14,
+                            "yaw": 0,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton2",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 90,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Srimanganti berfungsi untuk menampilkan kesenian budaya Keraton Yogyakarta dan digunakan pula sebagai tempat Sultan menjamu para tamu."
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 265,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Trajumas pada saat ini digunakan untuk menyimpan beberapa benda pusaka milik Keraton Yogyakarta."
+                        }
+                    ]
+                },
+
+                "areaKeraton2": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425324/Keraton%20Yogyakarta/R0011866_b9lsqs.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -15,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton1",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 268,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton3",
+                            "targetYaw": 250
+                        },
+                        {
+                            "pitch": -15,
+                            "yaw": 358,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton4",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": 20,
+                            "yaw": 357,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Regol Danapratapa adalah penghubung antara Plataran Srimanganti dengan Plataran Kedhaton."
+                        }
+                    ]
+                },
+
+                "areaKeraton3": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425318/Keraton%20Yogyakarta/R0011865_addzva.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 210,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton2",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "areaKeraton4": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425318/Keraton%20Yogyakarta/R0011867_vsrwwu.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -17,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton2",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 3,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton5",
+                            "targetYaw": 200
+                        }
+                    ]
+                },
+
+                "areaKeraton5": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425359/Keraton%20Yogyakarta/R0011868_xm0ocw.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": 0,
+                            "yaw": 25,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton4",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -4,
+                            "yaw": 170,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton6",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 265,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Kencana merupakan bangsal yang digunakan untuk menyelenggarakan upacara-upacara penting."
+                        },
+                        {
+                            "pitch": 15,
+                            "yaw": 165,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Mandalasana merupakan bangsal yang digunakan tempat Abdi Dalem Musikan memainkan ansambel musik diatonis."
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 290,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Prabayeksa adalah bangunan yang digunakan sebagai tempat penyimpanan pusaka-pusaka utama Keraton Yogyakarta."
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 325,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Jene merupakan sebuah bangunan tempat tinggal resmi Sultan yang bertahta."
+                        }
+                    ]
+                },
+
+                "areaKeraton6": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425360/Keraton%20Yogyakarta/R0011869_y1dlpt.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 260,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton5",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 180,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton7",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "areaKeraton7": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425402/Keraton%20Yogyakarta/R0011871_vxvwhi.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 270,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton6",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 8,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton8",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton24",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -7,
+                            "yaw": 223,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton25",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 310,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Gangsa Pelog merupakan bangunan yang digunakan untuk memainkan orkestra gamelan dengan tangga nada pelog."
+                        }
+                    ]
+                },
+
+                "areaKeraton8": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425359/Keraton%20Yogyakarta/R0011875_hlfhr6.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 178.5,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton7",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 243,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton9",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -7,
+                            "yaw": 115,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton11",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 356,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Kasatriyan"
+                        }
+                    ]
+                },
+
+                "areaKeraton9": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425343/Keraton%20Yogyakarta/R0011873_mnm1bw.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 160,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton8",
+                            "targetYaw": 115
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 355,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton10",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "areaKeraton10": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425356/Keraton%20Yogyakarta/R0011874_zlna4v.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 205,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton9",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -7,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Museum Batik Keraton Yogyakarta"
+                        }
+                    ]
+                },
+
+                "areaKeraton11": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425372/Keraton%20Yogyakarta/R0011876_jk1bjm.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -7,
+                            "yaw": 205,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton8",
+                            "targetYaw": 178.5
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 20,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton14",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                // "areaKeraton12": {
+                //     "title": "Wisata Keraton Yogyakarta",
+                //     "hfov": 120,
+                //     "pitch": 0,
+                //     "yaw": 360,
+                //     "type": "equirectangular",
+                //     "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425386/Keraton%20Yogyakarta/R0011877_dnqk7q.jpg",
+                //     "hotSpots": [
+                //         {
+                //             "pitch": -12,
+                //             "yaw": 265,
+                //             "type": "scene",
+                //             "cssClass": "custom-hotspot",
+                //             "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                //             "sceneId": "areaKeraton11",
+                //             "targetYaw": 180
+                //         },
+                //         {
+                //             "pitch": -12,
+                //             "yaw": 90,
+                //             "type": "scene",
+                //             "cssClass": "custom-hotspot",
+                //             "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                //             "sceneId": "areaKeraton13",
+                //             "targetYaw": 0
+                //         }
+                //     ]
+                // },
+
+                // "areaKeraton13": {
+                //     "title": "Wisata Keraton Yogyakarta",
+                //     "hfov": 120,
+                //     "pitch": 0,
+                //     "yaw": 360,
+                //     "type": "equirectangular",
+                //     "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425393/Keraton%20Yogyakarta/R0011878_rfwezo.jpg",
+                //     "hotSpots": [
+                //         {
+                //             "pitch": -12,
+                //             "yaw": 200,
+                //             "type": "scene",
+                //             "cssClass": "custom-hotspot",
+                //             "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                //             "sceneId": "areaKeraton11",
+                //             "targetYaw": 270
+                //         },
+                //         {
+                //             "pitch": -12,
+                //             "yaw": 0,
+                //             "type": "scene",
+                //             "cssClass": "custom-hotspot",
+                //             "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                //             "sceneId": "areaKeraton14",
+                //             "targetYaw": 0
+                //         }
+                //     ]
+                // },
+
+                "areaKeraton14": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425422/Keraton%20Yogyakarta/R0011886_wc6fpx.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -7,
+                            "yaw": 265,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton11",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 285,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton15",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -25,
+                            "yaw": 110,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton18",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 330,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Kaca merupakan Museum Sri Sultan Hamengku Buwono IX"
+                        }
+                    ]
+                },
+
+                "areaKeraton15": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425387/Keraton%20Yogyakarta/R0011880_iz4okh.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 63,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton14",
+                            "targetYaw": 50
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 318,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton16",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 10,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton17",
+                            "targetYaw": 0
+                        }
+                    ]
+                },
+
+                "areaKeraton16": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425404/Keraton%20Yogyakarta/R0011882_zdjtwl.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 47,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton15",
+                            "targetYaw": 90
+                        }
+                    ]
+                },
+
+                "areaKeraton17": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425414/Keraton%20Yogyakarta/R0011881_k8cefu.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 75,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton15",
+                            "targetYaw": 90
+                        }
+                    ]
+                },
+
+                "areaKeraton18": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425433/Keraton%20Yogyakarta/R0011887_pur0mm.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 357,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton14",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 150,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton19",
+                            "targetYaw": 90
+                        }
+                    ] 
+                },
+
+                "areaKeraton19": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425435/Keraton%20Yogyakarta/R0011888_spegz4.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 233,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton18",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton20",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -8,
+                            "yaw": 175,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton23",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 350,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Danartapura adalah bangunan yang digunakan sebagai kantor bendahara."
+                        }
+                    ]
+                },
+
+                "areaKeraton20": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425304/Keraton%20Yogyakarta/R0011889_m0b7ne.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -7,
+                            "yaw": 270,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton19",
+                            "targetYaw": 200
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton21",
+                            "targetYaw": 30
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 3,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Patehan merupakan bangunan yang digunakan untuk menyiapkan minuman teh."
+                        }
+                    ]
+                },
+
+                "areaKeraton21": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425318/Keraton%20Yogyakarta/R0011893_rote8o.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 150,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton20",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -3,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton22",
+                            "targetYaw": 180
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 10,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Manis merupakan bangsal yang digunakan sebagai tempat perjamuan resmi kerajaan."
+                        },
+                        {
+                            "pitch": 0,
+                            "yaw": 253,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Regol Kemagangan merupakan penghubung Plataran Kedhaton ke Plataran Kemagangan"
+                        }
+                    ]
+                },
+
+                "areaKeraton22": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425267/Keraton%20Yogyakarta/R0011897_k4ozdz.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -3,
+                            "yaw": 300,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton21",
+                            "targetYaw": 150
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 210,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton23",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -20,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Kotak Kidul"
+                        }
+                    ]
+                },
+
+                "areaKeraton23": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425301/Keraton%20Yogyakarta/R0011894_mjqwhs.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 230,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton22",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 270,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton24",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton19",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 3,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Sarangbaya adalah tempat yang digunakan untuk menyimpan peralatan makan dan minum."
+                        }
+                    ]
+                },
+
+                "areaKeraton24": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425258/Keraton%20Yogyakarta/R0011895_hqbe33.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -10,
+                            "yaw": 90,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton23",
+                            "targetYaw": 90
+                        },
+                        {
+                            "pitch": -7,
+                            "yaw": 270,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton7",
+                            "targetYaw": 270
+                        },
+                        {
+                            "pitch": -2,
+                            "yaw": 0,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Gedhong Gangsa Slendro merupakan bangunan yang digunakan untuk memainkan orkestra gamelan dengan tangga nada slendro."
+                        }
+                    ]
+                },
+
+                "areaKeraton25": {
+                    "title": "Wisata Keraton Yogyakarta",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621425282/Keraton%20Yogyakarta/R0011898_tlczzd.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -7,
+                            "yaw": 200,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Area Wisata Keraton Yogyakarta",
+                            "sceneId": "areaKeraton7",
+                            "targetYaw": 0
+                        },
+                        {
+                            "pitch": -5,
+                            "yaw": 5,
+                            "type": "info",
+                            "cssClass": "info-hotspot",
+                            "text": "Bangsal Kotak Lor"
+                        }
+                    ]
+                }
+            }
+            
+        })
+</script>
+</body>
+</html>

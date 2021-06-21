@@ -1,0 +1,534 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+<script>
+
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "pintuMasuk",
+        "author": "Ignatius Ivan Rizky Marcelino",
+        "sceneFadeDuration": 500,
+        "autoLoad": true,
+        "compass": false
+    },
+
+    "scenes": {
+        "pintuMasuk": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553831/Komplek%20Masjid%20Kauman%20Kotagede/R0011710_ox0xwz.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -2,
+                    "yaw": 357,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Menuju Halaman Masjid",
+                    "sceneId": "halamanMasjid1"
+                }
+            ]
+        },
+
+        "halamanMasjid1": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553833/Komplek%20Masjid%20Kauman%20Kotagede/R0011711_awxfrb.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 150,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Meninggalkan Masjid",
+                    "sceneId": "pintuMasuk",
+                    "targetYaw": 177
+                },
+                {
+                    "pitch": -15,
+                    "yaw": 340,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Menuju Halaman Utama Masjid",
+                    "sceneId": "halamanMasjidUtama"
+                }
+            ]
+
+        },
+
+        "halamanMasjidUtama": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553806/Komplek%20Masjid%20Kauman%20Kotagede/R0011712_rfnwtg.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 190,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Meninggalkan Halaman Masjid",
+                    "sceneId": "halamanMasjid1",
+                    "targetYaw": 150
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 90,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi Halaman Masjid",
+                    "sceneId": "halamanMasjid2"
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 270,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi Halaman Masjid",
+                    "sceneId": "halamanMasjid4"
+                }
+            ]
+        },
+
+        "halamanMasjid2": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553806/Komplek%20Masjid%20Kauman%20Kotagede/R0011713_ly2yof.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5,
+                    "yaw": 260,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi Halaman Masjid",
+                    "sceneId": "halamanMasjidUtama"
+                },
+                {
+                    "pitch": -3,
+                    "yaw": 355,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi Halaman Masjid",
+                    "sceneId": "halamanMasjid3"
+                }
+            ]
+        },
+
+        "halamanMasjid3": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553818/Komplek%20Masjid%20Kauman%20Kotagede/R0011714_znwnak.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -1,
+                    "yaw": 125,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi Halaman Utama Masjid",
+                    "sceneId": "halamanMasjid2",
+                    "targetYaw": 250
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 280,
+                    "type": "info",
+                    "cssClass": "info-hotspot",
+                    "text": "Sekretariat Masjid Gedhe Mataram"
+                },
+                {
+                    "pitch": 5,
+                    "yaw": 1,
+                    "type": "info",
+                    "cssClass": "info-hotspot",
+                    "text": "Kori Barat Masjid Gedhe Mataram Kotagede"
+                }
+            ]
+        },
+
+        "halamanMasjid4": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 240,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553825/Komplek%20Masjid%20Kauman%20Kotagede/R0011715_vji6c8.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -1,
+                    "yaw": 247,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Menuju Halaman Kedua Masjid",
+                    "sceneId": "halamanKeduaMasjid"
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 70,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi Halaman Masjid",
+                    "sceneId": "halamanMasjidUtama"
+                }
+            ]
+        },
+
+        "halamanKeduaMasjid" : {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 305,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553767/Komplek%20Masjid%20Kauman%20Kotagede/R0011716_ptu7rc.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -1,
+                    "yaw": 178,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Menuju Halaman Utama Masjid",
+                    "sceneId": "halamanMasjid4",
+                    "targetYaw": 70
+                },
+                {
+                    "pitch": -25,
+                    "yaw": 305,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi Halaman Kedua Masjid",
+                    "sceneId": "halamanKeduaMasjid2"
+                }
+            ]
+        },
+
+        "halamanKeduaMasjid2": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553768/Komplek%20Masjid%20Kauman%20Kotagede/R0011717_livwei.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 140,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Meninggalkan Halaman Kedua Masjid",
+                    "sceneId": "halamanKeduaMasjid",
+                    "targetYaw": 178
+                },
+                {
+                    "pitch": -1,
+                    "yaw": 357,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Menuju Halaman Makam Raja-raja Mataram",
+                    "sceneId": "halamanMakam"
+                }
+            ]
+        },
+
+        "halamanMakam": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 290,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553764/Komplek%20Masjid%20Kauman%20Kotagede/R0011718_udlwuj.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -8,
+                    "yaw": 175,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Meninggalkan Halaman Makam",
+                    "sceneId": "halamanKeduaMasjid2",
+                    "targetYaw": 140
+                },
+                {
+                    "pitch": -20,
+                    "yaw": 295,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Menuju Halaman Makam Raja-raja Mataram",
+                    "sceneId": "halamanMakam2"
+                }
+            ]
+        },
+
+        "halamanMakam2": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 350,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553768/Komplek%20Masjid%20Kauman%20Kotagede/R0011719_s7mk7f.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 190,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Meninggalkan Halaman Makam",
+                    "sceneId": "halamanMakam",
+                    "targetYaw": 175
+                },
+                {
+                    "pitch": -3,
+                    "yaw": 350,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi Makam Raja-raja Mataram",
+                    "sceneId": "halamanMakam3"
+                }
+            ]
+        },
+
+        "halamanMakam3": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 358,
+            "type": "equirectangular",
+            "cssClass": "custom-hotspot",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553788/Komplek%20Masjid%20Kauman%20Kotagede/R0011720_lfrgwm.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 185,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi Halaman Makam Raja-raja Mataram",
+                    "sceneId": "halamanMakam2",
+                    "targetYaw": 190
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 358,
+                    "type": "info",
+                    "cssClass": "info-hotspot",
+                    "text": "Makam Raja-raja Mataram"
+                },
+                {
+                    "pitch": -12,
+                    "yaw": 260,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi Halaman Makam Raja-raja Mataram",
+                    "sceneId": "halamanMakam4"
+                }
+            ]
+        },
+
+        "halamanMakam4": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553805/Komplek%20Masjid%20Kauman%20Kotagede/R0011723_utfg4z.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 172,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Jelajahi Halaman Makam Raja-raja Mataram",
+                    "sceneId": "halamanMakam3",
+                    "targetYaw": 185
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 355,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Menuju Halaman Sendang Seliran",
+                    "sceneId": "halamanSendang"
+                }
+            ]
+        },
+
+        "halamanSendang": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553788/Komplek%20Masjid%20Kauman%20Kotagede/R0011727_ssmow4.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 12,
+                    "yaw": 130,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Meninggalkan Halaman Sendang Seliran",
+                    "sceneId": "halamanMakam4",
+                    "targetYaw": 172
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 310,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Menuju Halaman Sendang Putri",
+                    "sceneId": "halamanSendangPutri"
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 40,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Menuju Halaman Sendang Kakung",
+                    "sceneId": "halamanSendangKakung"
+                }
+            ]
+        },
+
+        "halamanSendangPutri": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553808/Komplek%20Masjid%20Kauman%20Kotagede/R0011725_jiky4a.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -5,
+                    "yaw": 90,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Meninggalkan Halaman Sendang Putri",
+                    "sceneId": "halamanSendang",
+                    "targetYaw": 130
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 360,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Area Sendang Putri",
+                    "sceneId": "areaSendangPutri"
+                }
+            ]
+        },
+
+        "halamanSendangKakung": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553789/Komplek%20Masjid%20Kauman%20Kotagede/R0011728_i8e4dc.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 1,
+                    "yaw": 175,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Meninggalkan Halaman Sendang Kakung",
+                    "sceneId": "halamanSendang",
+                    "targetYaw": 130
+                },
+                {
+                    "pitch": -25,
+                    "yaw": 45,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Area Sendang Kakung",
+                    "sceneId": "areaSendangKakung"
+                }
+            ]
+        },
+
+        "areaSendangPutri": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553798/Komplek%20Masjid%20Kauman%20Kotagede/R0011726_ujp1av.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 1,
+                    "yaw": 180,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Meninggalkan Area Sendang Putri",
+                    "sceneId": "halamanSendangPutri",
+                    "targetYaw": 90
+                }
+            ]
+        },
+
+        "areaSendangKakung": {
+            "title": "Kompleks Masjid Gedhe Mataram",
+            "hfov": 120,
+            "pitch": 0,
+            "yaw": 360,
+            "type": "equirectangular",
+            "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1620553825/Komplek%20Masjid%20Kauman%20Kotagede/R0011729_kxtaeo.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -18,
+                    "yaw": 155,
+                    "type": "scene",
+                    "cssClass": "custom-hotspot",
+                    "text": "Meninggalkan Halaman Sendang Kakung",
+                    "sceneId": "halamanSendangKakung",
+                    "targetYaw": 175
+                }
+            ]
+        }
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+    .custom-hotspot {
+        height: 30px;
+        width: 30px;
+        background-image: url("iconphoto/icons8-upward-arrow-64.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .info-hotspot {
+        height: 25px;
+        width: 25px;
+        background-image: url("iconphoto/icons8-info-128.png");
+        background-position: center;
+        background-size: cover;
+    }
+    </style>
+</head>
+<body>
+
+    <div id="panorama"></div>
+    <script>
+        pannellum.viewer('panorama', {
+            "default": {
+                "firstScene": "joktengLor1",
+                "author": "Ignatius Ivan Rizky Marcelino",
+                "sceneFadeDuration": 500,
+                "autoLoad": true,
+                "compass": false
+            },
+
+            "scenes": {
+                "joktengLor1": {
+                    "title": "Pojok Benteng Lor",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256485/Benteng%20Keraton%20Jogja/R0011758_idfshs.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -8,
+                            "yaw": 70,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Pojok Benteng Lor",
+                            "sceneId": "joktengLor2"
+                        }
+                    ]
+                },
+
+                "joktengLor2": {
+                    "title": "Pojok Benteng Lor",
+                    "hfov": 120,
+                    "pitch": 0,
+                    "yaw": 360,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256588/Benteng%20Keraton%20Jogja/R0011759_sdg0bj.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 275,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Pojok Benteng Lor",
+                            "sceneId": "joktengLor1"
+                        },
+                        {
+                            "pitch": -10,
+                            "yaw": 45,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Pojok Benteng Lor",
+                            "sceneId": "joktengLor3"
+                        }
+                    ]
+                },
+
+                "joktengLor3": {
+                    "title": "Pojok Benteng Lor",
+                    "hfov": 120,
+                    "pitch": 5,
+                    "yaw": 330,
+                    "type": "equirectangular",
+                    "panorama": "https://res.cloudinary.com/universitas-gadjah-mada/image/upload/q_70/v1621256529/Benteng%20Keraton%20Jogja/R0011760_qaz2vm.jpg",
+                    "hotSpots": [
+                        {
+                            "pitch": -5,
+                            "yaw": 277,
+                            "type": "scene",
+                            "cssClass": "custom-hotspot",
+                            "text": "Jelajahi Pojok Benteng Lor",
+                            "sceneId": "joktengLor2"
+                        }
+                    ]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

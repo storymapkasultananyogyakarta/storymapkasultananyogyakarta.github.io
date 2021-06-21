@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style-2.css">
+
+    <style>
+        body {
+            background-image: url("background/vintage-ornamental-flowers-background_52683-28040.jpg");
+            background-position: fixed;
+        }
+
+        .paragraf {
+            text-indent: 40px;
+        }
+    
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Baskervville', serif;
+            font-weight: 800;
+        }
+
+        p {
+            font-family: 'Baskervville';
+            font-weight: 600;
+            text-align: justify;
+            font-size: 12pt;
+        }
+
+        section {
+            margin-top: 1mm;
+            margin-bottom: 1mm;
+        }
+
+        section p {
+            margin-top: 1mm;
+            margin-bottom: 1mm;
+        }
+
+        li {
+            font-family: 'Baskervville', serif;
+            font-weight: 700;
+            text-align: justify;
+        }
+
+        .jumbotron {
+            background: url("background/640px-Jogjakarta\,_January_2007.jpg");
+            background-position: center;
+            position: sticky;
+            border-radius: 10px;
+        }
+
+        .jumbotron-overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .leaflet-popup-content-wrapper {
+            background-color: rgba(245, 222, 179, 1);
+            border-radius: 20px;
+            font-size: 12pt;
+            background-image: url(background/vintage-ornamental-flowers-background_52683-28040.jpg);
+        }
+
+        .navbar {
+            font-family: 'Baskerville', serif;
+            font-weight: 700;
+            background-image: url(background/vintage-ornamental-flowers-background_52683-28040.jpg);
+            height: 8%;
+        }
+
+        .modal-body {
+            font-size: 11pt;
+        }
+
+        .dropdown-menu {
+            border-radius: 10px;
+            
+        }
+        
+        .dropup {
+            right: 380px
+        }
+
+        .daftarisi {
+            font-size: 10pt;
+            color: rgba(6, 69, 173, 1);
+        }
+
+        #map {
+            display: block;
+            position: fixed;
+            right: 0;
+            overflow: hidden;
+            height: 92%;
+            border-left-width: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Pintasan -->
+    <nav class="navbar navbar-light fixed-bottom">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="homepage.html">Beranda</a>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#petunjukPenggunaan">
+            Petunjuk
+        </button>
+
+        <div class="btn-group dropup">
+            <button type="button" class="btn btn-primary dropdown-toggle my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Daftar Isi
+            </button>
+            <div class="dropdown-menu">
+            <ul style="list-style-type: square">
+                <h6>Sumbu Filosofis Yogyakarta</h6>
+                <a class="dropdown-item" href="#panggungKrapyak"><li class="daftarisi">Panggung Krapyak</li></a>
+                <a class="dropdown-item" href="#keraton"><li class="daftarisi">Keraton Yogyakarta</li></a>
+                <a class="dropdown-item" href="#tuguGolongGilig"><li class="daftarisi">Tugu Yogyakarta</li></a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#tamansari"><li class="daftarisi">Tamansari</li></a>
+                <a class="dropdown-item" href="#benteng"><li class="daftarisi">Benteng Keraton Yogyakarta</li></a>
+                <a class="dropdown-item" href="#masjid"><li class="daftarisi">Masjid Gedhe Kauman</li></a>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Modal Petunjuk -->
+      <div class="modal fade bd-example-modal-lg" id="petunjukPenggunaan" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            
+            <div class="modal-body">
+                <ul style="list-style-type: decimal;">
+                    <p>Petunjuk Penggunaan Story Map</p>
+                    <li>Lakukan scrolling pada bagian narasi cerita untuk membaca cerita secara urut, maka peta akan menampilkan lokasi sejarah sesuai dengan narasi cerita.</li>
+                    <li>Lakukan zoom in atau zoom out dengan cara scrolling pada muka peta atau klik ikon zoom di pojok kiri atas tampilan peta.</li>
+                    <li>Geser (panning) muka peta dengan cara klik kiri atau kanan pada mouse, kemudian tahan, dan gerakkan mouse ke arah yang diinginkan.</li>
+                    <li>Klik kiri pada titik marker di peta untuk membuka jendela informasi serta menampilkan media, baik berupa gambar maupun foto sferis 360&deg;.</li>
+                </ul>
+                <ul style="list-style-type: decimal;">
+                    <p>Petunjuk Penggunaan Foto Sferis 360&deg;</p>
+                    <li>Lakukan zoom in atau zoom out dengan cara scrolling pada area foto sferis 3600 atau klik ikon zoom di pojok kiri atas tampilan foto.</li>
+                    <li>Arahkan tampilan foto dengan cara klik kiri pada mouse, kemudian tahan, dan gerakkan mouse ke arah yang diinginkan.</li>
+                    <li>Untuk mengubah tampilan foto menjadi fullscreen dapat dilakukan dengan cara klik ikon fullscreen di pojok kiri atas tampilan foto.</li>
+                    <li>Untuk menavigasikan foto dapat dilakukan dengan cara klik pada ikon panah maupun ikon info pada tampilan foto. Ikon panah berfungsi untuk berpindah ke foto selanjutnya, sedangkan ikon info berfungsi untuk memberikan informasi terkait bangunan atau lokasi tersebut.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 col-md-5 main">                
+                <!-- Jumbotron Judul -->
+                <div class="jumbotron jumbotron-fluid p-4 mb-5 text-white">
+                    <div class="jumbotron-overlay">
+                        <div class="container">
+                            <h2 class="diplay-4 text-center">Tata Rakiting Wewangunan Kasultanan Yogyakarta</h2>
+                            
+                            <section data-place="caution">
+                            <p class="text-center mt-4">Halaman ini menjelaskan tentang Tata Rakiting Wewangunan yang ada di area Kasultanan Yogyakarta.
+                                Tata Rakiting Wewangunan merupakan serangkaian konsep tata ruang, bangunan, maupun fungsi dan kegunaan dari ruang atau bangunan tersebut di Kasultanan Yogyakarta.
+                            </p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Narasi -->
+                <!-- Sumbu Filosofis Yogyakarta -->
+                <h2><center><u>Sumbu Filosofis Yogyakarta</u></center></h2>
+                <p>Sumbu Filosofis Yogyakarta atau Garis Imajiner Yogyakarta merupakan garis memanjang dari utara ke selatan yang menghubungkan Gunung Merapi di utara dan Pantai Parangkusumo atau Pantai Parangtritis di selatan. Garis ini melewati beberapa bangunan penting di Yogyakarta, diantaranya Panggung Krapyak, Keraton Yogyakarta, dan Tugu Golong Gilig yang saat ini berubah menjadi Tugu Pal Putih (Tugu Yogyakarta).</p>
+
+                <!-- Panggung Krapyak -->
+                <section data-place="panggungKrapyak">
+                <li id="panggungKrapyak">Panggung Krapyak</li>
+                <center><img src="imagenarasi/TataRakitingWewangunan/Kandang_Menjangan.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Panggung Krapyak terletak sekitar 2 km dari Keraton Yogyakarta. Pada zaman Kerajaan Mataram Islam, Panggung Krapyak sering digunakan oleh raja-raja untuk berburu binatang, khusunya binatang rusa atau menjangan. Oleh sebab itu, Panggung Krapyak juga disebut Kandang Menjangan oleh masyarakat sekitar. Kata ‘Krapyak’ menurut kepercayaan masyakarat Jawa, khususnya Keraton Yogyakarta, merupakan tempat roh-roh suci yang atas perkenan Allah dihembuskan ke dalam calon bayi yang berada dalam kandungan ibu. Dari Panggung Krapyak menuju arah utara (Gunung Merapi) memiliki filosofi perjalanan manusia sejak dilahirkan dari Rahim ibu, beranjak dewasa, kemudian menikah hingga melahirkan anak. </p>
+                </section>
+
+                <!-- Keraton Yogyakarta -->
+                <section data-place="keraton">
+                <li id="keraton">Keraton Yogyakarta</li>
+                <center><img src="imagenarasi/TataRakitingWewangunan/Kraton_Yogyakarta_Pagelaran.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Keraton atau kedhaton merupakan istana yang berfungsi sebagai tempat tinggal raja. Selain itu, keraton juga berfungsi sebagai pusat politik, pusat budaya, dan pusat kekuasaan kerajaan.</p>
+                </section>
+                <section data-place="keraton1"> 
+                <p>Tata letak Keraton Yogyakarta didasarkan pada makna sumbu filosofis yang memanjang dari selatan ke utara. Keraton Yogyakarta berada pada satu garis lurus yang merupakan gambaran dari sumbu kelanggengan. Hal tersebut lebih menekankan pada hubungan timbal balik antara Sang Pencipta dan manusia sebagai makhluk ciptaan-Nya.</p>
+                </section>
+
+                <!-- Tugu Jogja -->
+                <section data-place="tuguGolongGilig">
+                <li id="tuguGolongGilig">Tugu Pal Putih dan Monumen Tugu Golong Gilig</li>
+                <center><img src="imagenarasi/TataRakitingWewangunan/tuguYogyakarta-internet.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Sebutan Tugu Pal Putih didapatkan dari warna tugu yang berwarna putih. Adanya Tugu Pal Putih tersebut menjadi salah satu penanda Sumbu Filosofis Yogyakarta. Tugu Pal Putih merupakan tugu (monumen) yang dibangun sebagai pengganti Tugu Golong Gilig. Tugu Golong Gilig dibangun pada tahun 1756. Pemberian nama ‘Golong Gilig’ mengacu pada bentuk awal tugu yang berupa silinder (golong) dengan puncaknya berupa bulatan (gilig). Bentuk tersebut menyimpan makna filosofi ‘Manunggaling Kawula Gusti’ yang berarti bersatunya rakyat dengan rajanya, dan manusia dengan Sang Pencipta.</p>
+                <center><img src="imagenarasi/TataRakitingWewangunan/tuguGolongGilig2.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Tugu Golong Gilig mengalami kerusakan akibat gempa tektonik pada tanggal 10 Juni 1867. Pada masa pemerintahan Sri Sultan HB VII, tugu tersebut dibangun kembali dan diresmikan pada tanggal 3 Oktober 1889, yang kemudian dikenal dengan sebutan Tugu Pal Putih. Perubahan bentuk tugu dari Tugu Golong Gilig menjadi Tugu Pal Putih ditengarai merupakan strategi Belanda untuk menghilangkan simbol kebersamaan raja dan rakyat pada bentuk Tugu Golong Gilig.
+                </p>
+                </section>
+
+                <!-- Tamansari -->
+                <h2 id="tamansari"><center><u>Tamansari</u></center></h2>
+                <section data-place="tamansari">
+                <center><img src="imagenarasi/TataRakitingWewangunan/Jogjakarta,_January_2007.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Pada awalnya, Tamansari merupakan sebuah taman atau kebun istana di Keraton Yogyakarta. Tamansari memiliki arti nama taman yang indah. Komplek Tamansari dibangun secara bertahap pada masa pemerintahan Sri Sultan Hamengku Buwono I. Tamansari didesain atas dasar gagasan dari Sri Sultan Hamengku Buwono I, kemudian gambar teknisnya dikerjakan oleh seorang arsitek berkebangsaan Portugis yang diduga datang dari wilayah Gowa, Sulawesi.</p>
+                <p>Tamansari merupakan bangunan yang sangat indah. Keindahannya tersebut membuat penasaran Raffles. Sir Thomas Stamford Raffles adalah Letnan Gubernur Inggris di Jawa pada tahun 1811 sampai tahun 1816. Namun, keindahan dan kemegahan Tamansari tidak bertahan lama. Beberapa tahun setelah selesai dibangun, tepatnya pada tanggal 7 September 1803, terjadi gempa yang disebabkan oleh letusan Gunung Guntur di Jawa Barat. Gempa tersebut mengakibatkan pondasi Tamansari rusak. Sumber air di kolam pemandian dan segaran (danau buatan) Tamansari merembes hingga kering. Sejak saat ini, upaya perbaikan terus dilakukan.</p>
+                <p>Secara berturut-turut, kerusakan terus terjadi mulai dari agresi Inggris ke Yogyakarta pada tahun 1812, bencana gempa bumi yang kembali terjadi di Yogyakarta pada tanggal 10 Juni 1867, dan yang terakhir adalah bencana gempa bumi pada tahun 2006. Pada tahun 2016, Balai Pelestarian Cagar Budaya Yogyakarta memulai kembali perbaikan kawasan Tamansari.</p>
+                </section>
+
+                <!-- Benteng Baluwarti -->
+                <h2 id="benteng"><center><u>Benteng Keraton Yogyakarta</u></center></h2>
+                <section data-place="plengkungGadhing">
+                <center><img src="imagenarasi/TataRakitingWewangunan/Jokteng_Lor_Wetan.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Benteng Keraton Yogyakarta merupakan sebuah tembok besar yang mengelilingi keraton. Layaknya kota-kota kerajaan lainnya di Pulau Jawa, Keraton Yogyakarta tidak dapat dipisahkan dari benteng. Semua bekas pusat pemerintahan Kerajaan Mataram memiliki benteng sebagai tembok pertahanan yang mengelilingi keraton. Selain keraton, benteng tersebut juga mengelilingi kawasan pemukiman kerabat Sultan dan Abdi Dalem.</p>
+                </section>
+                <section data-place="joktengWetan">
+                <p>Dalam Bahasa Portugis, benteng disebut juga Baluarte yang memiliki kesamaan bunyi dengan Baluwarti. Oleh sebab itu, Benteng Keraton Yogyakarta juga dikenal dengan nama Benteng Baluwarti.</p>
+                </section>
+                <section data-place="joktengLorWetan">
+                <center><img src="imagenarasi/TataRakitingWewangunan/plengkungGadhing.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Benteng Baluwarti didesain dan dibangun pada masa pemerintahan Sri Sultan Hamengku Buwono I (1755-1792). Desain Benteng Keraton Yogyakarta berbeda dibandingkan dengan benteng-benteng Kerajaan Mataram Islam sebelumnya, terutama pada bagian gerbang-gerbang yang tersebar di segala penjuru. Saat merancang desain benteng ini, Pangeran Mangkubumi nampaknya belajar banyak dari peristiwa jatuhnya ibu kota Mataram Kartasura ke tangan pemberontak pada peristiwa Geger Pacina atau Perang Cina pada tahun 1740 hingga 1743.</p>
+                </section>
+                <section data-place="plengkungWijilan">
+                <p>Benteng Baluwarti memiliki lima gerbang dengan pintu melengkung sebagai jalur keluar masuk benteng. Pintu tersebut dikenal dengan sebutan Plengkung atau Gapura Panggung. Kelima plengkung tersebut diantaranya Plengkung Tarunasura atau Plengkung Wijilan di sebelah timur laut, Plengkung Jagasura atau Plengkung Ngasem di sebelah barat laut, Plengkung Jagabaya atau Plengkung Tamansari di sebelah barat, Plengkung Nirbaya atau Plengkung Gadhing di sebelah selatan, dan Plengkung Madyasura atau Plengkung Gondomanan di sebelah timur.</p>
+                </section>
+                <section data-place="joktengLor">
+                <center><img src="imagenarasi/TataRakitingWewangunan/plengkungWijilan.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Salah satu sudut benteng tersebut hancur saat peristiwa Geger Sepehi pada tanggal 20 Juni 1812. Keraton Yogyakarta diserang oleh pasukan Inggris. Mereka berhasil meledakkan Gudang mesiu yang ada di Pojok Benteng Timur Laut. Peristiwa tersebut juga menyebabkan Plengkung Madyasura ditutup secara permanen sebagai bagian dari strategi pertahanan.</p>
+                </section>
+                <section data-place="joktengKulon">
+                <p>Saat ini, sebagian besar benteng telah tertutup oleh pemukiman. Dari lima buah plengkung, hanya tersisa dua yang masih utuh berbentuk seperti awal dibangun. Plengkung tersebut ialah Plengkung Wijilan dan Plengkung Gadhing. Selain itu, bangunan Pojok Benteng yang masih utuh diantaranya Pojok Benteng Wetan, Pojok Benteng Kulon, Pojok Benteng Lor, dan Pojok Benteng Lor Wetan.</p>
+                </section>
+
+                <!-- Masjid Gedhe Kauman -->
+                <h2 id="masjid"><center><u>Masjid Gedhe Kauman</u></center></h2>
+                <section data-place="masjidGedhe">
+                <center><img src="imagenarasi/TataRakitingWewangunan/GrandMosqueYogya.jfif" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Masjid Gedhe Kauman merupakan masjid yang didirikan pada hari Minggu 29 Mei 1773. Masjid tersebut didirikan atas dasar perintah Sri Sultan Hamengku Buwono I dan Kiai Fakih Ibrahim Diponingrat selaku penghulu keraton. Sedangkan rancangan desain masjid dikerjakan oleh Kiai Wiryokusumo. Adanya Masjid Gedhe Kauman ini menegaskan bahwa Yogyakarta sebagai kerajaan islam, sama seperti Kerajaan Mataram Islam terdahulu.</p>
+                <p>Pada masa awal berdirinya Kasultanan Yogyakarta, masjid juga dipergunakan sebagai tempat untuk menyelesaikan masalah yang berkaitan dengan hukum Islam, khusunya masalah perkara perdata. Prosesi penyelesaian permasalahan tersebut dilaksanakan di serambi masjid yang juga disebut sebagai Al Mahkamah Al Kabirah. Selain itu, masjid ini juga berfungsi sebagai tempat pertemuan para alim ulama, pengajian dakwah Islamiyah, dan peringatan hari besar.</p>
+                <p>Masjid Gedhe Kauman menjadi bagian yang tak terpisahkan dari Keraton Yogyakarta. Masjid ini turut berdinamika bersama bangsa Indonesia. Pada masa perjuangan kemerdekaan, bangunan Pajagan digunakan sebagai markas Asykar Perang Sabil yang membantu Tentara Nasional Indonesia (TNI) untuk melawan agresi militer Belanda. Selain itu, masjid ini juga terus menjadi sarana perjuangan, diantaranya saat masyarakat menumbangkan Orde Lama dan saat pejuang reformasi menumbangkan Orde Baru.</p>
+                </section>
+            </br>
+                <h3>Sumber Referensi</h3>
+                <li>Abimanyu, S. (2015). <i>Kitab Terlengkap Sejarah Mataram</i>. Saufa.</li>
+                <li>Sujarweni, V. W. (2017). <i>Menelusuri Jejak Mataram Islam di Yogyakarta</i>. Anak Hebat Indonesia.</li>
+                <li>Situs resmi Keraton Yogyakarta. https://www.kratonjogja.id/tata-rakiting-wewangunan.</li>
+                <li>Adrisijanti,I. (2000). <i>Arkeologi Perkotaan Mataram Islam</i>. Penerbit Jendela.</li>
+                
+            </div>
+
+            <div id="map" class="col-9 col-md-7"></div>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="storymap-2.js"></script>
+    <script type="text/javascript" src="leaflet.ajax.js"></script>
+    
+    <!-- File JS GeoJSON -->
+    <script type="text/javascript" src="geoJSON/garisImajiner.js"></script>
+    <script type="text/javascript" src="geoJSON/bentengBaluwarti.js"></script>
+    
+    <script type="text/javascript">
+
+        (function () {
+            'use strict';
+
+            // Point
+            var markers = {
+                panggungKrapyak: { lat: -7.827632917564044, lon: 110.3606049957885, zoom: 14, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKrapyak.html"></iframe>`, properties: {maxWidth: 1000}, geometry: garisImajiner},
+
+                keraton: { lat: -7.8071396613019175, lon: 110.36381604721429, zoom: 14, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKeratonYogyakarta.html"></iframe>`, properties: {maxWidth: 1000}, geometry: garisImajiner},
+
+                keraton1: { lat: -7.80529148322277, lon: 110.36411298412551, zoom: 14, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPagelaranKeraton.html"></iframe>`, properties: {maxWidth: 1000}, geometry: garisImajiner},
+
+                tuguGolongGilig: { lat: -7.7828756484073605, lon: 110.3670483738481, zoom: 14, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisTugu.html"></iframe>`, properties: {maxWidth: 1000}, geometry: garisImajiner},
+
+                tamansari: { lat: -7.810085475276065, lon: 110.3595059214416, zoom: 14, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisTamansari.html"></iframe>`, properties: {maxWidth: 1000}},
+
+                plengkungGadhing: { lat: -7.813812449171208, lon: 110.36287664405756, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPlengkungGadhing.html"></iframe>`, properties: {maxWidth: 1000}, geometry: benteng},
+
+                joktengWetan: { lat: -7.814610488256155, lon: 110.36847286680913, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisBentengWetan.html"></iframe>`, properties: {maxWidth: 1000}, geometry: benteng},
+
+                joktengLorWetan: { lat: -7.80382423121694, lon: 110.36919452957909, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisBentengTimurLaut.html"></iframe>`, properties: {maxWidth: 1000}, geometry: benteng},
+
+                plengkungWijilan: { lat: -7.80374257535612, lon: 110.36664348731465, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPlengkungWijilan.html"></iframe>`, properties: {maxWidth: 1000}, geometry: benteng},
+
+                joktengLor: { lat: -7.804374732186362, lon: 110.35632371165956, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPlengkungWijilan.html"></iframe>`, properties: {maxWidth: 1000}, geometry: benteng},
+
+                joktengKulon: { lat: -7.812899857678232, lon: 110.35603364495066, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPlengkungWijilan.html"></iframe>`, properties: {maxWidth: 1000}, geometry: benteng},
+
+                masjidGedhe: { lat: -7.803950844243376, lon: 110.36264052659493, zoom: 14, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisMasjidGedheKauman.html"></iframe>`, properties: {maxWidth: 1000}}
+            };
+
+            $('.main').storymap({ markers: markers });
+        }());
+
+    </script>
+</body>
+
+</html>
