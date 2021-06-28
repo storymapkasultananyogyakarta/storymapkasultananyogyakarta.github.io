@@ -39,8 +39,8 @@
                 var div = L.DomUtil.create("div", "legend");
                 div.innerHTML += "<h4>Legenda</h4>";
                 div.innerHTML += '<i class="icon" style="background-image: url(icon/icons8-marker-100.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Titik Lokasi</span><br>';
-                div.innerHTML += '<i class="icon" style="background-image: url(icon/garisImajiner.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Garis Imajiner</span><br>';
-                div.innerHTML += '<i class="icon" style="background-image: url(icon/boundary-benteng.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Luas Wilayah</span><br>';
+                div.innerHTML += '<i class="icon" style="background-image: url(icon/garisImajiner.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Garis Sumbu Filosofis</span><br>';
+                div.innerHTML += '<i class="icon" style="background-image: url(icon/boundary-benteng.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Luasan Wilayah</span><br>';
                 
                 return div;
                 };

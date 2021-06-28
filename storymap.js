@@ -38,7 +38,7 @@
                 var div = L.DomUtil.create("div", "legend");
                 div.innerHTML += "<h4>Legenda</h4>";
                 div.innerHTML += '<i class="icon" style="background-image: url(icon/icons8-marker-100.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Titik Lokasi</span><br>';
-                div.innerHTML += '<i class="icon" style="background-image: url(icon/boundary.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Wilayah Kekuasaan</span><br>';
+                div.innerHTML += '<i class="icon" style="background-image: url(icon/boundary.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Perkiraan Luas Wilayah Kekuasaan</span><br>';
                 
                 return div;
                 };
