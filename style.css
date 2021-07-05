@@ -150,7 +150,7 @@ section {
     }
 
     .leaflet-popup-content-wrapper {
-        border-radius: 20px;
+        border-radius: 20px; 
         font-size: 12pt;
         background-image: url(background/damask-seamless-pattern-background_1217-1269.jpg);
     }
