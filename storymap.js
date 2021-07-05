@@ -137,6 +137,9 @@
                 if (key === 'intro') {
                     map.setView(initPoint, initZoom, true);
                     map.removeControl(legend)
+                }
+                if (key === 'additional') {
+                    map.removeControl(legend)
                 } else if (markers[key]) {
                     var marker = markers[key];
                     var layer = marker.layer;
@@ -162,7 +165,7 @@
                         } else {
                             div.innerHTML += '<i class="icon" style="background-image: url(icon/icons8-marker-100.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Titik Lokasi</span><br>';
                             div.innerHTML += '<i class="icon" style="background-image: url(icon/boundary.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Luas Wilayah Kekuasaan</span><br>';
-                        }
+                        } 
                         
                         return div;
                     }
