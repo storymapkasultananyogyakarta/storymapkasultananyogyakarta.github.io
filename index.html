@@ -52,12 +52,11 @@ iframe {margin-left: 50px;}
 <body>
 
 <!-- Navbar (sticky bottom) -->
-<div class="w3-bottom w3-hide-small">
+<div class="w3-bottom w3-hide-medium">
   <div class="w3-bar w3-black w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
-    <a href="#storymap1" style="width:25%" class="w3-bar-item w3-button">Sejarah Berdirinya Kasultanan Yogyakarta</a>
-    <a href="#latarbelakang" style="width:25%" class="w3-bar-item w3-button">Latar Belakang</a>
-    <a href="#storymap2" style="width:25%" class="w3-bar-item w3-button">Tata Rakiting Wewangunan</a>
-    <a href="#kontak" style="width:25%" class="w3-bar-item w3-button">Kontak</a>
+    <a href="#storymap1" style="width:30%" class="w3-bar-item w3-button">Story Map</a>
+    <a href="#latarbelakang" style="width:40%" class="w3-bar-item w3-button">Latar Belakang dan Tujuan</a>
+    <a href="#kontak" style="width:30%" class="w3-bar-item w3-button">Kontak</a>
   </div>
 </div>
 
@@ -75,25 +74,20 @@ iframe {margin-left: 50px;}
 
 
 
-<!-- Latar Belakang -->
-<div class="w3-container bgimg3" id="latarbelakang">
+<!-- Latar Belakang dan Tujuan -->
+<div class="w3-container w3-padding-64 bgimg2" id="latarbelakang" style="color: white">
   <div class="w3-content">
-    <h2 class="w3-jumbo w3-center w3-text-black"><b>Latar Belakang</b></h2>
-    <center><img class="w3-round " src="background/potretkeluargaKasultananYogyakarta.jpg" style="width:450px; position: center"></center>
-    <p class="source">Lukisan <em>Potret Keluarga Kasultanan Yogyakarta</em> karya Raden Saleh Sjarif Boestaman.</p> 
-    <p class="source">(Sumber gambar: kratonjogja.id)</p>
+    <h2 class="w3-jumbo w3-center w3-text-white"><b>Latar Belakang</b></h2>
     <h4 style="text-align: center; text-indent: 40px">Sejarah adalah peristiwa atau kejadian di masa lampau yang terjadi di kehidupan manusia dan berhubungan dengan perubahan serta perkembangan manusia tersebut. Masa sekarang adalah konsekuensi dari apa yang telah terjadi di masa lampau. Mempelajari sejarah merupakan suatu perwujudan dari tanggung jawab manusia akan hal-hal yang telah dilakukannya serta keinginan untuk dapat hidup lebih baik di masa yang akan datang. Sejarah juga merupakan salah satu factor yang membentuk kebudayaan kita saat ini. Namun, kebanyakan orang menganggap belajar sejarah adalah sesuatu hal yang membosankan dan tidak menarik. Oleh sebab itu, diperlukan suatu media untuk memvisualisasikan cerita sejarah agar lebih menarik dan tidak membosankan. Story map Kasultanan Yogyakarta ini merupakan salah satu media visualisasi dengan menggunakan aspek spasial berupa peta interaktif yang diintegrasikan dengan foto sferis 360&deg;.</h4>
+    </br>
+    <h2 class="w3-jumbo w3-center w3-text-white"><b>Tujuan</b></h2>
+    <h4><ol>
+      <li>Menampilkan peta interaktif story map sejarah Kerajaan Mataram Islam sampai terbentuknya Kasultanan Yogyakarta yang dapat ditampilkan dengan baik.</li>
+      <li>Menampilkan visualisasi foto sferis 360&deg; yang menggambarkan kondisi lokasi dari sejarah Kerajaan Mataram Islam masa kini dan situs budaya di Yogyakarta.</li>
+      <li>Melakukan analisis hasil pembuatan story map melalui uji usabilitas produk.</li>
+    </ol></h4>
     <br>
     
-  </div>
-</div>
-
-<!-- Story Map Tata Rakiting Wewangunan -->
-<div class="w3-display-container bgimg2" id="storymap2">
-  <div class="w3-display-middle w3-text-white w3-center">
-    <h2 class="w3-jumbo">Tata Rakiting Wewangunan</h2>
-    <h3 style="margin-top: 20px;">Story map ini berisi tentang informasi sejarah Tata Rakiting Wewangunan atau Tata Ruang Kasultanan Yogyakarta yang divisualisasikan dengan menggunakan peta interaktif dan fitur multimedia berupa foto sferis 360&deg;.</h3>
-    <p class="w3-center" style="margin-top: 30px;"><a href="peta-2.html" class="w3-button w3-pale-yellow w3-round w3-padding-large w3-large">Lihat Story Map</a></p>
   </div>
 </div>
 
@@ -112,7 +106,14 @@ iframe {margin-left: 50px;}
         <img src="icon/email.png" style="width: 30px;"> ignatiusivan99@mail.ugm.ac.id<br>
       </div>
       <p>Berikan Kritik dan Saran</p>
-      <form action="#" method:"post">
+
+      <!-- <form id="fr1">
+        <input type="text" id="tb1" />
+        <input type="text" id="tb2" />
+        <input type="button" id="bt1" value="click" />
+      </form> -->
+
+      <form action="mailto:ignatiusivan99@mail.ugm.ac.id?subject=subject&message=message" method:"post">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
             <input class="w3-input w3-border" type="text" placeholder="Nama" name="Name">
@@ -129,10 +130,16 @@ iframe {margin-left: 50px;}
     </div>
   </div>
 </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
+
+<script>
+  $(document).ready(function() {
+    $('#bt1').click(function() {
+        $('#fr1').attr('action',
+                       'mailto:ignatiusivan99@mail.ugm.ac.id?subject=' +
+                       $('#tb1').val() + '&body=' + $('#tb2').val());
+        $('#fr1').submit();
+    });
+});
+</script>
 </body>
 </html>

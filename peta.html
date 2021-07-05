@@ -20,99 +20,13 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <style>
-        body {
-            background-image: url('background/damask-seamless-pattern-background_1217-1269.jpg');
-            background-position: fixed;
-        }
-
-        .paragraf {
-            text-indent: 40px;
-        }
-    
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Baskervville', serif;
-            font-weight: 800;
-        }
-
-        p {
-            font-family: 'Baskervville';
-            font-weight: 600;
-            text-align: justify;
-            font-size: 12pt;
-        }
-
-        section {
-            padding: 1mm;
-        }
-
-        li {
-            font-family: 'Baskervville', serif;
-            font-weight: 700;
-            text-align: justify;
-        }
-
-        .jumbotron {
-            background: url("background/potretkeluargaKasultananYogyakarta.jpg");
-            background-position: center;
-            position: sticky;
-            border-radius: 10px;
-        }
-
-        .jumbotron-overlay {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 5px;
-            border-radius: 10px;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            border-radius: 5px;
-        }
-
-        .leaflet-popup-content-wrapper {
-            background-color: rgba(245, 222, 179, 1);
-            border-radius: 20px;
-            font-size: 12pt;
-            background-image: url('background/damask-seamless-pattern-background_1217-1269.jpg');
-        }
-
-        .navbar {
-            font-family: 'Baskerville', serif;
-            font-weight: 700;
-            background-image: url('background/damask-seamless-pattern-background_1217-1269.jpg');
-            height: 8%;
-        }
-
-        .modal-body {
-            font-size: 11pt;
-        }
-
-        .dropdown-menu {
-            border-radius: 10px;
-            
-        }
-        
-        .dropup {
-            right: 0
-        }
-
-        .daftarisi {
-            font-size: 10pt;
-            color: rgba(6, 69, 173, 1);
-        }
-
         #map {
             display: block;
             position: fixed;
             right: 0;
             overflow: hidden;
             height: 92%;
+            border-left-width: 0;
         }
     </style>
 </head>
@@ -121,40 +35,46 @@
     <!-- Pintasan -->
     <nav class="navbar navbar-light fixed-bottom">
         <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Beranda</a>
+        <a class="navbar-brand" style="margin-bottom: 10px" href="index.html">BERANDA</a>
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#petunjukPenggunaan">
-            Petunjuk
+        <button type="button" class="btn btn-info" style="margin-bottom: 10px" data-toggle="modal" data-target="#petunjukPenggunaan">
+            PETUNJUK
         </button>
 
-        <div class="btn-group dropup">
-            <button type="button" class="btn btn-primary dropdown-toggle my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Daftar Isi
+        <div class="btn-group dropup" style="margin-bottom: 10px">
+            <button type="button" class="btn btn-info dropdown-toggle my-2 my-sm-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              DAFTAR ISI
             </button>
-            <div class="dropdown-menu">
-            <ul style="list-style-type: square">
-                <h6>Asal Usul Kerajaan Mataram Islam</h6>
-                <a class="dropdown-item" href="#aryaPenangsang"><li class="daftarisi">Tewasnya Arya Penangsang</li></a>
-                <a class="dropdown-item" href="#babatAlas"><li class="daftarisi">Babat Alas Mentaok</li></a>
-                <a class="dropdown-item" href="#randulawang"><li class="daftarisi">Pertempuran di Randulawang</li></a>
-                <a class="dropdown-item" href="#istanaPajang"><li class="daftarisi">Penyerbuan ke Istana Pajang</li></a>
-                <a class="dropdown-item" href="#runtuh"><li class="daftarisi">Runtuhnya Kerajaan Pajang</li></a>
-                <div class="dropdown-divider"></div>
-                <h6>Transisi Ibukota Mataram</h6>
-                <a class="dropdown-item" href="#kotagede"><li class="daftarisi">Mataram Kotagede</li></a>    
-                <a class="dropdown-item" href="#kerta"><li class="daftarisi">Mataram Kerta</li></a>    
-                <a class="dropdown-item" href="#plered"><li class="daftarisi">Mataram Plered</li></a>    
-                <a class="dropdown-item" href="#kartasura"><li class="daftarisi">Mataram Kartasura</li></a>     
-                <a class="dropdown-item" href="#surakarta"><li class="daftarisi">Mataram Surakarta</li></a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#yogyakarta" style="font-size= 12pt;"><p class="daftarisi">Kasultanan Yogyakarta</p></a>
-            </ul>
-            </div>
+
+            <!-- Daftar Isi -->
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item page-scroll" href="#narasiasalUsul"><h6>Asal-usul Kerajaan Mataram Islam</h6></a>
+                <ol>
+                    <a class="dropdown-item page-scroll" href="#narasibengawanSolo"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Tewasnya Arya Penangsang</li></a>
+                    <a class="dropdown-item page-scroll" href="#narasialasMentaok"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Babat Alas Mentaok</li></a>
+                    <a class="dropdown-item page-scroll" href="#narasiprambanan"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Pertempuran di Prambanan</li></a>
+                    <a class="dropdown-item page-scroll" href="#narasipajang"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Penyerbuan ke Istana Pajang</li></a>
+                    <a class="dropdown-item page-scroll" href="#narasisenopati"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Panembahan Senopati berkuasa atas Pajang</li></a>
+                </ol>
+                <a class="dropdown-item page-scroll" href="#narasitransisi"><h6>Transisi Ibu Kota Mataram</h6></a>
+                <ol>
+                    <a class="dropdown-item page-scroll" href="#narasikotaGede"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Ibu Kota Mataram di Kotagede</li></a>
+                    <a class="dropdown-item page-scroll" href="#narasikerta"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Ibu Kota Mataram di Kerta</li></a>
+                    <a class="dropdown-item page-scroll" href="#narasiplered"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Ibu Kota Mataram di Plered</li></a>
+                    <a class="dropdown-item page-scroll" href="#narasikartasura"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Ibu Kota Mataram di Kartasura</li></a>
+                    <a class="dropdown-item page-scroll" href="#narasisurakarta"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Ibu Kota Mataram di Surakarta</li></a>
+                </ol>
+                <a class="dropdown-item page-scroll" href="#narasiyogyakarta"><h6>Kasultanan Yogyakarta</h6></a>
+                <ol>
+                    <a class="dropdown-item page-scroll" href="#narasiSumbuFilosofi"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Sumbu Filosofi Yogyakarta</li></a>
+                    <a class="dropdown-item page-scroll" href="#narasiTamansari"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Bangunan Air Tamansari</li></a>
+                    <a class="dropdown-item page-scroll" href="#narasibentengKeraton"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Benteng Keraton Yogyakarta</li></a>
+                    <a class="dropdown-item page-scroll" href="#narasimasjidGedhe"><li style="font-size: 11pt; color:rgb(93, 126, 179)">Masjid Gedhe Kauman</li></a>
+                </ol>
+              </div>
         </div>
-
-        <a class="navbar-brand" href="peta-2.html"><img src="icon/next.png" style="width: 30px;"></a>
-
+        
         </div>
       </nav>
 
@@ -162,9 +82,6 @@
       <div class="modal fade bd-example-modal-lg" id="petunjukPenggunaan" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal">&times;
-              </button>
-            
             <div class="modal-body">
                 <ul style="list-style-type: decimal;">
                     <p>Petunjuk Penggunaan Story Map</p>
@@ -193,136 +110,280 @@
         <div class="row">
             <div class="col-3 col-md-5 main">                
                 <!-- Jumbotron Judul -->
-                <div class="jumbotron jumbotron-fluid p-4 mb-5 text-white">
+                <div class="jumbotron jumbotron-fluid p-4 mb-5 text-white fixed-top">
                     <div class="jumbotron-overlay">
                         <div class="container">
-                            <h2 class="diplay-4 text-center">Sejarah Terbentuknya Kasultanan Yogyakarta</h2>
-                            
-                            <section data-place="caution">
-                            <p class="text-center mt-4">Halaman ini menceritakan tentang sejarah terbentuknya Kasultanan Yogyakarta 
-                            yang dimulai dari lahirnya Kerajaan Mataram Islam. Sejarah yang diceritakan dalam halaman ini menyesuaikan dengan transisi pusat kekuasaan Kerajaan Mataram Islam.</p>
-                            </section>
+                            <h1 class="diplay-4 text-center">Sejarah Berdirinya Kasultanan Yogyakarta</h1>
+                            <!-- <section data-place="title">
+                            <p class="text-center mt-4" style="font-size: 13pt; font-weight: 500;">Halaman ini menceritakan tentang sejarah terbentuknya Kasultanan Yogyakarta 
+                            yang dimulai dari lahirnya Kerajaan Mataram Islam. Sejarah yang diceritakan dalam halaman ini sesuai dengan transisi pusat kekuasaan Kerajaan Mataram Islam.</p>
+                            </section> -->
                         </div>
                     </div>
                 </div>
 
                 <!-- Narasi -->
                 <!-- Asal Usul Kerajaan Mataram Islam */ -->
-                <h2><center><u>Asal-usul Kerajaan Mataram Islam</u></center></h2>
-                <p>Mataram awalnya adalah sebuah wilayah di bawah pemerintahan Kerajaan Pajang. Berawal dari sebuah sayembara yang diadakan oleh Sultan Hadiwijaya. Sayembara ini bertujuan untuk membunuh Arya Penangsang dengan imbalan penguasaan dua wilayah di bawah kekuasaan Pajang, yaitu wilayah Pati dan Alas Mentaok (Mataram).</p>
-                <section data-place="bengawanSolo">
-                <li id="aryaPenangsang">Tewasnya Arya Penangsang</li>
-                <center><img src="imagenarasi/asalUsulMataram/tewasnya_aryapenangsang.png" style="width: 400px; height: auto; border-style: none;"></center>
-                <p class="paragraf">Orang-orang dari Sela (Grobogan) yang terdiri dari Ki Ageng Pemanahan, Ki Panjawi, Ki Juru Mertani, dan Danang Sutawijaya mengikuti sayembara tersebut. Mereka menerapkan siasat pengelabuan dalam peperangan yang terjadi di tepi sungai Sore (Bengawan Solo) dengan mengikutsertakan kira-kira 300 pasukan gabungan Sela dan Pajang. Dalam pertempuran tersebut, Arya Penangsang terluka dan akhirnya meninggal dunia. Ki Ageng Pemanahan dan Ki Panjawi adalah dua orang yang dinilai paling berjasa dalam pertempuran tersebut. Masing-masing dipersilahkan untuk memilih wilayah yang dijanjikan. Dari kesepakatan mereka, Ki Panjawi mendapatkan hak penguasaan atas Pati, sementara Ki Ageng Pemanahan mendapatkan hak penguasaan atas Alas Mentaok.</p>
-                </section>
-                
-                <section data-place="alasMentaok">
-                <li id="babatAlas">Babat Alas Mentaok</li>
-                <center><img src="imagenarasi/asalUsulMataram/babatalasmentaok.png" style="width: 400px; height: auto; border-style: none;"></center>
-                <p class="paragraf">Selanjutnya, Ki Ageng Pemanahan melakukan perpindahan bersama dengan 150 orang pengikutnya dari Sela ke Mataram. Setibanya di Mataram, ia berhasil meyakinkan kira-kira 800 orang penduduk lokal bahwa ia merupakan penguasa Mataram atas pemberian Sultan Hadiwijaya. Di bawah pimpinan Ki Ageng Pemanahan, segera dibuka lahan dengan melakukan babat alas untuk dijadikan wilayah pemukiman yang tertata. Ki Ageng Pemanahan memakai nama baru dengan sebutan Ki Ageng Mataram. Pemukiman tersebut terus tumbuh dan berkembang menjadi daerah yang makmur. Mataram semakin ramai dikunjungi oleh saudagar asing.</p>
-                <p class="paragraf">Ki Ageng Pemanahan wafat pada tahun 1584. Untuk melanjutkan ayahnya, Danang Sutawijaya ditunjuk secara langsung oleh Ki Ageng Pemanahan dan Sultan Hadiwijaya sebagai suksesor di Mataram. Selanjutnya, Danang Sutawijaya mengangkat dirinya sebagai Raja Mataram dengan gelar Panembahan Senopati. Selama masa pemerintahannya, Senopati menunjukkan sikap tidak patuh kepada Sultan Hadiwijaya. Senopati tidak pernah mengunjungi Istana Pajang setelah satu tahun sejak penobatannya sebagai penguasa Mataram. Ia juga gemar berfoya-foya saat menyambut tamu-tamunya yang diduga sebagai perjamuan politik.</p>
-                </section>
-                
-                <section data-place="prambanan">
-                <li id="randulawang">Pertempuran di Randulawang</li>
-                <center><img src="imagenarasi/asalUsulMataram/pertempuranRandulawang.png" style="width: 400px; height: auto; border-style: none;"></center>
-                <p class="paragraf">Tiga tahun setelah penobatan Panembahan Senopati, Sultan Hadiwijaya dengan kekuatan penuh bergerak menuju Mataram melewati daerah Prambanan untuk melancarkan serangan. Senopati pun sudah bersiap bersama kurang-lebih 800 prajurit menghadapi pasukan Pajang di Randulawang, Prambanan. Pada saat pertempuran terjadi bencana letusan Gunung Merapi. Pajang berhasil dipaksa mundur oleh Mataram. Sultan Hadiwijaya mengalami kecelakaan sewaktu melarikan diri dengan mengendarai gajah, sehingga ia harus melanjutkan pelariannya dengan ditandu.</p>
-                </section>
-                
-                <section data-place="pajang">
-                <li id="istanaPajang">Penyerbuan ke Istana Pajang</li>
-                <center><img src="imagenarasi/asalUsulMataram/penyerbuanIstanaPajang.png" style="width: 400px; height: auto; border-style: none;"></center>
-                <p class="paragraf">Sakit akibat kecelakaan yang diderita Sultan Hadiwijaya semakin parah Senopati yang mengetahui hal tersebut melakukan penyerbuan ke Istana Pajang. Senopati memerintahkan abdi Mataram bernama Juru Taman untuk membunuh Sultan Hadiwijaya. Kemudian, Sultan Hadiwijaya terbunuh saat itu juga. Setelah wafatnya Sultan Hadiwijaya, terjadi perebutan kekuasaan di Pajang antara Arya Pangiri dan Pangeran Benawa. Benawa meminta bantuan kepada Senopati untuk menghadapi Arya Pangiri. Benawa berjanji untuk memberikan penguasaan penuh atas Pajang jika Mataram bersedia memberi bantuan dalam mengambil alih tahta Pajang. Kerajaan Pajang runtuh setelah diserang oleh gabungan dari pasukan Jipang dan Mataram.</p>
+                <section data-place="intro">
+                <h2 id="narasiasalUsul"><center><u>Asal-usul Kerajaan Mataram Islam</u></center></h2>
+                <p>Mataram awalnya adalah sebuah wilayah di bawah pemerintahan Kerajaan Pajang [2]. Berawal dari sebuah sayembara yang diadakan oleh Sultan Hadiwijaya. Sayembara ini bertujuan untuk membunuh Arya Penangsang dengan imbalan penguasaan dua wilayah di bawah kekuasaan Pajang, yaitu wilayah Pati dan Alas Mentaok (Mataram).</p>
                 </section>
 
-                <section data-place="kotaGede1">
-                <li id="runtuh">Runtuhnya Kerajaan Pajang</li>
+                <!-- Tewasnya Arya Penangsang -->
+                <section data-place="bengawanSolo">
+                <h5 id="narasibengawanSolo">Tewasnya Arya Penangsang</h5>
+                <center><img src="imagenarasi/asalUsulMataram/tewasnya_aryapenangsang.png" style="width: 400px; height: auto; border-style: none;"></center>
+                <p class="paragraf">Orang-orang dari Sela (Grobogan) yang terdiri dari Ki Ageng Pemanahan, Ki Panjawi, Ki Juru Mertani, dan Danang Sutawijaya mengikuti sayembara tersebut [1]. Mereka menerapkan siasat pengelabuan dalam peperangan yang terjadi di tepi Sungai Sore (Bengawan Solo) dengan mengikutsertakan kira-kira 300 pasukan gabungan Sela dan Pajang. Dalam pertempuran tersebut, Arya Penangsang tewas karena dibunuh oleh Danang Sutawijaya menggunakan tombak bernama kyai plered dan keris bernama kyai setan kober. Danang Sutawijaya adalah putra dari Ki Ageng Pemanahan. Oleh sebab itu, Ki Ageng Pemanahan dan Ki Panjawi dinilai sebagai dua orang yang paling berjasa dalam pertempuran tersebut. Masing-masing dipersilahkan untuk memilih wilayah yang dijanjikan. Dari kesepakatan mereka, Ki Panjawi mendapatkan hak penguasaan atas wilayah Pati, sementara Ki Ageng Pemanahan mendapatkan hak penguasaan atas wilayah Alas Mentaok.</p>
+                </section>
+                
+                <!-- Babat Alas Mentaok -->
+                <section data-place="alasMentaok">
+                <h5 id="narasialasMentaok">Babat Alas Mentaok</h5>
+                <center><img src="imagenarasi/asalUsulMataram/babatalasmentaok.png" style="width: 400px; height: auto; border-style: none;"></center>
+                <p class="paragraf">Selanjutnya, Ki Ageng Pemanahan melakukan perpindahan bersama dengan 150 orang pengikutnya dari Sela ke Mataram [1]. Setibanya di Mataram, ia berhasil meyakinkan kira-kira 800 orang penduduk lokal bahwa ia merupakan penguasa Mataram atas pemberian Sultan Hadiwijaya. Di bawah pimpinan Ki Ageng Pemanahan, segera dibuka lahan dengan melakukan babat alas untuk dijadikan wilayah pemukiman yang tertata. Ki Ageng Pemanahan memakai nama baru dengan sebutan Ki Ageng Mataram. Pemukiman tersebut terus tumbuh dan berkembang menjadi daerah yang makmur. Pemukiman di Mataram memiliki panen yang berlimpah sehingga perdagangan berkembang dengan pesat [3]. Mataram semakin ramai dikunjungi oleh para saudagar asing.</p>
+                <p class="paragraf">Ki Ageng Mataram wafat pada tahun 1584. Kemudian untuk melanjutkan ayahnya, Danang Sutawijaya ditunjuk secara langsung oleh Ki Ageng Mataram dan Sultan Hadiwijaya sebagai raja di Mataram. Selanjutnya, Danang Sutawijaya mengangkat dirinya sebagai Raja Mataram dengan gelar Panembahan Senopati. Selama masa pemerintahannya, Senopati menunjukkan sikap tidak patuh kepada Sultan Hadiwijaya yang telah mengangkat dirinya sebagai raja. Senopati tidak pernah mengunjungi Istana Pajang setelah satu tahun sejak penobatannya sebagai penguasa Mataram. Ia juga gemar berfoya-foya saat menyambut tamu-tamunya yang diduga sebagai perjamuan politik. Hal ini menyebabkan hubungan Senopati dan Sultan Hadiwijaya semakin memburuk.</p>
+                </section>
+                
+                <!-- Pertempuran di Prambanan -->
+                <section data-place="prambanan">
+                <h5 id="narasiprambanan">Pertempuran di Prambanan</h5>
+                <center><img src="imagenarasi/asalUsulMataram/pertempuranRandulawang.png" style="width: 400px; height: auto; border-style: none;"></center>
+                <p class="paragraf">Tiga tahun setelah penobatan Panembahan Senopati, Sultan Hadiwijaya dengan kekuatan penuh bergerak menuju Mataram melewati daerah Prambanan untuk melancarkan serangan [1]. Senopati pun sudah bersiap bersama kurang-lebih 800 prajurit menghadapi pasukan Pajang di Randulawang, Prambanan. Lokasi tersebut berada di tepi Sungai Opak selatan Prambanan. Pertempuran hebat terjadi antara pasukan Pajang dan pasukan Senopati. Pada malam hari, Gunung Merapi meletur di tengah-tengah pertempuran. Bencana tersebut mengakibatkan kegelapan diiringi dengan hujan lebat, hujan abu, dan gempa bumi [3]. Pajang berhasil dipaksa mundur oleh Mataram. Sultan Hadiwijaya mengalami kecelakaan sewaktu melarikan diri dengan mengendarai gajah, sehingga ia harus melanjutkan pelariannya dengan ditandu.</p>
+                </section>
+                
+                <!-- Penyerbuan Istana Pajang -->
+                <section data-place="pajang">
+                <h5 id="narasipajang">Penyerbuan ke Istana Pajang</h5>
+                <center><img src="imagenarasi/asalUsulMataram/penyerbuanIstanaPajang.png" style="width: 400px; height: auto; border-style: none;"></center>
+                <p class="paragraf">Sakit akibat kecelakaan yang diderita Sultan Hadiwijaya semakin parah. Senopati yang mengetahui hal tersebut melakukan penyerbuan ke Istana Pajang. Senopati memerintahkan abdi Mataram bernama Juru Taman untuk membunuh Sultan Hadiwijaya. Juru Taman adalah salah satu abdi Mataram yang berkebangsaan Eropa [1]. Serangan dari Juru Taman tidak disadari oleh para penjaga Kerajaan Pajang, sehingga ia berhasil membunuh Sultan Hadiwijaya. Setelah wafatnya Sultan Hadiwijaya, terjadi perebutan kekuasaan di Pajang antara Arya Pangiri dan Pangeran Benawa. Benawa meminta bantuan kepada Senopati untuk menghadapi Arya Pangiri. Benawa berjanji untuk memberikan penguasaan penuh atas Pajang jika Mataram bersedia memberi bantuan dalam mengambil alih tahta Pajang. Kerajaan Pajang runtuh setelah diserang oleh gabungan dari pasukan Jipang dan Mataram.</p>
+                </section>
+
+                <!-- Panembahan Senopati berkuasa atas Pajang -->
+                <section data-place="senopati">
+                <h5 id="narasisenopati">Panembahan Senopati berkuasa atas Pajang</h5>
                 <center><img src="imagenarasi/asalUsulMataram/runtuhnyaPajang.png" style="width: 400px; height: auto; border-style: none;"></center>
-                <p class="paragraf">Selanjutnya, Senopati diberikan tawaran penguasaan penuh atas Pajang yang telah dijanjikan oleh Benawa sebelumnya. Tawaran tersebut ditolak oleh Senopati yang lebih memilih benda-benda pusaka yang dimiliki Pajang untuk dibawa ke Mataram. Setelah itu, Pangeran Benawa dinobatkan sebagai Raja Pajang. Namun, periode pemerintahan Benawa sebagai Raja Pajang tidak berlangsung lama. Benawa mengundurkan diri dari dunia politik setelah satu tahun memerintah tahta Pajang dan mengambil jalur keagamaan sebagai jalan hidupnya. Kekosongan kekuasaan tersebut dimanfaatkan oleh Senopati untuk mengangkat Pangeran Gagakbaning, adik dari Senopati menjadi Adipati Pajang. Dengan demikian, wilayah Pajang telah berada di bawah kekuasaan Senopati secara utuh.</p>
+                <p class="paragraf">Selanjutnya, Senopati diberikan tawaran penguasaan penuh atas Pajang yang telah dijanjikan oleh Benawa sebelumnya [1]. Tawaran tersebut ditolak oleh Senopati yang lebih memilih benda-benda pusaka yang dimiliki Pajang untuk dibawa ke Mataram. Setelah itu, Pangeran Benawa dinobatkan sebagai Raja Pajang. Namun, periode pemerintahan Benawa sebagai Raja Pajang tidak berlangsung lama. Benawa mengundurkan diri dari dunia politik setelah satu tahun memerintah tahta Pajang dan mengambil jalur keagamaan sebagai jalan hidupnya. Kekosongan kekuasaan tersebut dimanfaatkan oleh Senopati untuk mengangkat Pangeran Gagakbaning, adik dari Senopati menjadi Adipati Pajang. Dengan demikian, wilayah Pajang telah berada di bawah kekuasaan Mataram secara utuh.</p>
                 </section>
                 </br>
 
-                <h2><center><u>Transisi Pusat Kekuasaan Mataram</u></center></h2>
-                <!-- /* Mataram di Kotagede */ -->
-                <li id="kotagede">Mataram Kotagede</li>
+                <!-- Transisi Ibu Kota Mataram -->
+                <h2 id="narasitransisi"><center><u>Transisi Ibu Kota Mataram</u></center></h2>
+                <p>Sejak kemunculan Mataram sebagai pusat politik baru di Jawa pada dekade akhir abad ke-16 hingga pertengahan abad ke-18, Mataram mengalami pasang surut politik yang dinamis [1]. Hal tersebut dapat diketahui dari lima tempat berbeda yang pernah digunakan sebagai pusat kerajaan. Tempat-tempat tersebut memiliki makna yang bersejarah.</p>
+
+                <!-- Ibu Kota Mataram di Kotagede -->
                 <section data-place="kotaGede">
+                <h5 id="narasikotaGede">Ibu Kota Mataram di Kotagede</h5>
                 <center><img src="imagenarasi/TransisiMataram/745x489-img-91206-makamraja-raja-mataram-kotagede-guidekuarendya.jpg" style="width: 400px; height: auto; border-style: none;"></center>
-                <p>Ki Ageng Pemanahan atau Ki Gedhe Mataram tinggal di Kotagede selama kurang lebih enam tahun sebelum wafat pada sekitar tahun 1584 M. Makamnya terletak di sebelah barat Masjid Gedhe Mataram. Penerus dirinya, Sutawijaya merupakan putra dari Ki Ageng Pemanahan sekaligus putra angkat dari Sultan Hadiwijaya.</p>
+                <p>Ki Ageng Pemanahan atau Ki Ageng Mataram tinggal di Kotagede selama kurang lebih enam tahun sebelum wafat pada sekitar tahun 1584 M [1]. Makamnya terletak di sebelah barat Masjid Gedhe Mataram. Ki Ageng Mataram mendapatkan banyak pengikut dan kekuasaan dengan waktu yang singkat, sehingga ia mampu menaklukkan daerah Jipang (Bojonegoro) dan Ponorogo [3]. Ki Ageng Mataram digantikan oleh putranya yang bernama Danang Sutawijaya. Ia juga merupakan anak angkat dari Sultan Pajang. Danang Sutawijaya bergelar Ngabehi Lor ing Pasar yang kemudian disebut Panembahan Senopati.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
                 </section>
                 
                 <section data-place="bentengCepuri">
-                <p>Panembahan Senopati mengadakan berbagai kegiatan pembangunan Kotagede. Salah satunya adalah pembangunan benteng yang mengelilingi Keraton Mataram Islam (kediaman raja). Benteng tersebut diberi nama Benteng Cepuri.</p>
+                <p>Panembahan Senopati melakukan berbagai kegiatan pembangunan untuk Kotagede. Salah satunya adalah pembangunan benteng yang mengelilingi Keraton Mataram Islam sebagai tempat tinggal raja. Benteng tersebut diberi nama Benteng Cepuri. Senopati juga menginisiasi pembangunan masjid agung dan makam. Selain itu, perkembangan pembangunan Kotagede juga dapat dilihat dari perkembangan pemukiman dan adanya pasar sebagai pusat ekonomi utama di wilayah tengah bagian selatan Jawa.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
                 </section>
                 
                 <section data-place="pasarKotagede">
-                <p>Senopati juga menginisiasi pembangunan masjid dan makam. Selain itu, perkembangan pembangunan Kotagede juga dapat dilihat dari perkembangan pemukiman dan adanya pasar sebagai pusat ekonomi utama di wilayah tengah bagian selatan Jawa. Melalui berbagai kegiatan pembangunan, perluasan wilayah serta politik aliansi, Senopati telah memberikan dasar yang kuat bagi keberlangsungan Kerajaan Mataram di masa yang akan datang. Pada masa pemerintahannya. Senopati telah banyak melakukan peperangan untuk menaklukan bupati-bupati yang memberontak dan tidak mau mengakui kekuasaannya. Ia berhasil menaklukkan wilayah Pati, Surabaya, Madiun, dan Jepara. Namun juga mengalami kegagalan dalam menaklukkan beberapa wilayah Jawa Timur lain.</p>
+                <p>Melalui berbagai kegiatan pembangunan, perluasan wilayah serta politik aliansi, Senopati telah memberikan dasar yang kuat bagi keberlangsungan Kerajaan Mataram di masa yang akan datang. Selama masa pemerintahannya. Senopati telah banyak melakukan peperangan untuk menaklukan bupati-bupati yang memberontak dan tidak mau mengakui kekuasaannya. Ia berhasil menaklukkan wilayah Pati, Surabaya, Madiun, dan Jepara [4]. Namun juga mengalami kegagalan dalam menaklukkan beberapa wilayah Jawa Timur lainnya. </p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
                 </section>
                 
                 <section data-place="krapyak">
-                <center><img src="imagenarasi/TransisiMataram/Panggung_Krapyak.jpg" style="width: 400px; height: auto; border-style: none;"></center>
-                <p>Senopati wafat pada tahun 1601. Ia digantikan oleh Raden Mas Jolang (Panembahan Hanyakrawati), putra dari Senopati dengan Waskita Jawi. Selama memerintah Mataram, Panembahan Hanyakrawati melanjutkan pembangunan Kotagede yang telah dimulai oleh Senopati. Pembangunan yang dilakukan pada masa pemerintahan Hanyakrawati diantaranya adalah pembangunan komplek istana Kotagede benteng Keraton, Prabayaksa, taman Danalaya, segaran, lumbung di Gading, dan penyempurnaan komplek makam Kotagede. Hanyakrawati adalah raja yang gemar berburu. Kemudian, dibangun tempat berburu Krapyak khusus untuk menyalurkan hobi raja tersebut di daerah Beringan. Pada tahun 1613, Hanyakrawati wafat saat sedang berburu di Krapyak. Oleh karena itu, ia dikenal dengan sebutan Panembahan Seda Ing Krapyak.</p>
+                <p>Senopati wafat pada tahun 1601. Ia digantikan oleh Raden Mas Jolang (Panembahan Hanyakrawati), putra dari Senopati dengan Waskita Jawi. Selama memerintah Mataram, Panembahan Hanyakrawati melanjutkan pembangunan Kotagede yang telah dimulai oleh Senopati. Pembangunan yang dilakukan pada masa pemerintahan Hanyakrawati diantaranya adalah pembangunan kompleks istana Kotagede benteng keraton, Prabayaksa, Taman Danalaya, segaran, lumbung di Gading, dan penyempurnaan kompleks makam Kotagede [1]. Hanyakrawati adalah raja yang gemar berburu. Kemudian, dibangun tempat berburu Krapyak khusus untuk menyalurkan hobi raja tersebut di daerah Beringan. Pada tahun 1613, Hanyakrawati wafat saat sedang berburu di Krapyak. Oleh karena itu, ia dikenal dengan sebutan Panembahan Seda Ing Krapyak. Pada akhir masa pemerintahannya mulai terjadi hubungan dengan orang-orang Belanda [4].</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
                 </section>
 
-                <!-- Mataram di Kerta -->
-                <li id="kerta">Mataram Kerta</li>
+                <!-- Ibu Kota Mataram di Kerta -->
                 <section data-place="kerta">
+                <h5 id="narasikerta">Ibu Kota Mataram di Kerta</h5>
                 <center><img src="imagenarasi/TransisiMataram/situs_kerta.jpg" style="width: 400px; height: auto; border-style: none;"></center>
-                <p>Setelah meninggalnya Panembahan Hanyakrawati, kekuasaan Mataram digantikan oleh putranya, yaitu Raden Mas Rangsang (Sultan Agung). Ia memindahkan pusat kerajaan yang semula berada di Kotagede berpindah ke Kerta. Meskipun sudah tidak menjadi pusat kerajaan Mataram, Kotagede tetap menjadi pusat ekonomi dengan adanya pasar yang terkenal, serta memiliki tanah pusaka kerajaan yaitu komplek masjid dan makam. Kerta terletak sekitar 5 km arah tenggara Kotagede. Pembangunan pusat kerajaan yang baru ini mulai dilakukan pada tahun 1617. Satu tahun kemudian, keraton Kerta sudah ditempati oleh raja walaupun pembangunan masih terus dilaksanakan.</p> 
-                <p>Pembangunan keraton Kerta melibatkan orang-orang buangan dari Pajang dan orang-orang dari tempat lain yang menetap di Mataram. Diperkirakan, pembangunan keraton baru ini selesai pada tahun 1621. Keraton Kerta dibangun dengan menggunakan kayu sebagai material utamanya. Terdapat halaman luas yang bersih (alun-alun) dilengkapi dengan pagar kayu dan pohon beringin besar di kedua sisi alun-alun. Keraton Kerta juga diperluas dengan membangun Siti Hinggil yang berfungsi sebagai tempat singgasana Sultan. Selain itu, pembangunan makam di Girilaya yang saat ini bernama Imogiri juga dilaksanakan. Makam tersebut menjadi makam turun-temurun dari trah Mataram Islam.</p>
-                <p>Selama masa pemerintahan Sultan Agung, Mataram berada pada puncak kejayaannya. Sultan Agung berhasil memperluas wilayah Mataram hingga ke ujung barat dan ujung timur Pulau Jawa. Untuk wilayah barat, hanya Banten dan Batavia yang tidak bisa ditaklukkan oleh Mataram. Banten tetap tidak mau menyerah kepada Mataram, sedangkan Batavia pada waktu itu dikuasai oleh VOC. Selain itu, Sultan Agung juga berhasil menaklukkan beberapa wilayah di luar Pulau Jawa, seperti Palembang, Jambi, Banjarmasin, dan Makassar. Sultan Agung wafat pada tahun 1646 di pendapa keraton Kerta. Sebelumnya ia mengalami sakit dan menolak untuk meminum obat.</p>
+                <p>Setelah meninggalnya Panembahan Hanyakrawati, kekuasaan Mataram digantikan oleh putranya, yaitu Raden Mas Rangsang (Sultan Agung). Ia memindahkan pusat kerajaan yang semula berada di Kotagede berpindah ke Kerta [1]. Meskipun sudah tidak menjadi pusat kerajaan Mataram, Kotagede tetap menjadi pusat ekonomi dengan adanya pasar yang terkenal, serta memiliki tanah pusaka kerajaan yaitu komplek masjid dan makam. Kerta terletak sekitar 5 km arah tenggara Kotagede.</p>
+                </section>
+
+                <section data-place="kerta">
+                <p>Pembangunan pusat kerajaan yang baru ini mulai dilakukan pada tahun 1617 [4]. Satu tahun kemudian, keraton Kerta sudah ditempati oleh raja walaupun pembangunan masih terus dilaksanakan. Pembangunan keraton Kerta melibatkan orang-orang buangan dari Pajang dan orang-orang dari tempat lain yang menetap di Mataram [1]. Diperkirakan, pembangunan keraton baru ini selesai pada tahun 1621. Keraton Kerta dibangun dengan menggunakan kayu sebagai material utamanya. Terdapat halaman luas yang bersih (alun-alun) dilengkapi dengan pagar kayu dan pohon beringin besar di kedua sisi alun-alun. Keraton Kerta juga diperluas dengan membangun Siti Hinggil yang berfungsi sebagai tempat singgasana Sultan. Selain itu, pembangunan makam di Girilaya yang saat ini bernama Imogiri juga dilaksanakan. Makam tersebut menjadi makam turun-temurun dari trah Mataram Islam.</p>
+                </section>
+
+                <section data-place="kerta">
+                <p>Selama masa pemerintahan Sultan Agung, Mataram berada pada puncak kejayaannya. Sultan Agung berhasil memperluas wilayah Mataram hingga ke ujung barat dan ujung timur Pulau Jawa. Untuk wilayah barat, hanya Banten dan Batavia yang tidak bisa ditaklukkan oleh Mataram. Banten tetap tidak mau menyerah kepada Mataram, sedangkan Batavia pada waktu itu dikuasai oleh VOC (Belanda). Selain itu, Sultan Agung juga berhasil menaklukkan beberapa wilayah di luar Pulau Jawa, seperti Palembang, Jambi, Banjarmasin, dan Makassar [2]. Sebelumnya Sultan Agung telah melakukan penyerangan ke Batavia selama dua kali pada tahun 1628 dan 1629. Sultan Agung wafat pada tahun 1646 di pendapa keraton Kerta. Ia wafat karena mengalami sakit akibat wabah yang melanda Mataram dan ia menolak untuk meminum obat.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
                 </section>
                 
-                <!-- Mataram di Plered -->
-                <li id="plered">Mataram Plered</li>
+                <!-- Ibu Kota Mataram di Plered -->
                 <section data-place="plered">
+                <h5 id="narasiplered">Ibu Kota Mataram di Plered</h5>
                 <center><img src="imagenarasi/TransisiMataram/Situs_Masjid_Kauman_Pleret.jpg" style="width: 400px; height: auto; border-style: none;"></center>
-                <p>Kekuasaan Mataram kemudian dilanjutkan oleh salah satu putera Sultan Agung yang dikenal dengan gelar Susuhunan Hamangku Rat I. Pada masa pemerintahannya, keraton dipindahkan ke timur Kerta di tempat yang disebut Plered. Hamangku Rat ingin memerintah di tempat baru, tidak lagi menggunakan keraton yang dibangun oleh ayahnya di Kerta. Plered terletak sekitar 1.5 kilometer timur Kerta. Perpindahan keraton dari Kerta ke Plered berlangsung pada tahun 1647. Sama halnya seperti keraton-keraton sebelumnya, Keraton Plered juga memiliki masjid. Masjid Agung Plered dibangun pada tahun 1649.</p>
-                <p>Pada masa pemerintahan Hamangku Rat I, Mataram mengalami penurunan. Raja melakukan serangkaian pembunuhan terhadap orang-orang yang tidak sehaluan dan dapat mengancam kedudukannya. Beberapa orang yang telah disingkirkan oleh Hamangku Rat I karena dianggap sebagai musuh yang berbahaya diantaranya Tumenggung Wiraguna beserta keluarganya, Pangeran Alit yang merupakan adik dari Raja sendiri, Pangeran Pekik yaitu mertua dari Raja sendiri, dan ulama-ulama beserta keluarganya. Hamangku Rat I juga menjalin hubungan baik dengan VOC yang menjadi musuh bebuyutan Mataram pada masa Sultan Agung. Ia membuat perjanjian persahabatan dengan VOC pada tahun 1646. Hal ini menyebabkan wilayah-wilayah yang awalnya berada di bawah kekuasaan Mataram melakukan perlawanan dan melepaskan diri dari Mataram.</p>
-                <p>Pada akhir masa pemerintahan Hamangku Rat I, Mataram mengalami penyerangan dari Trunojoyo yang menyebabkan raja harus melarikan diri bersama Adipati Anom (Hamangku Rat II) dari Keraton. Dalam pelariannya tersebut, Hamangku Rat I meninggal saat menuju Batavia. Trunojoyo melakukan penyerangan tersebut didasari oleh perjanjiannya dengan Adipati Anom (Hamangku Rat II). Namun setelah Trunojoyo berhasil menduduki Istana Mataram, terjadi perselisihan antara Trunojoyo dan Hamangku Rat II. Sehingga, Trunojoyo enggan untuk menyerahkan tahta Mataram kepada Hamangku Rat II. Kekosongan kekuasaan Mataram setelah pertempuran tersebut dimanfaatkan oleh Pangeran Puger untuk mengangkat dirinya sebagai raja di Plered dan bergelar Susuhunan ing Alaga.</p>
+                <p>Kekuasaan Mataram kemudian dilanjutkan oleh salah satu putra Sultan Agung yang dikenal dengan gelar Susuhunan Hamangku Rat I [1]. Ia memindahkan keraton ke timur Kerta di tempat yang disebut Plered. Hamangku Rat ingin memerintah di tempat baru, tidak lagi menggunakan keraton yang dibangun oleh ayahnya di Kerta. Plered terletak sekitar 1.5 kilometer timur Kerta. Perpindahan keraton dari Kerta ke Plered berlangsung pada tahun 1647. Keraton Plered selesai dibangun pada tahun 1668 [4]. Sama halnya seperti keraton-keraton sebelumnya, Keraton Plered juga memiliki masjid. Masjid Agung Plered dibangun pada tahun 1649.</p>
                 </section>
 
-                <!-- Mataram di Kartasura -->
-                <li id="kartasura">Mataram Kartasura</li>
+                <section data-place="plered">
+                <p>Pada masa pemerintahan Hamangku Rat I, Mataram mengalami penurunan. Raja melakukan serangkaian pembunuhan terhadap orang-orang yang tidak sehaluan dan dapat mengancam kedudukannya [4]. Beberapa orang yang telah disingkirkan oleh Hamangku Rat I karena dianggap sebagai musuh yang berbahaya diantaranya Tumenggung Wiraguna beserta keluarganya, Pangeran Alit yang merupakan adik dari Raja sendiri, Pangeran Pekik yaitu mertua dari Raja sendiri, dan ulama-ulama beserta keluarganya [2]. Hamangku Rat I juga menjalin hubungan baik dengan VOC yang menjadi musuh bebuyutan Mataram pada masa Sultan Agung. Ia membuat perjanjian persahabatan dengan VOC. Hal ini menyebabkan wilayah-wilayah yang awalnya berada di bawah kekuasaan Mataram melakukan perlawanan dan melepaskan diri dari Mataram. Di luar Pulau Jawa, hanya Palembang yang tetap setia kepada Mataram. Blambangan (Banyuwangi) melepaskan diri dari kekuasaan Mataram [5].</p>
+                </section>
+
+                <section data-place="plered">
+                <p>Pada akhir masa pemerintahan Hamangku Rat I, Mataram mengalami penyerangan dari Trunojoyo yang menyebabkan raja harus melarikan diri bersama Adipati Anom (Hamangku Rat II) dari Keraton [1]. Dalam pelariannya tersebut, Hamangku Rat I meninggal saat menuju Batavia. Trunojoyo melakukan penyerangan tersebut didasari oleh perjanjiannya dengan Adipati Anom (Hamangku Rat II). Namun setelah Trunojoyo berhasil menduduki Istana Mataram, terjadi perselisihan antara Trunojoyo dan Hamangku Rat II. Sehingga, Trunojoyo enggan untuk menyerahkan tahta Mataram kepada Hamangku Rat II. Kekosongan kekuasaan Mataram setelah pertempuran tersebut dimanfaatkan oleh Pangeran Puger untuk mengangkat dirinya sebagai raja di Plered dan bergelar Susuhunan ing Alaga.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
+                </section>
+
+                <!-- Ibu Kota Mataram di Kartasura -->
                 <section data-place="kartasura">
+                <h5 id="narasikartasura">Ibu Kota Mataram di Kartasura</h5>
                 <center><img src="imagenarasi/TransisiMataram/20210603_102718.jpg" style="width: 400px; height: auto; border-style: none;"></center>
-                <p>Pelarian Hamangku Rat I dan Hamangku Rat II ke Batavia ternyata membuahkan hasil. Walaupun Hamangku Rat I meninggal di perjalanan, Hamangku Rat II meneruskan pelarian dan berhasil meminta bantuan kepada VOC untuk menghentikan penyerangan Trunojoyo. VOC menyanggupi hal tersebut dengan memberikan syarat yang sangat berat kepada Mataram. Kemudian VOC berhasil mengalahkan Trunojoyo dan Hamangku Rat II bisa kembali ke Istana Plered.</p>
-                <p>Menurut khasanah kebudayaan Jawa, keraton yang pernah diduduki oleh musuh dianggap telah tercemar. Ditambah lagi, keraton Plered sudah rusak parah karena serangan musuh dan sudah diduduki oleh raja baru, yaitu Pangeran Puger. Hamangku Rat II lebih memilih untuk memindahkan pusat kekuasaan Mataram di tempat yang baru, yaitu di Hutan Wana Karta. Hutan tersebut dibuka dan dibuat menjadi keraton yang baru pada tahun 1680. Tempat tersebut diberi nama Kartasura. Sementara itu, saudara Hamangku Rat II, Pangeran Puger tidak mau mengakuinya sebagai raja. Ia memilih tetap tinggal di Plered.</p>
-                <p>Pada masa pemerintahannya, Hamangku Rat II dianggap sebagai kepanjangan tangan dari VOC, akibat dari perjanjian yang disepakati untuk melawan Trunojoyo. Hamangku Rat II wafat pada tahun 1703. Ia digantikan oleh puteranya yang bergelar Hamangku Rat III. Pangeran Puger mengetahui hal tersebut dan berniat mengambil tahta dari Hamangku Rat III dengan meminta bantuan kepada VOC. VOC menyetujui hal tersebut dan berhasil merebut tahta Mataram. Pada tahun 1704, Pangeran Puger menjadi raja di Kartasura dengan gelar Susuhunan Paku Buwana I. Kemudian, secara berturut-turut kekuasaan Mataram di Kartasura berpindah tangan dari Susuhunan Paku Buwana I, Hamangku Rat IV, sampai Susuhunan Paku Buwana II. Keraton Kartasura menjadi pusat kerajaan Mataram selama enam dekade yang dipimpin oleh lima orang raja. Selama di Keraton Kartasura, Mataram menunjukkan penurunan kejayaan setelah era Sultan Agung.</p>
+                <p>Pelarian Hamangku Rat I dan Hamangku Rat II ke Batavia ternyata membuahkan hasil [1] Walaupun Hamangku Rat I meninggal di perjalanan, Hamangku Rat II meneruskan pelarian dan berhasil meminta bantuan kepada VOC untuk menghentikan penyerangan Trunojoyo. VOC menyanggupi hal tersebut dengan memberikan syarat yang sangat berat kepada Mataram. Kemudian VOC berhasil mengalahkan Trunojoyo dan Hamangku Rat II bisa kembali ke Istana Plered.</p>
                 </section>
 
-                <!-- Mataram di Surakarta -->
-                <li id="surakarta">Mataram Surakarta</li>
+                <section data-place="kartasura">
+                <p>Menurut khasanah kebudayaan Jawa, keraton yang pernah diduduki oleh musuh dianggap telah tercemar [1]. Ditambah lagi, keraton Plered sudah rusak parah karena serangan musuh dan sudah diduduki oleh raja baru, yaitu Pangeran Puger. Hamangku Rat II lebih memilih untuk memindahkan pusat kekuasaan Mataram di tempat yang baru, yaitu di Hutan Wana Karta. Hutan tersebut dibuka dan dibuat menjadi keraton yang baru pada tahun 1680. Tempat tersebut diberi nama Kartasura. Sementara itu, saudara Hamangku Rat II, Pangeran Puger tidak mau mengakuinya sebagai raja. Ia memilih tetap tinggal di Plered.</p>
+                </section>
+
+                <section data-place="kartasura">
+                <p>Pada masa pemerintahannya, Hamangku Rat II dianggap sebagai kepanjangan tangan dari VOC, akibat dari perjanjian yang disepakati untuk melawan Trunojoyo [1]. Hamangku Rat II wafat pada tahun 1703. Ia digantikan oleh putranya yang bergelar Hamangku Rat III. Pangeran Puger mengetahui hal tersebut dan berniat mengambil tahta dari Hamangku Rat III dengan meminta bantuan kepada VOC. VOC menyetujui hal tersebut dan berhasil merebut tahta Mataram.</p>
+                </section>
+                
+                <section data-place="kartasura">
+                <p>Pada tahun 1704, Pangeran Puger menjadi raja di Kartasura dengan gelar Susuhunan Paku Buwana I. Namun, ia harus membayar dengan menyerahkan wilayah Priangan, Cirebon, dan Madura Timur kepada VOC [4]. Kemudian, secara berturut-turut kekuasaan Mataram di Kartasura berpindah tangan dari Susuhunan Paku Buwana I, Hamangku Rat IV, sampai Susuhunan Paku Buwana II. Keraton Kartasura menjadi pusat kerajaan Mataram selama enam dekade yang dipimpin oleh lima orang raja. Selama di Keraton Kartasura, Mataram menunjukkan penurunan kejayaan setelah era Sultan Agung.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
+                </section>
+
+                <!-- Ibu Kota Mataram di Surakarta -->
                 <section data-place="surakarta">
+                <h5 id="narasisurakarta">Ibu Kota Mataram di Surakarta</h5>
                 <center><img src="imagenarasi/TransisiMataram/20210603_111344.jpg" style="width: 400px; height: auto; border-style: none;"></center>
-                <p>Pada tahun 1742, terjadi penyerangan oleh pasukan pendukung Mas Garendi, sekaligus merusak keraton di Kartasura. Susuhunan Paku Buwana II dan para kompeni melarikan diri dari keraton tersebut. Kartasura berhasil diduduki pasukan Jawa-Tionghoa dan pemimpin penyerangan tersebut dinobatkan menjadi penguasa baru. Dalam waktu yang tidak terlalu lama, kekuasaan Kartasura berhasil diambil kembali pada tahun 1743. Namun, kerusakan akibat penyerangan tersebut sangat parah. Oleh karena itu, pusat kekuasaan Kerajaan Mataram dipindahkan ke tempat yang baru. Keraton yang baru terletak sebelah timur istana Kartasura di Desa Sala yang kemudian dinamakan dengan Surakarta.</p>
-                <p>Surakarta menjadi tempat terakhir sebelum kerajaan ini mengalami peristiwa palihan nagari. Pada akhir hayatnya, Susuhunan Paku Buwana II masih harus menghadapi pemberontakan yang dipimpin oleh Pangeran Mangkubumi dan Raden Mas Said. Pemberontakan tersebut dikenal sebagai Perang Suksesi Jawa III yang sudah dimulai pada tahun 1714 sampai 1755. Perang tersebut menyebabkan Susuhunan Paku Buwana II jatuh sakit kemudian wafat pada tahun 1749. Susuhunan Paku Buwana II digantikan oleh puteranya Raden Mas Suryadi bergelar Susuhunan Paku Buwana III.</p>
-                <p>Pemberontakan yang dipimpin oleh Pangeran Mangkubumi dan Raden Mas Said terus berlangsung saat Raden Mas Suryadi naik tahta. Kemudian, kedua pemimpin pemberontakan tersebut mengalami perselisihan yang menyebabkan mereka berdua berpisah. Hal ini dimanfaatkan VOC untuk menjadi penengah antara Mangkubumi dan Susuhunan Paku Buwana III. Perang Suksesi tersebut berakhir dengan ditandatanganinya perjanjian yang disebut Perjanjian Giyanti. Dengan demikian, Kerajaan Mataram Islam terpecah menjadi dua wilayah, yakni Kasultanan Yogyakarta yang dipimpin oleh Pangeran Mangkubumi bergelar Sultan Hamengku Buwana I dan Kasunanan Surakarta yang dipimpin oleh Susuhunan Paku Buwana III.</p>
+                <p>Pada tahun 1742, terjadi penyerangan oleh pasukan pendukung Mas Garendi, sekaligus merusak keraton di Kartasura [1]. Susuhunan Paku Buwana II dan para kompeni melarikan diri dari keraton tersebut. Kartasura berhasil diduduki pasukan Jawa-Tionghoa dan pemimpin penyerangan tersebut dinobatkan menjadi penguasa baru. Dalam waktu yang tidak terlalu lama, kekuasaan Kartasura berhasil diambil kembali pada tahun 1743. Namun, kerusakan akibat penyerangan tersebut sangat parah. Oleh karena itu, pusat kekuasaan Kerajaan Mataram dipindahkan ke tempat yang baru. Keraton yang baru terletak sebelah timur istana Kartasura di Desa Sala yang kemudian dinamakan dengan Surakarta.</p>
+                </section>
+
+                <section data-place="surakarta">
+                <p>Surakarta menjadi tempat terakhir sebelum kerajaan ini mengalami peristiwa palihan nagari. Pada akhir hayatnya, Susuhunan Paku Buwana II masih harus menghadapi pemberontakan yang dipimpin oleh Pangeran Mangkubumi dan Raden Mas Said [2]. Pemberontakan tersebut dikenal sebagai Perang Suksesi Jawa III yang sudah dimulai pada tahun 1714 sampai 1755. Perang tersebut menyebabkan Susuhunan Paku Buwana II jatuh sakit kemudian wafat pada tahun 1749. Susuhunan Paku Buwana II digantikan oleh putranya Raden Mas Suryadi bergelar Susuhunan Paku Buwana III.</p>
+                </section>
+
+                <section data-place="surakarta">
+                <p>Pemberontakan yang dipimpin oleh Pangeran Mangkubumi dan Raden Mas Said terus berlangsung saat Raden Mas Suryadi naik tahta. Kemudian, kedua pemimpin pemberontakan tersebut mengalami perselisihan yang menyebabkan mereka berdua berpisah. Hal ini dimanfaatkan VOC untuk menjadi penengah antara Mangkubumi dan Susuhunan Paku Buwana III. Perang Suksesi tersebut berakhir dengan ditandatanganinya perjanjian yang disebut Perjanjian Giyanti [2]. Dengan demikian, Kerajaan Mataram Islam terpecah menjadi dua wilayah, yakni Kasultanan Yogyakarta yang dipimpin oleh Pangeran Mangkubumi bergelar Sultan Hamengku Buwono I dan Kasunanan Surakarta yang dipimpin oleh Susuhunan Paku Buwana III.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
                 </section>
 
                 <!-- Kasultanan Yogyakarta -->
-                <h2 id="yogyakarta"><center><u>Kasultanan Yogyakarta</u></center></h2>
-                <section data-place="yogyakarta">
+                <section data-place="pagelaranKeraton">
+                <h2 id="narasiyogyakarta"><center><u>Kasultanan Yogyakarta</u></center></h2>
                 <center><img src="imagenarasi/TransisiMataram/Kraton_Yogyakarta_Pagelaran.jpg" style="width: 400px; height: auto; border-style: none;"></center>
-                <p>Kasultanan Yogyakarta secara resmi berdiri setelah ditandatanganinya Perjanjian Giyanti atau yang dikenal dengan peristiwa Palihan Nagari. Pada tanggal 13 Maret 1755, proklamasi Kasultanan Yogyakarta atau Hadeging Nagari Ngayogyakarta Hadiningrat dikumandangkan. Kemudian, Sultan Hamengku Buwono I memulai pembangunan Keraton Yogyakarta pada tanggal 9 Oktober 1755. Keraton tersebut dibangun di Desa Pacethokan dalam Hutan Beringan yang pada awalnya bernama Garjitawati. Tempat tersebut berada dalam satu garis imajiner mulai dari Laut Selatan, Panggung Krapyak, dan Gunung Merapi.</p>
+                <p>Kasultanan Yogyakarta secara resmi berdiri setelah ditandatanganinya Perjanjian Giyanti atau yang dikenal dengan peristiwa Palihan Nagari [2]. Pada tanggal 13 Maret 1755, proklamasi Kasultanan Yogyakarta atau Hadeging Nagari Ngayogyakarta Hadiningrat dikumandangkan. Kemudian, Sultan Hamengku Buwono I memulai pembangunan Keraton Yogyakarta pada tanggal 9 Oktober 1755. Keraton tersebut dibangun di Desa Pacethokan dalam Hutan Beringan yang pada awalnya bernama Garjitawati. Tempat tersebut berada dalam satu garis imajiner mulai dari Laut Selatan, Panggung Krapyak, dan Gunung Merapi.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
                 </section>
-                <section data-place="yogyakarta2">
-                <p>Pada masa pemerintahan Sultan HB II, tepatnya pada tanggal 20 Juni 1812, bangsa Inggris berhasil memasuki wilayah Keraton Yogyakarta. Sultan HB II adalah sultan yang menentang Inggris. Dari hal tersebut, bangsa Inggris memanfaatkan Pangeran Notokusumo (adik dari Sultan HB II) untuk melunakkan pemerintahan Sultan HB II. Sultan HB II dipaksa turun tahta serta menyerahkan sebagian wilayahnya untuk diberikan kepada Pangeran Notokusumo. Pangeran Notokusumo diangkat oleh Inggris sebagai Adipati Paku Alam I.</p>
+                
+                <section data-place="pakualaman">
+                <p>Pada masa pemerintahan Sultan HB II, bangsa Inggris berhasil memasuki wilayah Keraton Yogyakarta. Sultan HB II adalah sultan yang menentang Inggris. Dari hal tersebut, bangsa Inggris memanfaatkan Pangeran Notokusumo (adik dari Sultan HB II) untuk melunakkan pemerintahan Sultan HB II. Sultan HB II dipaksa turun tahta serta menyerahkan sebagian wilayahnya untuk diberikan kepada Pangeran Notokusumo. Pangeran Notokusumo diangkat oleh Inggris sebagai Adipati Paku Alam I pada tanggal 29 Juni 1812 [2]. Wilayah kekuasaan Adipati Paku Alam I meliputi sebagian kecil di dalam Ibukota Negara dan sebagian besar di wilayah Adikarto yang berada di daerah selatan Kulon Progo [6]. Sejak 17 Maret 1813, Adipati Paku Alam I mendeklarasikan berdirinya Kadipaten Pakualaman.
+                </section>
+
+                <section data-place="pagelaranKeraton">
+                <p>Setelah Proklamasi Kemerdekaan Indonesia, pada tanggal 5 September 1945, Sri Sultan HB IX dan Sri Paduka Paku Alam VIII mengeluarkan amanat yang menyatakan bahwa wilayahnya yang bersifat kerajaan adalah bagian dari Negara Kesatuan Republik Indonesia. Kemudian, Ir. Soekarno sebagai presiden pertama Republik Indonesia menanggapi amanat tersebut dengan menetapkan bahwa Sultan Hamengku Buwono dan Adipati Paku Alam merupakan dwi tunggal yang memegang kekuasaan atas Daerah Istimewa Yogyakarta [6].</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
                 </section>
 
                 <section data-place="pakualaman">
-                <p>Wilayah kekuasaan Adipati Paku Alam I meliputi sebagian kecil di dalam Ibukota Negara dan sebagian besar di wilayah Adikarto yang berada di daerah selatan Kulon Progo (Kapanewon, Temon, Water, Panjatan, Galur, dan Lendah). Sejak 17 Maret 1813, Adipati Paku Alam I mendeklarasikan berdirinya Kadipaten Pakualaman.</p>
-                <p>Setelah Proklamasi Kemerdekaan Indonesia, pada tanggal 5 September 1945, Sri Sultan HB IX dan Sri Paduka Paku Alam VIII mengeluarkan amanat yang menyatakan bahwa wilayahnya yang bersifat kerajaan adalah bagian dari Negara Kesatuan Republik Indonesia. Kemudian, Ir. Soekarno sebagai presiden pertama Republik Indonesia menanggapi amanat tersebut dengan menetapkan bahwa Sultan Hamengku Buwono dan Adipati Paku Alam merupakan dwi tunggal yang memegang kekuasaan atas Daerah Istimewa Yogyakarta.</p>
+                <p>Kasultanan Yogyakarta berkembang menjadi daerah yang kental akan nuansa kota kerajaan di Pulau Jawa. Terutama karena Kasultanan Yogyakarta merupakan pecahan dari Kerajaan Mataram. Bagian setelah ini akan menceritakan tentang Tata Rakiting Wewangunan atau tata ruang yang ada di Kasultanan Yogyakarta.</p></p>
+                </section>
+
+                <!-- Sumbu Filosofi Yogyakarta -->
+                <h5 id="narasiSumbuFilosofi">Sumbu Filosofi Yogyakarta</h5>
+                <p>Sumbu Filosofi Yogyakarta merupakan garis memanjang dari utara ke selatan yang menghubungkan Gunung Merapi di utara dan Pantai Parangkusumo atau Pantai Parangtritis di selatan. Garis ini melewati beberapa bangunan penting di Yogyakarta, diantaranya Panggung Krapyak, Keraton Yogyakarta, dan Tugu Golong Gilig yang saat ini berubah menjadi Tugu Pal Putih (Tugu Yogyakarta). Sumbu Filosofi ini memiliki makna yang dapat dilihat dari dua arah, yaitu dari arah selatan ke utara mengandung makna filosofi Sangkaning Dumadi, dan dari arah utara ke selatan mengandung makna filosofi Paraning Dumadi [9].</p>
+
+                <!-- Panggung Krapyak -->
+                <section data-place="krapyak2">
+                <center><img src="imagenarasi/TataRakitingWewangunan/Kandang_Menjangan.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Panggung Krapyak terletak sekitar 2 km dari Keraton Yogyakarta. Pada zaman Kerajaan Mataram Islam, Panggung Krapyak sering digunakan oleh raja-raja untuk berburu binatang, khusunya binatang rusa atau menjangan. Oleh sebab itu, Panggung Krapyak juga disebut Kandang Menjangan oleh masyarakat sekitar. Kata ‘Krapyak’ menurut kepercayaan masyakarat Jawa, khususnya Keraton Yogyakarta, merupakan tempat roh-roh suci yang atas perkenan Allah dihembuskan ke dalam calon bayi yang berada dalam kandungan ibu. Dari Panggung Krapyak menuju arah utara (Gunung Merapi) memiliki filosofi perjalanan manusia sejak dilahirkan dari Rahim ibu, beranjak dewasa, kemudian menikah hingga melahirkan anak [9].</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
+                </section>
+
+                <!-- Wisata Keraton -->
+                <section data-place="wisataKeraton">
+                <center><img src="imagenarasi/TataRakitingWewangunan/wisataKeraton (1).jpeg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Keraton atau kedhaton merupakan istana yang berfungsi sebagai tempat tinggal raja. Selain itu, keraton juga berfungsi sebagai pusat politik, pusat budaya, dan pusat kekuasaan kerajaan. Keraton Yogyakarta mulai dibangun pada tanggal 9 Oktober 1755 pada masa pemerintahan Sultan Hamengku Buwono I [2]. Pembangunan tersebut berlangsung hingga hampir satu tahun. Kemudian, Sri Sultan Hamengku Buwono I beserta keluarga berpindah ke Keraton Yogyakarta yang telah selesai dibangun pada tanggal 7 Oktober 1756. Tata letak Keraton Yogyakarta didasarkan pada makna sumbu filosofis yang memanjang dari selatan ke utara.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
+                </section>
+
+                <!-- Tugu Yogyakarta -->
+                <section data-place="tuguJogja">
+                <center><img src="imagenarasi/TataRakitingWewangunan/tuguYogyakarta.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Sebutan Tugu Pal Putih didapatkan dari warna tugu yang berwarna putih. Adanya Tugu Pal Putih tersebut juga menjadi salah satu penanda Sumbu Filosofis Yogyakarta. Tugu Pal Putih merupakan tugu (monumen) yang dibangun sebagai pengganti Tugu Golong Gilig. Tugu Golong Gilig dibangun pada tahun 1756 [6]. Pemberian nama ‘Golong Gilig’ mengacu pada bentuk awal tugu yang berupa silinder (golong) dengan puncaknya berupa bulatan (gilig). Bentuk tersebut menyimpan makna filosofi ‘Manunggaling Kawula Gusti’ yang berarti bersatunya rakyat dengan rajanya, dan manusia dengan Sang Pencipta. Tugu Golong Gilig mengalami kerusakan akibat gempa tektonik pada tanggal 10 Juni 1867. Pada masa pemerintahan Sri Sultan HB VI, tugu tersebut dibangun kembali dan diresmikan pada tanggal 3 Oktober 1889, yang kemudian dikenal dengan sebutan Tugu Pal Putih [3]. Perubahan bentuk tugu dari Tugu Golong Gilig menjadi Tugu Pal Putih ditengarai merupakan strategi Belanda untuk menghilangkan simbol kebersamaan raja dan rakyat pada bentuk Tugu Golong Gilig.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
+                </section>
+
+                <!-- Bangunan Air Tamansari -->
+                <section data-place="tamansari">
+                <h5 id="narasiTamansari">Bangunan Air Tamansari</h5>
+                <center><img src="imagenarasi/TataRakitingWewangunan/Jogjakarta,_January_2007.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Pada awalnya, Tamansari merupakan sebuah taman atau kebun istana di Keraton Yogyakarta. Tamansari memiliki arti nama taman yang indah [6]. Komplek Tamansari dibangun secara bertahap pada masa pemerintahan Sri Sultan Hamengku Buwono I. Tamansari didesain atas dasar gagasan dari Sri Sultan Hamengku Buwono I, kemudian gambar teknisnya dikerjakan oleh seorang arsitek berkebangsaan Portugis yang diduga datang dari wilayah Gowa, Sulawesi.</p>
+                </section>
+
+                <section data-place="tamansari">
+                <p>Tamansari merupakan bangunan yang sangat indah. Keindahannya tersebut membuat penasaran Raffles [6]. Sir Thomas Stamford Raffles adalah Letnan Gubernur Inggris di Jawa pada tahun 1811 sampai tahun 1816. Namun, keindahan dan kemegahan Tamansari tidak bertahan lama. Beberapa tahun setelah selesai dibangun, tepatnya pada tanggal 7 September 1803, terjadi gempa yang disebabkan oleh letusan Gunung Guntur di Jawa Barat. Gempa tersebut mengakibatkan pondasi Tamansari rusak. Sumber air di kolam pemandian dan segaran (danau buatan) Tamansari merembes hingga kering. Sejak saat ini, upaya perbaikan terus dilakukan.</p>
+                </section>
+
+                <section data-place="tamansari">
+                <p>Secara berturut-turut, kerusakan terus terjadi mulai dari agresi Inggris ke Yogyakarta pada tahun 1812, bencana gempa bumi yang kembali terjadi di Yogyakarta pada tanggal 10 Juni 1867, dan yang terakhir adalah bencana gempa bumi pada tahun 2006 [6]. Pada tahun 2016, Balai Pelestarian Cagar Budaya Yogyakarta memulai kembali perbaikan kawasan Tamansari.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
+                </section>
+
+                <!-- Benteng Keraton Yogyakarta -->
+                <section data-place="plengkungGadhing">
+                <h5 id="narasibentengKeraton">Benteng Keraton Yogyakarta</h5>
+                <center><img src="imagenarasi/TataRakitingWewangunan/plengkungGadhing.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Benteng Keraton Yogyakarta merupakan sebuah tembok besar yang mengelilingi keraton. Layaknya kota-kota kerajaan lainnya di Pulau Jawa, Keraton Yogyakarta tidak dapat dipisahkan dari benteng. Semua bekas pusat pemerintahan Kerajaan Mataram memiliki benteng sebagai tembok pertahanan yang mengelilingi keraton. Selain keraton, benteng tersebut juga mengelilingi kawasan pemukiman kerabat Sultan dan Abdi Dalem. Dalam Bahasa Portugis, benteng disebut juga Baluarte yang memiliki kesamaan bunyi dengan Baluwarti [6]. Oleh sebab itu, Benteng Keraton Yogyakarta juga dikenal dengan nama Benteng Baluwarti.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
+                </section>
+
+                <section data-place="joktengWetan">
+                <p>Benteng Baluwarti didesain dan dibangun pada masa pemerintahan Sri Sultan Hamengku Buwono I (1755-1792). Desain Benteng Keraton Yogyakarta berbeda dibandingkan dengan benteng-benteng Kerajaan Mataram Islam sebelumnya, terutama pada bagian gerbang-gerbang yang tersebar di segala penjuru. Saat merancang desain benteng ini, Pangeran Mangkubumi nampaknya belajar banyak dari peristiwa jatuhnya ibu kota Mataram Kartasura ke tangan pemberontak pada peristiwa Geger Pacina atau Perang Cina pada tahun 1740 hingga 1743. </p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
+                </section>
+
+                <section data-place="joktengLorWetan">
+                <p>Pada awalnya benteng ini hanya berupa pagar dari kayu. Dibandingkan dengan bangunan lain yang ada di keraton, benteng ini merupakan bangunan paling akhir yang diselesaikan oleh Sri Sultan HB I. Benteng Baluwarti selesai dibangun pada tahun 1782. Pembangunan benteng tersebut dipimpin oleh R. Rangga Prawirasentika, seorang Bupati Madiun. Kemudian, pembangunan tersebut dilanjutkan oleh Kanjeng Gusti Pangeran Adipati Anom (Sri Sultan HB II) [6].</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
+                </section>
+
+                <section data-place="plengkungWijilan">
+                <center><img src="imagenarasi/TataRakitingWewangunan/plengkungWijilan.jpg" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Benteng Baluwarti memiliki lima gerbang dengan pintu melengkung sebagai jalur keluar masuk benteng [6]. Pintu tersebut dikenal dengan sebutan Plengkung atau Gapura Panggung. Kelima plengkung tersebut diantaranya Plengkung Tarunasura atau Plengkung Wijilan di sebelah timur laut, Plengkung Jagasura atau Plengkung Ngasem di sebelah barat laut, Plengkung Jagabaya atau Plengkung Tamansari di sebelah barat, Plengkung Nirbaya atau Plengkung Gadhing di sebelah selatan, dan Plengkung Madyasura atau Plengkung Gondomanan di sebelah timur.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
+                </section>
+
+                <section data-place="joktengLor">
+                <p>Salah satu sudut benteng tersebut hancur saat peristiwa Geger Sepehi pada tanggal 20 Juni 1812. Keraton Yogyakarta diserang oleh pasukan Inggris. Mereka berhasil meledakkan Gudang mesiu yang ada di Pojok Benteng Timur Laut [6]. Peristiwa tersebut juga menyebabkan Plengkung Madyasura ditutup secara permanen sebagai bagian dari strategi pertahanan.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
+                </section>
+
+                <section data-place="joktengKulon">
+                <p>Saat ini, sebagian besar benteng telah tertutup oleh pemukiman. Dari lima buah plengkung, hanya tersisa dua yang masih utuh berbentuk seperti awal dibangun. Plengkung tersebut ialah Plengkung Wijilan dan Plengkung Gadhing. Selain itu, bangunan Pojok Benteng yang masih utuh diantaranya Pojok Benteng Wetan, Pojok Benteng Kulon, Pojok Benteng Lor, dan Pojok Benteng Lor Wetan.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
+                </section>
+
+                <!-- Masjid Gedhe Kauman -->
+                <section data-place="masjidGedhe">
+                <h5 id="narasimasjidGedhe">Masjid Gedhe Kauman</h5>
+                <center><img src="imagenarasi/TataRakitingWewangunan/GrandMosqueYogya.jfif" style="width: 400px; height: auto; border-style: none;"></center>
+                <p>Masjid Gedhe Kauman merupakan masjid yang didirikan pada hari Minggu 29 Mei 1773 [6]. Masjid tersebut didirikan atas dasar perintah Sri Sultan Hamengku Buwono I dan Kiai Fakih Ibrahim Diponingrat selaku penghulu keraton. Sedangkan rancangan desain masjid dikerjakan oleh Kiai Wiryokusumo. Adanya Masjid Gedhe Kauman ini menegaskan bahwa Yogyakarta sebagai kerajaan islam, sama seperti Kerajaan Mataram Islam terdahulu.</p>
+                </section>
+
+                <section data-place="masjidGedhe">
+                <p>Pada masa awal berdirinya Kasultanan Yogyakarta, masjid juga dipergunakan sebagai tempat untuk menyelesaikan masalah yang berkaitan dengan hukum Islam, khusunya masalah perkara perdata. Prosesi penyelesaian permasalahan tersebut dilaksanakan di serambi masjid yang juga disebut sebagai Al Mahkamah Al Kabirah. Selain itu, masjid ini juga berfungsi sebagai tempat pertemuan para alim ulama, pengajian dakwah Islamiyah, dan peringatan hari besar [6].</p>
+                </section>
+
+                <section data-place="masjidGedhe">
+                <p>Masjid Gedhe Kauman menjadi bagian yang tak terpisahkan dari Keraton Yogyakarta. Masjid ini turut berdinamika bersama bangsa Indonesia [6]. Pada masa perjuangan kemerdekaan, bangunan Pajagan digunakan sebagai markas Asykar Perang Sabil yang membantu Tentara Nasional Indonesia (TNI) untuk melawan agresi militer Belanda. Selain itu, masjid ini juga terus menjadi sarana perjuangan, diantaranya saat masyarakat menumbangkan Orde Lama dan saat pejuang reformasi menumbangkan Orde Baru.</p>
+                <p><img src="icon/360-degrees.png" style="width: 30px;"> Foto Sferis 360&deg; tersedia</p>
                 </section>
 
             </br>
-                <h3>Sumber Referensi</h3>
-                <li>Winardi, U. N., Utama, G. A., Margana, S., Yuwono, J., & Sylvia, D. (2020). <i>Atlas Mataram</i>. Dinas Kebudayaan Daerah Istimewa Yogyakarta.</li>
-                <li>Abimanyu, S. (2015). <i>Kitab Terlengkap Sejarah Mataram</i>. Saufa.</li>
-                <li>Sujarweni, V. W. (2017). <i>Menelusuri Jejak Mataram Islam di Yogyakarta</i>. Anak Hebat Indonesia.</li>
-                <li>Adrisijanti,I. (2000). <i>Arkeologi Perkotaan Mataram Islam</i>. Penerbit Jendela.</li>
+                <h4>Sumber Referensi</h4>
+                <ol>
+                <li>Winardi, U. N., Utama, G. A., Margana, S., Yuwono, J., dan Sylvia, D. (2020). <i>Atlas Mataram</i>. Dinas Kebudayaan Daerah Istimewa Yogyakarta.</li>
+                <li>Abimanyu, S. (2015). <i>Kitab Terlengkap Sejarah Mataram</i>. Yogyakarta: Saufa.</li>
+                <li>Graaf, D. H. J. De. (1985). <i>Awal Kebangkitan Mataram (Masa Panembahan Senopati)</i>. Jakarta: Grafiti Pers.</li>
+                <li>Adrisijanti, I. (2000). <i>Arkeologi Perkotaan Mataram Islam</i>. Yogyakarta: Jendela.</li>
+                <li>Graaf, D. H. J. De. (1987). <i>Disintegrasi Mataram di bawah Mangkurat I</i>. Jakarta: Grafiti Pers.</li>
                 <li>Situs resmi Keraton Yogyakarta. https://www.kratonjogja.id/tata-rakiting-wewangunan.</li>
-                
-                
+                <li>Gubernur DIY. (2007). Surat Keputusan Gubernur Daerah Istimewa Yogyakarta Nomor 108/KEP/2017 tentang Penetapan Ruas Jalan Sepanjang Sumbu Filosofi sebagai Struktur Cagar Budaya.</li>
+                </ol>
             </div>
 
             <div id="map" class="col-9 col-md-7"></div>
@@ -330,55 +391,82 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="storymap.js"></script>
-    <script type="text/javascript" src="leaflet.ajax.js"></script>
     
     <!-- File JS GeoJSON -->
-    <script type="text/javascript" src="geoJSON/puncakKekuasaan.js"></script>
-    <script type="text/javascript" src="geoJSON/masaAwal.js"></script>
-    <script type="text/javascript" src="geoJSON/masaAkhir.js"></script>
-    <script type="text/javascript" src="geoJSON/yogyakarta.js"></script>
+    <script type="text/javascript" src="geoJSON/kotagede-senopati.js"></script>
+    <script type="text/javascript" src="geoJSON/kerta.js"></script>
+    <script type="text/javascript" src="geoJSON/plered.js"></script>
+    <script type="text/javascript" src="geoJSON/kartasura.js"></script>
+    <script type="text/javascript" src="geoJSON/surakarta.js"></script>
+    <script type="text/javascript" src="geoJSON/kasultananyogyakarta.js"></script>
+    <script type="text/javascript" src="geoJSON/pakualaman.js"></script>
     
     <script type="text/javascript">
         (function () {
             'use strict';
 
-            // Point
+            // Data Spasial
             var markers = {
-                bengawanSolo: { lat: -7.572588186852655, lon: 110.84741578375929, zoom: 11, description: `<h3><center>Bengawan Solo</center></h3><p class="text-center">Bengawan Solo merupakan sungai terpanjang di</br> Pulau Jawa, Indonesia. Sungai ini memiliki dua hulu yaitu </br>dari daerah Pegunungan Sewu, Wonogiri,</br> dan Ponorogo, kemudian bermuara di daerah Gresik.</p>` + `<img src="popupimg/COLLECTIE_TROPENMUSEUM_De_rivier_de_Solo_TMnr_3728-417.jpg" style="width: 500px; height: 300px">` + `<p class="text-center"></p>` + `<p class="text-center">Lukisan Abraham Salm. <i>De rivier de Solo</i>. Tropenmuseum.</p>`, properties: {maxWidth: 500}},
+                // Asal-usul Kerajaan Mataram Islam
+                bengawanSolo: { lat: -7.572588186852655, lon: 110.84741578375929, zoom: 10, description: `<img src="popupimg/COLLECTIE_TROPENMUSEUM_De_rivier_de_Solo_TMnr_3728-417.jpg" style="width: 500px; height: 300px">` + `<p class="text-center">Sumber: Salm, A. (1872). [De Rivier De Solo - Tropenmuseum]</p>` , properties: {maxWidth: 500}, tooltip:`<h6>Bengawan Solo</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
 
-                alasMentaok: { lat: -7.811762308992165, lon: 110.4014227960555, zoom: 11, description: `<h3 class="text-center">Alas Mentaok</h3><p class="text-center">Alas Mentaok adalah sebuah hutan yang pernah ada di</br> Daerah Istimewa Yogyakarta. Wilayah tersebut tumbuh menjadi</br> daerah makmur yang kemudian disebut Kotagede</p>`+`<img src="popupimg/anton-nugroho-1-babat-alas-mentaok-1200.jpg" style="width: 500px; height: 300px">` + `<p class="text-center">Lukisan Anton Nugroho. Alas Mentaok. ArtStation.</p>`, properties: {maxWidth: 500}},
+                alasMentaok: { lat: -7.811762308992165, lon: 110.4014227960555, zoom: 10, description: `<img src="popupimg/anton-nugroho-1-babat-alas-mentaok-1200.jpg" style="width: 500px; height: 300px">` + `<p class="text-center">Sumber: Nugroho, Anton. (2016). [Babad Alas Mentaok - Artstation]</p>`, properties: {maxWidth: 500}, tooltip:`<h6>Alas Mentaok</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
 
-                prambanan: { lat: -7.753552193250846, lon: 110.50666693476475, zoom: 11, description: `<h3 class="text-center">Randulawang, Prambanan</h3><p class="text-center">Perkiraan titik lokasi pertempuran antara pasukan</br> Sultan Hadiwijaya dengan pasukan Panembahan Senopati.</br> Pertempuran tersebut terjadi di Randulawang, Prambanan.</p>` + `<img src="popupimg/Yogyakarta_Indonesia_Prambanan-temple-complex-02.jpg" style="width: 500px; height: 300px">` + `<p class="text-center">Foto diambil oleh Uwe Aranas. Yogyakarta Indonesia Prambanan. CEphoto.</p>`, properties: {maxWidth: 500}},
+                prambanan: { lat: -7.75496944, lon: 110.4888936, zoom: 10, description: `<img src="popupimg/tjandi prambanan.jpg" style="width: 500px; height: 300px">` + `<p class="text-center">Sumber: Cephas, Kassian. (1895). [Tjandi Prambanan - Leiden University Libraries]</p>`, properties: {maxWidth: 500}, tooltip:`<h6>Prambanan</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
 
-                pajang: { lat: -7.57237533580028, lon: 110.78213975387469, zoom: 11, description: `<h3 class="text-center">Kerajaan Pajang</h3><p class="text-center">Masjid Laweyan merupakan salah satu peninggalan Kerajaan Pajang.</br>Masjid ini dibangun pada masa Sultan Hadiwijaya tahun 1546.</p>` + `<center><img src="popupimg/Masjid Laweyan - Kerajaan Pajang.jpg" style="width: 500px; height: 300px"></center>` + `<p class="text-center">Foto diambil dari situs resmi DISKOMINFO Surakarta.</p>`, properties: {maxWidth: 1000}},
+                pajang: { lat: -7.57237533580028, lon: 110.78213975387469, zoom: 10, description: `<center><img src="popupimg/Masjid Laweyan - Kerajaan Pajang.jpg" style="width: 500px; height: 300px"></center>` + `<p class="text-center">Sumber: DISKOMINFO Surakarta.</p>`, properties: {maxWidth: 1000}, tooltip:`<h6>Kerajaan Pajang</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
 
-                kotaGede1: { lat: -7.829481853963505, lon: 110.39816408823039, zoom: 11, description: '<h3 class="text-center">Kerajaan Mataram Islam</h3><p class="text-center">Pada awal berdirinya, Kerajaan Mataram Islam beribukota</br> di Kutagede atau Kotagede yang didirikan </br>pada tahun 1582 oleh Panembahan Senopati.</p>' + `<center><img src="popupimg/COLLECTIE_TROPENMUSEUM_Poort_van_de_Sultansgraven_in_Pasar_Gedé_de_oude_begraafplaats_nabij_Djokjakarta._TMnr_60004745.jpg" style="width: 300px; height: 400px"></center>` + '<p class="text-center">Foto diambil oleh Kassian Cephas pada tahun 1890. <i>Poort van de Sultansgraven in Pasar Gedé de oude begraafplaats nabij Djokjakarta.</i> Tropenmuseum.)</p>', properties: { maxWidth: 500} },
+                senopati: { lat: -7.829481853963505, lon: 110.39816408823039, zoom: 10, description: `<center><img src="popupimg/COLLECTIE_TROPENMUSEUM_Poort_van_de_Sultansgraven_in_Pasar_Gedé_de_oude_begraafplaats_nabij_Djokjakarta._TMnr_60004745.jpg" style="width: 300px; height: 450px"></center>` + '<p class="text-center">Sumber: Cephas, Kassian. (1890). </br>[Kota Gede - Tropenmuseum]</p>', properties: { maxWidth: 500}, tooltip:`<h6>Kotagede</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
 
-                kotaGede: { lat: -7.829481853963505, lon: 110.39816408823039, zoom: 10, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKotagede.html"></iframe>`, properties: { maxWidth: 1000}, geometry: masaAwal },
+                // Transisi Ibu Kota Mataram
+                kotaGede: { lat: -7.829379067, lon: 110.3981758, zoom: 8, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKotagede.html"></iframe>`, properties: { maxWidth: 1000}, tooltip:`<h6>Masjid Gedhe Mataram</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}, geometry: kotagedeSenopati},
 
-                bentengCepuri: { lat: -7.831291150489649, lon: 110.39893639711963, zoom: 10, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisBentengCepuri.html"></iframe>`, properties: { maxWidth: 1000}, geometry: masaAwal},
+                bentengCepuri: { lat: -7.831291150489649, lon: 110.39893639711963, zoom: 8, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisBentengCepuri.html"></iframe>`, properties: { maxWidth: 1000}, tooltip:`<h6>Situs Benteng Cepuri</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}, geometry: kotagedeSenopati},
 
-                pasarKotagede: { lat: -7.827895411295089, lon: 110.39976271061182, zoom: 10, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPasarKotagede.html"></iframe>`, properties: { maxWidth: 1000}, geometry: masaAwal},
+                pasarKotagede: { lat: -7.827895411295089, lon: 110.39976271061182, zoom: 8, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPasarKotagede.html"></iframe>`, properties: { maxWidth: 1000}, tooltip:`<h6>Pasar Legi Kotagede</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}, geometry: kotagedeSenopati},
 
-                krapyak: { lat: -7.827632917564044, lon: 110.3606049957885, zoom: 10, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKrapyak.html"></iframe>`, properties: { maxWidth: 1000 }, geometry: masaAwal},
+                krapyak: { lat: -7.827632917564044, lon: 110.3606049957885, zoom: 8, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKrapyak.html"></iframe>`, properties: { maxWidth: 1000 }, tooltip:`<h6>Panggung Krapyak</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}, geometry: kotagedeSenopati},
 
-                kerta: { lat: -7.871485629787498, lon: 110.39722582501152, zoom: 7, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKerta.html"></iframe>`, properties: {maxWidth: 1000}, geometry: puncakKekuasaan},
+                kerta: { lat: -7.871485629787498, lon: 110.39722582501152, zoom: 6, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKerta.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Situs Kerta</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}, geometry: kerta},
 
-                plered: { lat: -7.864897402352897, lon: 110.40582384766205, zoom: 11, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPleret.html"></iframe>`, properties: {maxWidth: 1000}},
+                plered: { lat: -7.864897402352897, lon: 110.40582384766205, zoom: 7, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPleret.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Situs Pleret</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}, geometry: plered},
 
-                kartasura: { lat: -7.5583978757700425, lon: 110.74003200021276, zoom: 11, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKartasura.html"></iframe>`, properties: {maxWidth: 1000}},
+                kartasura: { lat: -7.5583978757700425, lon: 110.74003200021276, zoom: 8, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKartasura.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Benteng Bekas Keraton Kartasura</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}, geometry: kartasura},
 
-                surakarta: { lat: -7.577924640610986, lon: 110.82771635478977, zoom: 9, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKeratonSurakarta.html"></iframe>`, properties: {maxWidth: 1000}, geometry: masaAkhir},
+                surakarta: { lat: -7.577924640610986, lon: 110.82771635478977, zoom: 8, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKeratonSurakarta.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Keraton Surakarta</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}, geometry: surakarta},
 
-                yogyakarta: { lat: -7.805180158321483, lon: 110.36427082328214, zoom: 10, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPagelaranKeraton.html"></iframe>`, properties: {maxWidth: 1000}, geometry: yogyakarta},
+                // Kasultanan Yogyakarta
+                pagelaranKeraton: { lat: -7.805180158321483, lon: 110.36427082328214, zoom: 9, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPagelaranKeraton.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Pagelaran Keraton Yogyakarta</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}, geometry: yogyakarta},
 
-                yogyakarta2: { lat: -7.8071396613019175, lon: 110.36381604721429, zoom: 10, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKeratonYogyakarta.html"></iframe>`, properties: {maxWidth: 1000}, geometry: yogyakarta},
+                pakualaman: { lat: -7.800727588865754, lon: 110.37620423293944, zoom: 10, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPuroPakualaman.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Puro Pakualaman</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}, geometry: pakualaman},
 
-                pakualaman: { lat: -7.800727588865754, lon: 110.37620423293944, zoom: 11, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPuroPakualaman.html"></iframe>`, properties: {maxWidth: 1000}}
+                // Panggung Krapyak dengan zoom level 13
+                krapyak2: { lat: -7.827632917564044, lon: 110.3606049957885, zoom: 13, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKrapyak.html"></iframe>`, properties: { maxWidth: 1000 }, tooltip:`<h6>Panggung Krapyak</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
+
+                wisataKeraton: { lat: -7.8071396613019175, lon: 110.36381604721429, zoom: 13, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisKeratonYogyakarta.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Wisata Keraton</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
+
+                tuguJogja: { lat: -7.7828756484073605, lon: 110.3670483738481, zoom: 13, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisTugu.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Tugu Yogyakarta</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
+
+                tamansari: { lat: -7.810085475276065, lon: 110.3595059214416, zoom: 13, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisTamansari.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Tamansari</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
+
+                plengkungGadhing: { lat: -7.813812449171208, lon: 110.36287664405756, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPlengkungGadhing.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Plengkung Gadhing</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
+
+                joktengWetan: { lat: -7.814610488256155, lon: 110.36847286680913, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisBentengWetan.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Pojok Benteng Wetan</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
+
+                joktengLorWetan: { lat: -7.80382423121694, lon: 110.36919452957909, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisBentengTimurLaut.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Pojok Benteng Lor Wetan</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
+
+                plengkungWijilan: { lat: -7.80374257535612, lon: 110.36664348731465, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisPlengkungWijilan.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Plengkung Wijilan</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
+
+                joktengLor: { lat: -7.804374732186362, lon: 110.35632371165956, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisBentengLor.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Pojok Benteng Lor</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
+
+                joktengKulon: { lat: -7.812899857678232, lon: 110.35603364495066, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisBentengKulon.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Pojok Benteng Kulon</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}},
+
+                masjidGedhe: { lat: -7.803950844243376, lon: 110.36264052659493, zoom: 16, description: `<iframe width="700" height="500" allowfullscreen style="border-style: none; position: center" src="fotosferis/sferisMasjidGedheKauman.html"></iframe>`, properties: {maxWidth: 1000}, tooltip:`<h6>Masjid Gedhe Kauman</h6>`, tooltipsetting: {direction: 'top', offset: [0,-15], className: "background"}}
 
             };
 

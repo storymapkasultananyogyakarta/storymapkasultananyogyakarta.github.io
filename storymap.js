@@ -6,6 +6,9 @@
         iconSize: [50, 50],
         iconAnchor: [25,40]
     });
+
+    var legend = L.control({ position: "bottomright"});
+    var div = L.DomUtil.create("div", "legend");
     
     $.fn.storymap = function (options) {
 
@@ -16,34 +19,27 @@
                 // create a map in the "map" div, set the view to a given place and zoom
                 var map = L.map('map', {
                     center: [-7.793601659345258, 110.3704267303214],
-                    zoom: 11,
-                    zoomControl: false
+                    zoom: 10,
+                    zoomControl: true
                 });
 
-                L.control.zoom({
-                    position: 'topleft'
-                }).addTo(map)
+                // var zoom = L.control.zoom({
+                //     position: 'topleft'
+                // }).addTo(map);
 
                 // add an OpenStreetMap tile layer
-                let baseMap = L.tileLayer('https://api.mapbox.com/styles/v1/ignatiusivan99/cko8ovkze4nt418tet26t6mov/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaWduYXRpdXNpdmFuOTkiLCJhIjoiY2tuNWMwYmwzMDJwODJ4cWRtZmlpdHF3eSJ9.37uVfMF5jz3yTIxsY1-Uxw', {
-                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-                    subdomains: 'abcd',
-                    maxZoom: 19
+                var baseMap = L.tileLayer('https://tile.jawg.io/5cae44b4-28df-481a-a2d9-9b261d78a039/{z}/{x}/{y}{r}.png?access-token=L4Kh1ENETghHg0LTVRBLUNWZ4KWkXciY6fI0V47U8VlNgTdUNQkj2bLIy0ovMB8X', {
+                    maxZoom: 16
                 });
+                map.attributionControl.addAttribution("<a href=\"https://www.jawg.io\" target=\"_blank\">&copy; Jawg</a> - <a href=\"https://www.openstreetmap.org\" target=\"_blank\">&copy; OpenStreetMap</a>&nbsp;contributors");
                 baseMap.addTo(map)
 
-                var legend = L.control({ position: "bottomright" });
-
-                legend.onAdd = function(map) {
-                var div = L.DomUtil.create("div", "legend");
-                div.innerHTML += "<h4>Legenda</h4>";
-                div.innerHTML += '<i class="icon" style="background-image: url(icon/icons8-marker-100.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Titik Lokasi</span><br>';
-                div.innerHTML += '<i class="icon" style="background-image: url(icon/boundary.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Perkiraan Luas Wilayah Kekuasaan</span><br>';
-                
-                return div;
-                };
-
-                legend.addTo(map);
+                // var petaLatar = L.tileLayer('https://api.mapbox.com/styles/v1/ignatiusivan99/cko8ovkze4nt418tet26t6mov/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiaWduYXRpdXNpdmFuOTkiLCJhIjoiY2tuNWMwYmwzMDJwODJ4cWRtZmlpdHF3eSJ9.37uVfMF5jz3yTIxsY1-Uxw', {
+                //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                //     subdomains: 'abcd',
+                //     maxZoom: 14
+                // });
+                // petaLatar.addTo(map);
 
                 return map;
             }
@@ -138,8 +134,9 @@
             function showMapView(key) {
 
                 fg.clearLayers();
-                if (key === 'caution') {
+                if (key === 'intro') {
                     map.setView(initPoint, initZoom, true);
+                    map.removeControl(legend)
                 } else if (markers[key]) {
                     var marker = markers[key];
                     var layer = marker.layer;
@@ -153,8 +150,32 @@
                     });
                     fg.addLayer(dataGeojson).addLayer(L.marker([
                         marker.lat, marker.lon
-                    ], { icon: customIcon }).bindPopup(marker.description, marker.properties))
+                    ], { icon: customIcon }).bindPopup(marker.description, marker.properties).bindTooltip(marker.tooltip, marker.tooltipsetting));
                     map.setView([marker.lat, marker.lon], marker.zoom, 1);
+
+                    map.removeControl(legend)
+
+                    legend.onAdd = function() {
+                        div.innerHTML = "<h4>Legenda</h4>";
+                        if(marker.geometry == undefined) {
+                            div.innerHTML += '<i class="icon" style="background-image: url(icon/icons8-marker-100.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Titik Lokasi</span><br>';
+                        } else {
+                            div.innerHTML += '<i class="icon" style="background-image: url(icon/icons8-marker-100.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Titik Lokasi</span><br>';
+                            div.innerHTML += '<i class="icon" style="background-image: url(icon/boundary.png);background-repeat: no-repeat;background-color: rgb(124, 106, 73, 0);"></i><span>Luas Wilayah Kekuasaan</span><br>';
+                        }
+                        
+                        return div;
+                    }
+
+                    map.on('popupopen', function(e) {
+                        map.removeControl(legend);
+                    })
+                    map.on('popupclose', function(e) {
+                        legend.addTo(map);
+                    })
+
+                    legend.addTo(map);
+
                 }
 
             }

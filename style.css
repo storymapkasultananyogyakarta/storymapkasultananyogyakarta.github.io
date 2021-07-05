@@ -19,7 +19,7 @@
 }
 
 .main {
-    padding: 20px;
+    padding: 10px;
     padding-bottom: 100px;
 }
 @media (min-width: 768px) {
@@ -39,11 +39,11 @@
    /* top: 33.3333%; */
     width: 3px;
     height: 3px;
-    background: red;
+    background: rgb(0, 0, 0, 0);
 }
 
 .viewing {
-    background-color: rgba(228, 211, 173, 0.3);
+    background-color: rgba(117, 122, 46, 0.2);
 	
 }
 
@@ -64,7 +64,6 @@ section {
     line-height: 24px;
     color: rgb(0, 0, 0);
   }
-
   .legend h4 {
     text-align: center;
     font-size: 18px;
@@ -89,3 +88,92 @@ section {
     background-size: 20px;
     background-color: rgba(255, 255, 255, 1);
   }
+
+  /* peta.html */
+    body {
+    background-image: url("background/vintage-ornamental-flowers-background_52683-28040.jpg");
+    background-position: fixed;
+    }
+
+    .paragraf {
+        text-indent: 40px;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Baskervville', serif;
+        font-weight: 600;
+    }
+
+    p {
+        font-family: 'Baskervville', sans-serif;
+        font-weight: 600;
+        text-align: justify;
+        font-size: 11.8pt;
+    }
+
+    section {
+        margin-top: 1mm;
+        margin-bottom: 1mm;
+    }
+
+    li {
+        font-family: 'Baskervville', serif;
+        font-weight: 600;
+        text-align: justify;
+        font-size: 12pt;
+    }
+
+    .jumbotron {
+        background: url("background/potretkeluargaKasultananYogyakarta.jpg");
+        background-position: center;
+        position: sticky;
+        border-radius: 10px;
+    }
+
+    .jumbotron-overlay {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    .leaflet-popup-content-wrapper {
+        border-radius: 20px;
+        font-size: 12pt;
+        background-image: url(background/damask-seamless-pattern-background_1217-1269.jpg);
+    }
+
+    .leaflet-tooltip.background {
+        background-image: url(background/vintage-ornamental-flowers-background_52683-28040.jpg);
+        border-radius: 10px;
+        font-size: 12pt;
+    }
+
+    .navbar {
+        font-family: 'Baskerville', serif;
+        font-weight: 700;
+        background-image: url(background/vintage-ornamental-flowers-background_52683-28040.jpg);
+        height: 8%;
+    }
+
+    .modal-body {
+        font-size: 11pt;
+    }
+
+    .dropdown-menu {
+        border-radius: 10px;
+    }
+
+    .dropdown-toggle {
+        margin-right: 400px;
+    }
