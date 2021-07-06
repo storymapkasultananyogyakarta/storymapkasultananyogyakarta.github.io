@@ -20,12 +20,12 @@
                 var map = L.map('map', {
                     center: [-7.793601659345258, 110.3704267303214],
                     zoom: 10,
-                    zoomControl: true
+                    zoomControl: false
                 });
 
-                // var zoom = L.control.zoom({
-                //     position: 'topleft'
-                // }).addTo(map);
+                var zoom = L.control.zoom({
+                    position: 'bottomleft'
+                }).addTo(map);
 
                 // add an OpenStreetMap tile layer
                 var baseMap = L.tileLayer('https://tile.jawg.io/5cae44b4-28df-481a-a2d9-9b261d78a039/{z}/{x}/{y}{r}.png?access-token=L4Kh1ENETghHg0LTVRBLUNWZ4KWkXciY6fI0V47U8VlNgTdUNQkj2bLIy0ovMB8X', {

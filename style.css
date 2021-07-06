@@ -39,7 +39,7 @@
    /* top: 33.3333%; */
     width: 3px;
     height: 3px;
-    background: rgb(0, 0, 0, 1);
+    background: rgb(0, 0, 0, 0);
 }
 
 .viewing {
@@ -131,10 +131,11 @@ section {
     .jumbotron {
         background: url("background/potretkeluargaKasultananYogyakarta.jpg");
         background-position: center;
-        position: sticky;
+        position: fixed;
         border-radius: 10px;
-        padding: 10px;
-        margin: 10px, 10px, 2px, 2px;
+        margin-top: 60px;
+        margin-right: 60.333%;
+        margin-left: 2%;
     }
 
     .jumbotron-overlay {
@@ -153,6 +154,7 @@ section {
         border-radius: 20px; 
         font-size: 12pt;
         background-image: url(background/damask-seamless-pattern-background_1217-1269.jpg);
+        margin-top: 100px;
     }
 
     .leaflet-tooltip.background {
@@ -165,7 +167,7 @@ section {
         font-family: 'Baskerville', serif;
         font-weight: 700;
         background-image: url(background/vintage-ornamental-flowers-background_52683-28040.jpg);
-        height: 8%;
+        height: 60px;
     }
 
     .modal-body {
