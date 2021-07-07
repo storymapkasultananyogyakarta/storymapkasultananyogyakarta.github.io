@@ -23,7 +23,7 @@ p {
   color: black
 }
 
-.bgimg, .bgimg3 {
+.bgimg {
   min-height: 100%;
   background-position: 50% 75%;
   background-size: cover;
@@ -33,6 +33,15 @@ p {
   min-height: 100%;
   background-position: 50% 100%;
   background-size: cover;
+}
+
+.bgimg3 {
+  background-size: cover;
+}
+
+.bgimg4 {
+  background-size: cover;
+  background-position: 20% 70%;
 }
 
 .source {
@@ -48,39 +57,50 @@ p {
 
 .bgimg3 {background-image: url("background/vintage-ornamental-flowers-background_52683-28040.jpg");}
 
+.bgimg4 {background-image: url("background/homepage/tuguYogyakarta.jpg");}
+
 iframe {margin-left: 50px;}
 </style>
 <body>
 
 <!-- Navbar (sticky bottom) -->
-<div class="w3-bottom w3-hide-medium">
+<div class="w3-top w3-hide-medium">
   <div class="w3-bar w3-black w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
-    <a href="#storymap1" style="width:30%" class="w3-bar-item w3-button">Story Map</a>
-    <a href="#latarbelakang" style="width:40%" class="w3-bar-item w3-button">Latar Belakang dan Tujuan</a>
-    <a href="#kontak" style="width:30%" class="w3-bar-item w3-button">Kontak</a>
+    <a href="#storymap1" style="width:25%" class="w3-bar-item w3-button">Story Map</a>
+    <a href="#latarbelakang" style="width:25%" class="w3-bar-item w3-button">Latar Belakang</a>
+    <a href="#tujuan" style="width:25%" class="w3-bar-item w3-button">Tujuan</a>
+    <a href="#kontak" style="width:25%" class="w3-bar-item w3-button">Kontak</a>
   </div>
 </div>
 
 <!-- Sejarah Berdirinya Kasultanan Yogyakarta -->
 <header class="w3-display-container bgimg" id="storymap1">
   <div class="w3-display-topleft">
-    <img src="background/homepage/Lambang UGM.png" style="width: 60px; height: 60px; margin-top: 10px; margin-left: 10px;">
+    <img src="background/homepage/Lambang UGM.png" style="width: 60px; height: 60px; margin-top: 65px; margin-left: 10px;">
   </div>
-  <div class="w3-display-topmiddle w3-padding-60 w3-text-white w3-center" style="margin-top: 55px;">
+  <div class="w3-display-topmiddle w3-padding-60 w3-text-white w3-center" style="margin-top: 70px;">
     <h2 class="w3-xxxlarge">Story Map Sejarah Berdirinya Kasultanan Yogyakarta dengan Foto Sferis 360&deg;</h2>
+    <hr style="background-color: rgb(0, 0, 0); border: solid; border-color: black;" class="w3-round">
     <h3 style="margin-top: 20px;">Story map ini berisi tentang cerita sejarah berdirinya Kasultanan Yogyakarta yang divisualisasikan dengan menggunakan peta interaktif dan fitur multimedia berupa foto sferis 360&deg;.</h3>
-    <p class="w3-center" style="margin-top: 50px;"><a href="peta.html" class="w3-button w3-pale-yellow w3-round w3-padding-large w3-large">Lihat Story Map</a></p>
+    <p class="w3-center" style="margin-top: 50px;"><a href="#latarbelakang" class="w3-button w3-pale-yellow w3-round w3-padding-large w3-large">Mulai</a></p>
   </div>
 </header>
 
 
 
-<!-- Latar Belakang dan Tujuan -->
+<!-- Latar Belakang -->
 <div class="w3-container w3-padding-64 bgimg2" id="latarbelakang" style="color: white">
-  <div class="w3-content" style="background-color: rgb(0, 0, 0, 0.5); border-radius: 10px; padding-left: 30px; padding-right: 30px;">
+  <div class="w3-content" style="background-color: rgb(0, 0, 0, 0.5); border-radius: 10px; padding-left: 30px; padding-right: 30px; margin-top: 100px">
     <h2 class="w3-jumbo w3-center w3-text-white"><b>Latar Belakang</b></h2>
-    <h4 style="text-align: center; text-indent: 40px">Sejarah adalah peristiwa atau kejadian di masa lampau yang terjadi di kehidupan manusia dan berhubungan dengan perubahan serta perkembangan manusia tersebut. Masa sekarang adalah konsekuensi dari apa yang telah terjadi di masa lampau. Mempelajari sejarah merupakan suatu perwujudan dari tanggung jawab manusia akan hal-hal yang telah dilakukannya serta keinginan untuk dapat hidup lebih baik di masa yang akan datang. Sejarah juga merupakan salah satu factor yang membentuk kebudayaan kita saat ini. Namun, kebanyakan orang menganggap belajar sejarah adalah sesuatu hal yang membosankan dan tidak menarik. Oleh sebab itu, diperlukan suatu media untuk memvisualisasikan cerita sejarah agar lebih menarik dan tidak membosankan. Story map Kasultanan Yogyakarta ini merupakan salah satu media visualisasi dengan menggunakan aspek spasial berupa peta interaktif yang diintegrasikan dengan foto sferis 360&deg;.</h4>
+    <h4 style="text-align: center; text-indent: 40px">Sejarah adalah salah satu faktor yang membentuk kebudayaan kita saat ini. Mempelajari sejarah merupakan suatu perwujudan dari tanggung jawab manusia akan hal-hal yang telah dilakukannya serta keinginan untuk dapat hidup lebih baik di masa yang akan datang. Namun, kebanyakan orang menganggap belajar sejarah adalah sesuatu hal yang membosankan dan tidak menarik. Oleh sebab itu, story map ini dibuat sebagai media untuk memvisualisasikan cerita sejarah agar lebih menarik dan tidak membosankan. Story map Sejarah Berdirinya Kasultanan Yogyakarta ini merupakan salah satu media visualisasi dengan menggunakan aspek spasial berupa peta interaktif yang diintegrasikan dengan foto sferis 360&deg;.</h4>
+    <p class="w3-center" style="margin-top: 50px;"><a href="peta.html" class="w3-button w3-pale-yellow w3-round w3-padding-large w3-large">Lihat Story Map</a></p>
     </br>
+  </div>
+</div>
+
+<!-- Tujuan -->
+<div class="w3-container w3-padding-64 bgimg4" id="tujuan" style="color: white">
+  <div class="w3-content" style="background-color: rgb(0, 0, 0, 0.5); border-radius: 10px; padding-left: 30px; padding-right: 30px; padding-bottom: 20px; margin-top: 70px">
     <h2 class="w3-jumbo w3-center w3-text-white"><b>Tujuan</b></h2>
     <h4><ol>
       <li>Menampilkan peta interaktif story map sejarah Kerajaan Mataram Islam sampai terbentuknya Kasultanan Yogyakarta yang dapat ditampilkan dengan baik.</li>
@@ -90,55 +110,20 @@ iframe {margin-left: 50px;}
   </div>
 </div>
 
-<!-- Form Kontak -->
-<div class="w3-container w3-padding-64 bgimg3" id="kontak">
-  <h2 class="w3-jumbo w3-center">KONTAK</h2>
-  <p class="w3-center">Ignatius Ivan Rizky M</p>
-  <div class="w3-row w3-section">
-    <div class="w3-col m6">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.243172450248!2d110.37058061459817!3d-7.764016394404344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a58521ddc006d%3A0xf5d7db2383c151ce!2sGeodetic%20Engineering%20Department!5e0!3m2!1sen!2sid!4v1623718011063!5m2!1sen!2sid" width="600" height="400" style="border-style: solid;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <div class="w3-col m6 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <img src="icon/maps-and-flags.png" style="width: 30px;">
-        Jl. Grafika no.2 Bulaksumur, Yogyakarta, 55281<br>
-        <img src="icon/email.png" style="width: 30px;"> ignatiusivan99@mail.ugm.ac.id<br>
+<!-- Kontak -->
+<div class="w3-container w3-padding-64 bgimg3" id="kontak" style="color: white">
+  <div class="w3-content">
+      <h2 class="w3-jumbo w3-center w3-text-black"><b>Kontak</b></h2>
+    <div class="row">
+      <div class="col-6">
+        <h4 class="w3-text-black" style="text-align: center;"><img src="icon/maps-and-flags.png" style="width: 30px"> Alamat: Jl. Grafika no.2 Bulaksumur, Yogyakarta, 55281</h4>
       </div>
-      <p>Berikan Kritik dan Saran</p>
-
-      <!-- <form id="fr1">
-        <input type="text" id="tb1" />
-        <input type="text" id="tb2" />
-        <input type="button" id="bt1" value="click" />
-      </form> -->
-
-      <form action="mailto:ignatiusivan99@mail.ugm.ac.id?subject=subject&message=message" method:"post">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Nama" name="Name">
-          </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" name="Email">
-          </div>
-        </div>
-        <input class="w3-input w3-border" type="text" placeholder="Pesan" name="Message">
-        <button class="w3-button w3-blue w3-right w3-section" type="submit" style="border-radius: 10px;">
-          <img src="icon/send.png" style="width: 30px;">KIRIM PESAN
-        </button>
-      </form>
+      <div class="col-6">
+        <h4 class="w3-text-black" style="text-align: center;"><img src="icon/email.png" style="width: 30px"> Email: ignatiusivan99@mail.ugm.ac.id</h4>
+      </div>
     </div>
+    <footer class="footer bg-black large text-center w3-text-black"><div class="container px-4 px-lg-5">2021 &copy; Ignatius Ivan.</div></footer>
   </div>
 </div>
-
-<script>
-  $(document).ready(function() {
-    $('#bt1').click(function() {
-        $('#fr1').attr('action',
-                       'mailto:ignatiusivan99@mail.ugm.ac.id?subject=' +
-                       $('#tb1').val() + '&body=' + $('#tb2').val());
-        $('#fr1').submit();
-    });
-});
-</script>
 </body>
 </html>
