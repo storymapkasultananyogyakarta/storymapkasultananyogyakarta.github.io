@@ -20,7 +20,7 @@
 
 .main {
     padding: 10px;
-    padding-bottom: 100px;
+    padding-bottom: 225px;
 }
 @media (min-width: 768px) {
     .main {
@@ -126,6 +126,11 @@ section {
         font-weight: 600;
         text-align: justify;
         font-size: 12pt;
+    }
+
+    .referensi li {
+        font-size: 10pt;
+        font-weight: 600;
     }
 
     .navbar .btn {
