@@ -58,7 +58,7 @@ section {
 
 .legend {
     padding: 15px;
-    font: 16px Baskerville;
+    font: 16px Cambria;
     background: white;
     background: rgba(255, 255, 255, 0.8);
     /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);*/
@@ -108,18 +108,18 @@ section {
     h5,
     h6 {
         font-family: 'Amaranth', serif;
-        font-weight: 600;
+        font-weight: 700;
     }
 
     p {
-        font-family: 'Amaranth';
+        font-family: 'Calibri';
         font-weight: 500;
         text-align: justify;
-        font-size: 12.2pt;
+        font-size: 12.5pt;
     }
 
     li {
-        font-family: 'Amaranth';
+        font-family: 'Calibri';
         font-weight: 500;
         text-align: justify;
         font-size: 12pt;
@@ -132,6 +132,7 @@ section {
 
     .navbar .btn {
         background-color: rgba(242,220,176,255);
+        font-weight: 600;
     }
 
     .jumbotron {
@@ -170,8 +171,8 @@ section {
     }
 
     .navbar {
-        font-family: 'Amaranth', serif;
-        font-weight: 700;
+        font-family: 'Calibri', serif;
+        font-weight: 600;
         background-image: url(background/vintage-ornamental-flowers-background_52683-28040.jpg);
         height: 60px;
     }
