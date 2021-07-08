@@ -58,7 +58,7 @@ section {
 
 .legend {
     padding: 15px;
-    font: 16px Cambria;
+    font: 16px Calibri;
     background: white;
     background: rgba(255, 255, 255, 0.8);
     /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);*/
@@ -107,15 +107,15 @@ section {
     h4,
     h5,
     h6 {
-        font-family: 'Amaranth', serif;
-        font-weight: 700;
+        font-family: 'Calibri', serif;
+        font-weight: 600;
     }
 
     p {
         font-family: 'Calibri';
         font-weight: 500;
         text-align: justify;
-        font-size: 12.5pt;
+        font-size: 12pt;
     }
 
     li {
