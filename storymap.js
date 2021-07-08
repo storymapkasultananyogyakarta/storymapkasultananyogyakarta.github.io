@@ -151,7 +151,9 @@
                         fillColor: "green",
                         weight: 2
                     });
-                    fg.addLayer(dataGeojson).addLayer(L.marker([
+                    fg.addLayer(dataGeojson);
+                    
+                    fg.addLayer(L.marker([
                         marker.lat, marker.lon
                     ], { icon: customIcon }).bindPopup(marker.description, marker.properties).bindTooltip(marker.tooltip, marker.tooltipsetting));
                     map.setView([marker.lat, marker.lon], marker.zoom, 1);
