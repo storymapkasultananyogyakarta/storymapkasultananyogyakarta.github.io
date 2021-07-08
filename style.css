@@ -107,22 +107,22 @@ section {
     h4,
     h5,
     h6 {
-        font-family: 'Baskervville', serif;
+        font-family: 'Amaranth', serif;
         font-weight: 600;
     }
 
     p {
-        font-family: 'Cambria';
+        font-family: 'Amaranth';
         font-weight: 500;
         text-align: justify;
         font-size: 12.2pt;
     }
 
     li {
-        font-family: 'Cambria';
+        font-family: 'Amaranth';
         font-weight: 500;
         text-align: justify;
-        font-size: 11pt;
+        font-size: 12pt;
     }
 
     .referensi li {
@@ -170,7 +170,7 @@ section {
     }
 
     .navbar {
-        font-family: 'Baskerville', serif;
+        font-family: 'Amaranth', serif;
         font-weight: 700;
         background-image: url(background/vintage-ornamental-flowers-background_52683-28040.jpg);
         height: 60px;
