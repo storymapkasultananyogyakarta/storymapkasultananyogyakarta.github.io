@@ -14,7 +14,7 @@
 
         var defaults = {
             selector: '[data-place]',
-            breakpointPos: '35%',
+            breakpointPos: '38%',
             createMap: function () {
                 // create a map in the "map" div, set the view to a given place and zoom
                 var map = L.map('map', {
