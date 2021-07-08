@@ -20,7 +20,7 @@
 
 .main {
     padding: 10px;
-    padding-bottom: 180px;
+    padding-bottom: 150px;
 }
 @media (min-width: 768px) {
     .main {
