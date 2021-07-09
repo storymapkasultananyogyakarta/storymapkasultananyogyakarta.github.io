@@ -107,7 +107,7 @@ section {
     h4,
     h5,
     h6 {
-        font-family: 'Calibri', serif;
+        font-family: 'Amaranth', serif;
         font-weight: 600;
     }
 
@@ -119,7 +119,7 @@ section {
     }
 
     li {
-        font-family: 'Calibri';
+        font-family: 'Amaranth';
         font-weight: 500;
         text-align: justify;
         font-size: 12pt;
@@ -171,7 +171,7 @@ section {
     }
 
     .navbar {
-        font-family: 'Calibri', serif;
+        font-family: 'Amaranth', serif;
         font-weight: 600;
         background-image: url(background/vintage-ornamental-flowers-background_52683-28040.jpg);
         height: 60px;

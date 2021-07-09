@@ -5,8 +5,8 @@ $('.page-scroll').on('click', function(e) {
     var elemenTujuan = $(tujuan);
    
     $('html , body').animate({
-     scrollTop: elemenTujuan.offset().top - 240
-    }, 500);
+     scrollTop: elemenTujuan.offset().top - 255
+    }, 500, 'linear');
    
     e.preventDefault();
    });
