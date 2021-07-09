@@ -27,7 +27,7 @@
                     position: 'bottomleft'
                 }).addTo(map);
 
-                // add an OpenStreetMap tile layer
+                // Tile Layer
                 var baseMap = L.tileLayer('https://tile.jawg.io/5cae44b4-28df-481a-a2d9-9b261d78a039/{z}/{x}/{y}{r}.png?access-token=L4Kh1ENETghHg0LTVRBLUNWZ4KWkXciY6fI0V47U8VlNgTdUNQkj2bLIy0ovMB8X', {
                     maxZoom: 16
                 });
